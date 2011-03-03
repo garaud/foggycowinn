@@ -1,0 +1,12 @@
+
+TODO File
+=========
+
+:author: Damien Garaud
+:date: 2011-03-03
+
+* Import new configuration files
+* Write a README
+* Add a License
+* Split Emacs configuration files into a few Lisp files with their own features
+* Write a script to easily copy/install these configuration files in your account
