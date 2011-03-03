@@ -10,3 +10,5 @@ TODO File
 * Add a License
 * Split Emacs configuration files into a few Lisp files with their own features
 * Write a script to easily copy/install these configuration files in your account
+* Try to list necessary emacs packages which are used
+* Write a THANKS file
