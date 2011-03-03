@@ -12,3 +12,4 @@ TODO File
 * Write a script to easily copy/install these configuration files in your account
 * Try to list necessary emacs packages which are used
 * Write a THANKS file
+* Find a way to test Emacs configuration without copy/install everything
