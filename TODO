@@ -5,11 +5,12 @@ TODO File
 :author: Damien Garaud
 :date: 2011-03-03
 
-* Import new configuration files
+* Import new configuration files: Emacs, vim, Git, Bash, ...
 * Write a README
 * Add a License
 * Split Emacs configuration files into a few Lisp files with their own features
 * Write a script to easily copy/install these configuration files in your account
 * Try to list necessary emacs packages which are used
+* Add a shell-script to batch compile emacs configuration file
 * Write a THANKS file
 * Find a way to test Emacs configuration without copy/install everything
