@@ -1,19 +1,22 @@
 ;; -*- coding: utf-8 -*-
 ;; Main Emacs configuration file.
-;; 2011-03
+;; 2011
 ;; Author(s): Damien Garaud
+
+(add-to-list 'load-path "/home/boubou/applications/emacs/")
 
 ;;;;;;;;;;;;;
 ;; GENERAL ;;
 ;;;;;;;;;;;;;
 
 
-(set-default-font "9x15")
+;;(set-default-font "9x15")
+(set-default-font "8x13")
 ;; If Emacs 23 is in use, enjoy a great font!
 (setq running-emacs-23 (> emacs-major-version 22))
 (if running-emacs-23
     (progn
-      (set-default-font "Monospace-12") ) )
+      (set-default-font "Monospace-10") ) )
 
 ;; Gets rid of the useless tool bar and menu bar.
 (tool-bar-mode -1)
@@ -24,7 +27,7 @@
 
 ;; To select a default font, and windows width and height.
 (set-frame-width (selected-frame) 80)
-(set-frame-height (selected-frame) 41)
+(set-frame-height (selected-frame) 42)
 
 ;; Frame maximization.
 (defun frame-fullscreen (frame)
@@ -42,9 +45,9 @@
   (interactive)
   (frame-maximize-vertically nil))
 ;; Maximizes the window vertically at startup.
-;;(add-hook 'window-setup-hook 'maximize-vertically)
+(add-hook 'window-setup-hook 'maximize-vertically)
 ;; Maximizes a new frame vertically at startup.
-;;(add-hook 'after-make-frame-functions 'frame-maximize-vertically)
+(add-hook 'after-make-frame-functions 'frame-maximize-vertically)
 
 ;; Enables the mouse wheel (for old versions of Emacs).
 ;; (mouse-wheel-mode)
@@ -75,6 +78,7 @@
 (setq transient-mark-mode t)
 ;; Highlight the current line.
 (global-hl-line-mode t)
+(set-face-background 'hl-line "#282828")
 ;; Shows the column number.
 (setq column-number-mode t)
 ;; Shows the brackets correspondence.
@@ -134,8 +138,6 @@
 
 ;; Note: excellent pour passer d'un buffer a l'autre et pour ouvrir des
 ;; fichiers: Interactively do things.
-;; (ido-mode t)
-;; (setq ido-enable-flex-matching t)
 (ido-mode t)
 (setq
  ido-save-directory-list-file "~/.emacs.d/ido.last"
@@ -254,3 +256,40 @@ Goes backward if ARG is negative; error if CHAR not found."
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  )
+
+
+(defun fullpath-relative-to-current-file (file-relative-path)
+  "Returns the full path of FILE-RELATIVE-PATH, relative to file location where this function is called.
+
+Example: If the file that calls fullpath-relative-to-call-location is at:
+/Users/xah/web/emacs/emacs_init.el then,
+ (fullpath-relative-to-call-location \"xyz.el\")
+returns
+ /Users/xah/web/emacs/xyz.el
+
+This function solves 2 problems.
+
+ (1) if you have file A, that calls the “load” on a file at B, and
+ B calls “load” on file C using a relative path, then Emacs will
+ complain about unable to find C. Because, emacs does not switch
+ current directory with “load”.
+
+ (2) To know the current file's full path, emacs has 2 ways:
+ load-file-name and buffer-file-name.  If the file is loaded by
+ “load”, then load-file-name works but buffer-file-name doesn't.
+ If the file is called by eval-buffer, then load-file-name is
+ nil. You want to be able to get the full path regardless the
+ file is run by “load” or interactively by “eval-buffer”."
+  (concat (file-name-directory (or load-file-name buffer-file-name)) file-relative-path)
+)
+
+;; Add the dir of this file to load path.
+(add-to-list 'load-path (fullpath-relative-to-current-file ""))
+
+
+;; Load
+(load (fullpath-relative-to-current-file "emacs_keybindings.el"))
+(load (fullpath-relative-to-current-file "emacs_dev.el"))
+(load (fullpath-relative-to-current-file "emacs_git.el"))
+(load (fullpath-relative-to-current-file "emacs_latex.el"))
+(load (fullpath-relative-to-current-file "emacs_web.el"))
