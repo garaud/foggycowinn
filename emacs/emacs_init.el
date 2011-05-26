@@ -3,7 +3,7 @@
 ;; 2011
 ;; Author(s): Damien Garaud
 
-(add-to-list 'load-path "/home/boubou/applications/emacs/")
+(add-to-list 'load-path "~/applications/emacs/")
 
 ;;;;;;;;;;;;;
 ;; GENERAL ;;
@@ -165,10 +165,11 @@ This function solves 2 problems.
 (add-to-list 'load-path (fullpath-relative-to-current-file ""))
 
 ;; Load
-(load (fullpath-relative-to-current-file "emacs_keybindings.el"))
-(load (fullpath-relative-to-current-file "emacs_dev.el"))
-(load (fullpath-relative-to-current-file "emacs_git.el"))
-(load (fullpath-relative-to-current-file "emacs_latex.el"))
-(load (fullpath-relative-to-current-file "emacs_web.el"))
-(load (fullpath-relative-to-current-file "emacs_appearance.el"))
-(load (fullpath-relative-to-current-file "emacs_orgmode.el"))
+(load (fullpath-relative-to-current-file "appearance.el"))
+(load (fullpath-relative-to-current-file "dev.el"))
+(load (fullpath-relative-to-current-file "git.el"))
+(load (fullpath-relative-to-current-file "keybindings.el"))
+(load (fullpath-relative-to-current-file "latex.el"))
+(load (fullpath-relative-to-current-file "orgmode.el"))
+(load (fullpath-relative-to-current-file "personal_data.el"))
+(load (fullpath-relative-to-current-file "web.el"))
