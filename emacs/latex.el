@@ -3,10 +3,19 @@
 ;; 2011
 ;; Author(s): Damien Garaud
 
+
 ;;;;;;;;;;;
 ;; LATEX ;;
 ;;;;;;;;;;;
 
+;; AUCTeX.
+(require 'tex-site)
+(load "preview-latex")
+
+;; Reference mode.
+(autoload 'reftex-mode "reftex" "RefTeX Minor Mode" t)
+(autoload 'turn-on-reftex "reftex" "RefTeX Minor Mode" nil)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 
 ;; Turns off auto-fill which is inherited from text-mode.
 (add-hook 'LaTeX-mode-hook 'turn-off-auto-fill)
@@ -16,6 +25,14 @@
 ;; lignes, ne plus faire de M-q non plus. Les lignes n'ont plus de
 ;; largeur maximale.
 
+;; Use PDFLaTeX.
+(setq TeX-PDF-mode 1)
+
+;; Always in flyspell mode.
+(setq major-mode 'text-mode)
+(setq text-mode-hook 'turn-on-auto-fill)
+(add-hook 'text-mode-hook 'turn-on-filladapt-mode)
+(add-hook 'text-mode-hook (lambda () (flyspell-mode 1)))
 
 ;; C-o inserts "{}".
 (add-hook 'LaTeX-mode-hook
@@ -36,24 +53,6 @@
   '(add-to-list 'TeX-command-list 
 		'("Escape" "pdflatex --shell-escape -interaction=nonstopmode %t"
 		  TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX")))
-
-;; AUCTeX.
-(require 'tex-site)
-(load "preview-latex")
-
-;; Reference mode.
-(autoload 'reftex-mode "reftex" "RefTeX Minor Mode" t)
-(autoload 'turn-on-reftex "reftex" "RefTeX Minor Mode" nil)
-(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-
-;; Use PDFLaTeX.
-(setq TeX-PDF-mode 1)
-
-;; Always in flyspell mode.
-(setq major-mode 'text-mode)
-(setq text-mode-hook 'turn-on-auto-fill)
-(add-hook 'text-mode-hook 'turn-on-filladapt-mode)
-(add-hook 'text-mode-hook (lambda () (flyspell-mode 1)))
 
 
 ;; Sets evince as the default viewer for DVI and PDF, and Konqueror for HTML.
