@@ -1,0 +1,62 @@
+#+TITLE: README for Emacs Configuration
+#+AUTHOR: Damien Garaud
+
+* About
+
+So empty...
+
+
+* How to use it?
+
+
+** Copy the FoggyCowInn Emacs directory
+
+Do =git clone http://git.gitorious.org/foggycowinn/foggycowinn.git= or
+ =git clone git://gitorious.org/foggycowinn/foggycowinn.git=.
+
+
+** Create or modify your Emacs configuration file
+
+See if you have an Emacs configuration file named =.emacs= in your home
+directory. Then you can write
+
+#+begin_src lisp
+ ;; Load configuration from FoggyCowInn.
+ (load "/path/to/foggycowinn/emacs/emacs_init") 
+#+end_SRC lisp
+
+You don't have to compile the file =emacs_init.el= but you can do it with:
+
+#+begin_src screen
+  > make
+#+end_SRC screen
+
+in the =/path/to/foggycowinn/emacs/= directory.
+
+
+* Packages List
+
+  Names of different "packages" used in this Emacs configuration.
+
+  | Package name | File       |
+  |--------------+------------|
+  | tangotango   | appearance |
+  | python-mode  | dev        |
+  | zencoding    | dev        |
+  | magit        | git        |
+  | tex-site     | latex      |
+  | org-mode     | orgmode    |
+  | erc          | web        |
+  | identica     | web        |
+
+
+* Turn me into a HTML/PDF file
+
+  This operation requires the mode Org-mode.
+
+  Open this file with Emacs and do:
+
+  - =M-x org-export-as-pdf RET=
+  - =M-x org-export-as-html RET=
+
+  if you want to make a PDF or HTML file.
