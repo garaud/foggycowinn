@@ -24,8 +24,8 @@
 ;;(require 'ipython)
 ;;(setq py-python-command-args '( "--colors" "Linux"))
 
-(require 'pymacs)
-(pymacs-load "ropemacs" "rope-")
+;; (require 'pymacs)
+;; (pymacs-load "ropemacs" "rope-")
 
 ;; (defadvice py-execute-buffer (around python-keep-focus activate)
 ;;   "Thie advice to make focus python source code after execute command `py-execute-buffer'."
