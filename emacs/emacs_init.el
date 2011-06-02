@@ -165,11 +165,11 @@ This function solves 2 problems.
 (add-to-list 'load-path (fullpath-relative-to-current-file ""))
 
 ;; Load
-(load (fullpath-relative-to-current-file "appearance.el"))
-(load (fullpath-relative-to-current-file "dev.el"))
-(load (fullpath-relative-to-current-file "git.el"))
-(load (fullpath-relative-to-current-file "keybindings.el"))
-(load (fullpath-relative-to-current-file "latex.el"))
-(load (fullpath-relative-to-current-file "orgmode.el"))
+(load (fullpath-relative-to-current-file "foggy_appearance.el"))
+(load (fullpath-relative-to-current-file "foggy_dev.el"))
+(load (fullpath-relative-to-current-file "foggy_git.el"))
+(load (fullpath-relative-to-current-file "foggy_keybindings.el"))
+(load (fullpath-relative-to-current-file "foggy_latex.el"))
+(load (fullpath-relative-to-current-file "foggy_orgmode.el"))
 (load (fullpath-relative-to-current-file "personal_data.el"))
-(load (fullpath-relative-to-current-file "web.el"))
+(load (fullpath-relative-to-current-file "foggy_web.el"))
