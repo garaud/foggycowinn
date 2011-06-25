@@ -87,3 +87,13 @@
    (doxymacs-font-lock)))
 (add-hook 'font-lock-mode-hook 'my-doxymacs-font-lock-hook)
 (setq-default doxymacs-doxygen-style "Qt")
+
+
+;;;;;;;;;
+;; GDB ;;
+;;;;;;;;;
+
+;; Use the gdb debugging tool with 'M-x gdb'.
+
+;; Open many windows when you launch 'gdb'.
+(setq gdb-many-windows t)
