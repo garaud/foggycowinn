@@ -26,6 +26,9 @@
 (set-frame-width (selected-frame) 80)
 (set-frame-height (selected-frame) 42)
 
+;; No blinked cursor.
+(blink-cursor-mode nil)
+
 ;; Frame maximization.
 (defun frame-fullscreen (frame)
   (set-frame-parameter frame 'fullscreen
