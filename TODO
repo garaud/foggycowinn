@@ -16,3 +16,4 @@ TODO File
 * Find a way to test Emacs configuration without copy/install everything
 * Replace (load-path "~/applications/emacs/package-name") by a more generic
   one. May be ~/.emacs.d/package-base is a good one.
+* Clean up 'emacs/foggy_dev.el': Python part and C++ part. Too many comments !
