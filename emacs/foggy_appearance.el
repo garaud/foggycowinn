@@ -18,6 +18,7 @@
 ;; Gets rid of the useless tool bar and menu bar.
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; No advertisement when Emacs starts.
 (setq inhibit-startup-message t)
