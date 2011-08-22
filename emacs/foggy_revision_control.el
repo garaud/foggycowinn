@@ -1,5 +1,5 @@
 ;; -*- coding: utf-8 -*-
-;; Git and Hg Emacs configuration file.
+;; Emacs configuration file for Git and Mercurial.
 ;; 2011
 ;; Author(s): Damien Garaud
 
