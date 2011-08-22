@@ -73,8 +73,10 @@
 
 ;; The Lisp file from Astyle project http://astyle.sourceforge.net/scripts.html
 ;; with (setq c-default-style "bsd") sets a fine C++ coding convention for me
-;; --- brackets, indentation and so on.
-(load "astyle-hooks.el")
+;; --- brackets, indentation and so on. Do nothing if the file does not exist.
+(setq astyle-file (fullpath-relative-to-current-file "astyle-hooks.el"))
+(if (file-exists-p astyle-file) (load astyle-file))
+
 
 ;; TODO Clean up all this stuff.
 
