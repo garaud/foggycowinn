@@ -22,12 +22,15 @@
 ;; No advertisement when Emacs starts.
 (setq inhibit-startup-message t)
 
+;; No blinked cursor.
+(blink-cursor-mode nil)
+
+;; Show time.
+(display-time)
+
 ;; To select a default font, and windows width and height.
 (set-frame-width (selected-frame) 80)
 (set-frame-height (selected-frame) 42)
-
-;; No blinked cursor.
-(blink-cursor-mode nil)
 
 ;; Frame maximization.
 (defun frame-fullscreen (frame)
@@ -70,7 +73,10 @@
 (setq transient-mark-mode t)
 ;; Highlight the current line.
 (global-hl-line-mode t)
+;; For dark theme.
 (set-face-background 'hl-line "#282828")
+;; For light theme.
+;;(set-face-background 'hl-line "#F0F8FF")
 ;; Shows the column number.
 (setq column-number-mode t)
 ;; Shows the brackets correspondence.
@@ -80,8 +86,8 @@
 ;; Shows the complains!
 (setq visible-bell t)
 
-;; 78th column is not be crossed.
-(setq-default fill-column 78)
+;; 80th column is not be crossed.
+(setq-default fill-column 80)
 
 ;; Use spaces instead of tabs.
 (setq-default indent-tabs-mode nil)

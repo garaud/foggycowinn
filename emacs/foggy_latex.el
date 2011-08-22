@@ -28,12 +28,6 @@
 ;; Use PDFLaTeX.
 (setq TeX-PDF-mode 1)
 
-;; Always in flyspell mode.
-(setq major-mode 'text-mode)
-(setq text-mode-hook 'turn-on-auto-fill)
-(add-hook 'text-mode-hook 'turn-on-filladapt-mode)
-(add-hook 'text-mode-hook (lambda () (flyspell-mode 1)))
-
 ;; C-o inserts "{}".
 (add-hook 'LaTeX-mode-hook
 	  '(lambda()

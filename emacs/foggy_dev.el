@@ -20,6 +20,7 @@
 ;; Set Python mode for SConsctruct file
 (add-to-list 'auto-mode-alist '("\\SConstruct*" . python-mode))
 
+;; TODO: test and clean up all stuff about Python.
 
 ;;(require 'ipython)
 ;;(setq py-python-command-args '( "--colors" "Linux"))
@@ -72,7 +73,7 @@
 ;;;;;;;;;;;
 ;;  ECB  ;;
 ;;;;;;;;;;;
-(require 'ecb)
+;;(require 'ecb)
 
 ;;;;;;;;;;;;;
 ;; DOXYGEN ;;

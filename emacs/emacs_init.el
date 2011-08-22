@@ -44,7 +44,7 @@
 
 ;; Windmove to easily move among windows.
 (require 'windmove)
-(windmove-default-keybindings 'super)
+(windmove-default-keybindings 'meta)
 
 
 ;; Note: excellent pour passer d'un buffer a l'autre et pour ouvrir des
@@ -55,6 +55,14 @@
  ido-enable-flex-matching t
  ido-max-prospects 6
  ido-everywhere t)
+
+;; Auto fill-adapt for text-mode.
+(setq major-mode 'text-mode)
+(setq text-mode-hook 'turn-on-auto-fill)
+(add-hook 'text-mode-hook 'turn-on-filladapt-mode)
+
+;; Flyspell mode.
+;; (add-hook 'text-mode-hook (lambda () (flyspell-mode 1)))
 
 
 ;; Kill ring management.
@@ -174,5 +182,5 @@ This function solves 2 problems.
 (load (fullpath-relative-to-current-file "foggy_keybindings.el"))
 (load (fullpath-relative-to-current-file "foggy_latex.el"))
 (load (fullpath-relative-to-current-file "foggy_orgmode.el"))
-(load (fullpath-relative-to-current-file "personal_data.el"))
+;;(load (fullpath-relative-to-current-file "personal_data.el"))
 (load (fullpath-relative-to-current-file "foggy_web.el"))
