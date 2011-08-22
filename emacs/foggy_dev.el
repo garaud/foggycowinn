@@ -64,6 +64,74 @@
 ;;                                 '(length initial-pattern)))
 
 
+;;;;;;;;;;;
+;; C/C++ ;;
+;;;;;;;;;;;
+
+;; I want to have a C++ mode even for *.h files.
+(setq auto-mode-alist (cons '("\\.h$" . c++-mode) auto-mode-alist))
+
+;; The Lisp file from Astyle project http://astyle.sourceforge.net/scripts.html
+;; with (setq c-default-style "bsd") sets a fine C++ coding convention for me
+;; --- brackets, indentation and so on.
+(load "astyle-hooks.el")
+
+;; TODO Clean up all this stuff.
+
+;; (defun my-c-mode-hook ()
+;;   ;; style
+;;   (setq c-basic-offset 4)
+;;   (setq default-tab-width 4)
+;; )
+;; (add-hook 'c++-mode-hook 'my-c-mode-hook)
+
+;;(setq default-tab-width 4)
+
+;;(setq c-default-style "mine")
+
+;; Special option for April.
+;; (defun april-c++-mode ()
+  ;;(interactive)
+  ;;(add-hook 'before-save-hook 'delete-trailing-whitespace t t)
+  ;; (setq c-basic-offset 4)
+  ;; (setq c-offsets-alist
+  ;;       '((statement-block-intro . +))
+  ;;       '((substatement-open . 0))
+  ;;       '((substatement-label . 0))
+  ;;       '((label . 0))
+  ;;       '((statement-cont . +))
+  ;;       ;;'((innamespace . -))
+  ;;       '((inline-open . 0))
+  ;;       '((template-args-cont . +))
+  ;;       )
+  ;;(setq c-default-style "mine")
+;; c-set-offset 'substatement-open 0)
+  ;;(setq c-default-style "gnu"
+  ;;(setq default-tab-width 4)
+;;  )
+;; (defun april-c++-mode-hook ()
+;;   (if (string-match "april" buffer-file-name)
+;;       (april-c++-mode)))
+;;(add-hook 'c++-mode-hook 'april-c++-mode-hook)
+
+;; (c-add-style
+;;  "mine"
+;;  (quote
+;;   (
+;;    (c-basic-offset . 4)
+;;    (statement-block-intro . 0)
+;;    (substatement-open . -)
+;;    (substatement-label . 0)
+;;    (label . 0)
+;;    (statement-cont . +)
+;;    (innamespace . -)
+;;    (inline-open . 0)
+;;    (template-args-cont . +)
+;;  )))
+;; (setq c-default-style "mine")
+;;(setq c-default-style "stroustrup")
+
+
 ;;;;;;;;;;;;;;;
 ;; Zencoding ;;
 ;;;;;;;;;;;;;;;
