@@ -178,7 +178,7 @@ This function solves 2 problems.
 ;; Load
 (load (fullpath-relative-to-current-file "foggy_appearance.el"))
 (load (fullpath-relative-to-current-file "foggy_dev.el"))
-(load (fullpath-relative-to-current-file "foggy_git.el"))
+(load (fullpath-relative-to-current-file "foggy_revision_control.el"))
 (load (fullpath-relative-to-current-file "foggy_keybindings.el"))
 (load (fullpath-relative-to-current-file "foggy_latex.el"))
 (load (fullpath-relative-to-current-file "foggy_orgmode.el"))
