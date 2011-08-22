@@ -8,9 +8,11 @@ TODO File
 * Import new configuration files: Emacs, vim, Git, Bash, ...
 * Write a README
 * Add a License
-* Split Emacs configuration files into a few Lisp files with their own features
 * Write a script to easily copy/install these configuration files in your account
 * Try to list necessary emacs packages which are used
 * Add a shell-script to batch compile emacs configuration file
+* Add some contents about Emacs server to the emacs/README.org file.
 * Write a THANKS file
 * Find a way to test Emacs configuration without copy/install everything
+* Replace (load-path "~/applications/emacs/package-name") by a more generic
+  one. May be ~/.emacs.d/package-base is a good one.
