@@ -38,16 +38,18 @@ in the =/path/to/foggycowinn/emacs/= directory.
 
   Names of different "packages" used in this Emacs configuration.
 
-  | Package name | File       |
-  |--------------+------------|
-  | tangotango   | appearance |
-  | python-mode  | dev        |
-  | zencoding    | dev        |
-  | magit        | git        |
-  | tex-site     | latex      |
-  | org-mode     | orgmode    |
-  | erc          | web        |
-  | identica     | web        |
+  | Package name | File       | Link (main page or source code)                    |
+  |--------------+------------+----------------------------------------------------|
+  | tangotango   | appearance | https://github.com/juba/color-theme-tangotango.git |
+  | python-mode  | dev        |                                                    |
+  | zencoding    | dev        |                                                    |
+  | magit        | git        |                                                    |
+  | auctex       | latex      |                                                    |
+  | org-mode     | orgmode    |                                                    |
+  | erc          | web        |                                                    |
+  | identica     | web        | http://git.savannah.gnu.org/cgit/identica-mode.git |
+  | emacs-oauth  | web        | https://github.com/psanford/emacs-oauth.git        |
+  | w3m          | web        |                                                    |
 
 
 * Turn me into a HTML/PDF file
