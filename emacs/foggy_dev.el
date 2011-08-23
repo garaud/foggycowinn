@@ -4,8 +4,9 @@
 ;; Author(s): Damien Garaud
 
 ;; Loading path.
-(add-to-list 'load-path "~/applications/emacs/")
-(add-to-list 'load-path "~/applications/emacs/zencoding/")
+(setq zencoding-path (format "%s/%s" emacs-foggy-package-dir "zencoding"))
+(add-to-list 'load-path zencoding-path)
+
 
 
 ;;;;;;;;;;;;

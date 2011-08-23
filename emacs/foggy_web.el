@@ -4,8 +4,13 @@
 ;; Author(s): Damien Garaud
 
 ;; Loading path.
-(add-to-list 'load-path "~/applications/emacs/identica-mode/")
-(add-to-list 'load-path "~/applications/emacs/emacs-oauth/")
+;; (add-to-list 'load-path "~/applications/emacs/identica-mode/")
+;; (add-to-list 'load-path "~/applications/emacs/emacs-oauth/")
+(setq identica-path (format "%s/%s" emacs-foggy-package-dir "identica-mode"))
+(add-to-list 'load-path identica-path)
+(setq oauth-path (format "%s/%s" emacs-foggy-package-dir "emacs-oauth"))
+(add-to-list 'load-path oauth-path)
+
 
 ;; For IRC. Do 'M-x erc'.
 (require 'erc)

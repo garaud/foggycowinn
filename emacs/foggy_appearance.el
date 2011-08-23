@@ -4,7 +4,9 @@
 ;; Author(s): Damien Garaud
 
 ;; Loading path.
-(add-to-list 'load-path "~/applications/emacs/color-theme-tangotango/")
+;;(add-to-list 'load-path "~/applications/emacs/color-theme-tangotango/")
+(setq tangotango-path (format "%s/%s" emacs-foggy-package-dir "color-theme-tangotango"))
+(add-to-list 'load-path tangotango-path)
 
 ;;(set-default-font "9x15")
 (set-default-font "8x13")

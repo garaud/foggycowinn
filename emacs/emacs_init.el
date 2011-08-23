@@ -3,7 +3,9 @@
 ;; 2011
 ;; Author(s): Damien Garaud
 
-(add-to-list 'load-path "~/applications/emacs/")
+;;(add-to-list 'load-path "~/applications/emacs/")
+(add-to-list 'load-path emacs-foggy-package-dir)
+
 
 ;;;;;;;;;;;;;
 ;; GENERAL ;;
