@@ -3,17 +3,14 @@ TODO File
 =========
 
 :author: Damien Garaud
-:date: 2011-03-03
+:date: 2011-08-23
 
 * Import new configuration files: Emacs, vim, Git, Bash, ...
 * Write a README
 * Add a License
-* Write a script to easily copy/install these configuration files in your account
-* Try to list necessary emacs packages which are used
-* Add a shell-script to batch compile emacs configuration file
 * Add some contents about Emacs server to the emacs/README.org file.
 * Write a THANKS file
 * Find a way to test Emacs configuration without copy/install everything
-* Replace (load-path "~/applications/emacs/package-name") by a more generic
-  one. May be ~/.emacs.d/package-base is a good one.
 * Clean up 'emacs/foggy_dev.el': Python part and C++ part. Too many comments !
+* Explain how to install 'auto-complete'. A complete installation ---
+   more complex than a copy of the project --- is needed.
