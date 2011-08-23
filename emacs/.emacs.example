@@ -1,0 +1,18 @@
+(server-start)
+
+;; Kill current buffer without boring message.
+(global-set-key (kbd "C-x k")
+                '(lambda () (interactive)
+                   (if server-buffer-clients
+                       (server-done) (kill-this-buffer))))
+
+;; Path where you would like to put emacs packages.
+(setq emacs-foggy-package-dir "~/applications/emacs")
+
+;; It can be a more usual path such as "~/.emacs.d/".
+;; XXX This path must be the same as the path specified in the shell script
+;; 'foggycowinn/emacs/package_download.sh'. See the shell variable
+;; 'package_dir'.
+
+;; Load configuration from FoggyCowInn.
+(load "~/src/foggycowinn/emacs/emacs_init")
