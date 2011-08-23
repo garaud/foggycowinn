@@ -7,6 +7,13 @@
 (setq zencoding-path (format "%s/%s" emacs-foggy-package-dir "zencoding"))
 (add-to-list 'load-path zencoding-path)
 
+;; Loading for Auto-complete.
+(setq auto-complete-path (format "%s/%s" emacs-foggy-package-dir "auto-complete"))
+(add-to-list 'load-path auto-complete-path)
+(require 'auto-complete-config)
+(setq ac-dict-path (format "%s/%s" emacs-foggy-package-dir "auto-complete/ac-dict"))
+(add-to-list 'ac-dictionary-directories ac-dict-path)
+(ac-config-default)
 
 
 ;;;;;;;;;;;;
