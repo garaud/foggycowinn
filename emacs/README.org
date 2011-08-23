@@ -42,23 +42,32 @@ in the =/path/to/foggycowinn/emacs/= directory.
   |--------------+------------+----------------------------------------------------|
   | tangotango   | appearance | https://github.com/juba/color-theme-tangotango.git |
   | python-mode  | dev        |                                                    |
-  | zencoding    | dev        |                                                    |
-  | magit        | git        |                                                    |
-  | auctex       | latex      |                                                    |
-  | org-mode     | orgmode    |                                                    |
-  | erc          | web        |                                                    |
+  | zencoding    | dev        | https://github.com/rooney/zencoding                |
+  | magit        | git        | GNU/Linux package                                  |
+  | auctex       | latex      | GNU/Linux package                                  |
+  | org-mode     | orgmode    | GNU/Linux package                                  |
+  | erc          | web        | GNU/Linux package                                  |
   | identica     | web        | http://git.savannah.gnu.org/cgit/identica-mode.git |
   | emacs-oauth  | web        | https://github.com/psanford/emacs-oauth.git        |
-  | w3m          | web        |                                                    |
+  | w3m          | web        | GNU/Linux package                                  |
+
+
+  You can launch the Shell script =package_download.sh= to download/clone all no
+  GNU/Linux packaged Emacs extension in a dedicated directory which can be
+  specified by yourself. Open and read/modify =package_download.sh=.
+
+  May be you would like to have a more Lisp/Emacs user-friendly extension such
+  as ELPA for Emacs Lisp Package Archive --- http://tromey.com/elpa/index.html
+  --- which will be added to vanilla GnuEmacs, version 24.
 
 
 * Turn me into a HTML/PDF file
 
-  This operation requires the mode Org-mode.
+  This operation requires the mode Org-mode --- http://orgmode.org/
 
   Open this file with Emacs and do:
 
   - =M-x org-export-as-pdf RET=
   - =M-x org-export-as-html RET=
 
-  if you want to make a PDF or HTML file.
+  if you want to make a PDF --- via LaTeX --- or a HTML file.
