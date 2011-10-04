@@ -28,6 +28,9 @@
 ;; Set Python mode for SConsctruct file
 (add-to-list 'auto-mode-alist '("\\SConstruct*" . python-mode))
 
+;; Set Python mode for *.pyx file (cython extension).
+(add-to-list 'auto-mode-alist '("\\.pyx" . python-mode))
+
 ;; TODO: test and clean up all stuff about Python.
 
 ;;(require 'ipython)
