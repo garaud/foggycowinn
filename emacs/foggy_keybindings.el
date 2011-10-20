@@ -58,4 +58,10 @@
 				(ispell-change-dictionary "francais")
 				(setq ispell-personal-dictionary "~/.ispell-priv-fr")))
 
+;;;;;;;;;;
+;; ReST ;;
+;;;;;;;;;;
 
+;; Double ticks for monospaced text such as ``something``.
+(global-unset-key "\C-xt")
+(global-set-key "\C-xt" "````\C-b\C-b")
