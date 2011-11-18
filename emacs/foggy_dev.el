@@ -30,6 +30,7 @@
 
 ;; Set Python mode for *.pyx file (cython extension).
 (add-to-list 'auto-mode-alist '("\\.pyx" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.pyd" . python-mode))
 
 ;; TODO: test and clean up all stuff about Python.
 
