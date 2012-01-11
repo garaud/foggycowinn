@@ -45,6 +45,7 @@ in the =/path/to/foggycowinn/emacs/= directory.
   | zencoding    | dev        | https://github.com/rooney/zencoding                |
   | magit        | git        | GNU/Linux package                                  |
   | auctex       | latex      | GNU/Linux package                                  |
+  | mingus       | music      | https://github.com/pft/mingus.git                  |
   | org-mode     | orgmode    | GNU/Linux package                                  |
   | erc          | web        | GNU/Linux package                                  |
   | identica     | web        | http://git.savannah.gnu.org/cgit/identica-mode.git |

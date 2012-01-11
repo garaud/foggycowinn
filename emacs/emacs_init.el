@@ -186,3 +186,4 @@ This function solves 2 problems.
 (load (fullpath-relative-to-current-file "foggy_orgmode.el"))
 ;;(load (fullpath-relative-to-current-file "personal_data.el"))
 (load (fullpath-relative-to-current-file "foggy_web.el"))
+(load (fullpath-relative-to-current-file "foggy_music.el"))
