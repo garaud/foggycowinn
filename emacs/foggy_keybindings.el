@@ -51,12 +51,12 @@
 
 ;; Switches to american dictionary.
 (global-set-key "\C-cla"   '(lambda () (interactive)
-				(ispell-change-dictionary "american")
-				(setq ispell-personal-dictionary "~/.ispell-priv-us")))
+                              (ispell-change-dictionary "american")
+                              (setq ispell-personal-dictionary "~/.ispell-priv-us")))
 ;; Switches to french dictionary.
-(global-set-key "\C-clf"   '(lambda () (interactive)
-				(ispell-change-dictionary "francais")
-				(setq ispell-personal-dictionary "~/.ispell-priv-fr")))
+(global-set-key "\C-clf" '(lambda () (interactive)
+                            (ispell-change-dictionary "francais")
+                            (setq ispell-personal-dictionary "~/.ispell-priv-fr")))
 
 ;;;;;;;;;;
 ;; ReST ;;
