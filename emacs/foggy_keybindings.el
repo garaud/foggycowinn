@@ -65,3 +65,18 @@
 ;; Double ticks for monospaced text such as ``something``.
 (global-unset-key "\C-xt")
 (global-set-key "\C-xt" "````\C-b\C-b")
+;; Math syntax in ReST such as :math:`[some equations]`.
+(global-unset-key "\C-cm")
+(global-set-key "\C-cm" ":math:``\C-b")
+
+;; TODO: I would like allow this keybindings only if rst-mode is used.
+
+;;;;;;;;;;;;;
+;; Doxygen ;;
+;;;;;;;;;;;;;
+
+;; Insert LaTeX math environment in a Doxygen comment (is defined between
+;; '\f$').
+(global-set-key "\C-cde" "\\f$\\f$\C-b\C-b\C-b")
+
+;; TODO: I would like allow this keybinding only if doxy-mode is used.
