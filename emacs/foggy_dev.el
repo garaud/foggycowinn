@@ -7,6 +7,10 @@
 (setq zencoding-path (format "%s/%s" emacs-foggy-package-dir "zencoding"))
 (add-to-list 'load-path zencoding-path)
 
+;; Loading for lua-mode.
+(setq lua-mode-path (format "%s/%s" emacs-foggy-package-dir "lua-mode"))
+(add-to-list 'load-path lua-mode-path)
+
 ;; Loading for Auto-complete.
 (setq auto-complete-path (format "%s/%s" emacs-foggy-package-dir "auto-complete"))
 (add-to-list 'load-path auto-complete-path)
@@ -216,6 +220,15 @@
 ;;  ECB  ;;
 ;;;;;;;;;;;
 ;;(require 'ecb)
+
+;;;;;;;;;
+;; Lua ;;
+;;;;;;;;;
+
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
 
 ;;;;;;;;;;;;;
 ;; DOXYGEN ;;

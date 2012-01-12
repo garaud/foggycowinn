@@ -5,12 +5,21 @@ TODO File
 :author: Damien Garaud
 :date: 2011-08-23
 
+General
+-------
+
 * Import new configuration files: Emacs, vim, Git, Bash, ...
 * Write a README
 * Add a License
-* Add some contents about Emacs server to the emacs/README.org file.
 * Write a THANKS file
+
+
+Emacs
+-----
+
+* Add some contents about Emacs server to the emacs/README.org file.
 * Find a way to test Emacs configuration without copy/install everything
 * Clean up 'emacs/foggy_dev.el': Python part and C++ part. Too many comments !
 * Explain how to install 'auto-complete'. A complete installation ---
    more complex than a copy of the project --- is needed.
+* Try to manage default size according to screen resolution

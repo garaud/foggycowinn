@@ -43,8 +43,10 @@ in the =/path/to/foggycowinn/emacs/= directory.
   | tangotango   | appearance | https://github.com/juba/color-theme-tangotango.git |
   | python-mode  | dev        |                                                    |
   | zencoding    | dev        | https://github.com/rooney/zencoding                |
+  | lua-mode     | dev        | https://github.com/immerrr/lua-mode.git            |
   | magit        | git        | GNU/Linux package                                  |
   | auctex       | latex      | GNU/Linux package                                  |
+  | mingus       | music      | https://github.com/pft/mingus.git                  |
   | org-mode     | orgmode    | GNU/Linux package                                  |
   | erc          | web        | GNU/Linux package                                  |
   | identica     | web        | http://git.savannah.gnu.org/cgit/identica-mode.git |
