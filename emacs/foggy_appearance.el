@@ -28,6 +28,9 @@
 ;; No blinked cursor.
 (blink-cursor-mode nil)
 
+;; Show trailing white space.
+(setq-default show-trailing-whitespace t)
+
 ;; Show time.
 (display-time)
 
