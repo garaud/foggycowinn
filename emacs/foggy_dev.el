@@ -153,6 +153,16 @@
 (setq astyle-file (fullpath-relative-to-current-file "astyle-hooks.el"))
 (if (file-exists-p astyle-file) (load astyle-file))
 
+;; Write a cout-c++-like for a specific variable.
+(defun cppout (name)
+  "Write a c++ output with 'name'."
+  (interactive "s")
+  (setq content (format "cout << \"%s: \" << %s << endl;" name name))
+  (end-of-line 1)
+  (newline)
+  (beginning-of-line 1)
+  (insert content)
+)
 
 ;; TODO Clean up all this stuff.
 
