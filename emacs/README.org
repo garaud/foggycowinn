@@ -21,8 +21,14 @@ See if you have an Emacs configuration file named =.emacs= in your home
 directory. Then you can write
 
 #+begin_src lisp
+ ;; A variable used by FoggyCowInn Emacs config.
+ ;; Here you specify the directory for installed Emacs external packages used by
+ ;; this Emacs configuration (see '/path/to/foggycowinn/emacs/README.org' and
+ ;; '/path/to/foggycowinn/emacs/package_list'.
+ (setq emacs-foggy-package-dir "~/applications/emacs")
+
  ;; Load configuration from FoggyCowInn.
- (load "/path/to/foggycowinn/emacs/emacs_init") 
+ (load "/path/to/foggycowinn/emacs/emacs_init")
 #+end_SRC lisp
 
 You don't have to compile the file =emacs_init.el= but you can do it with:
@@ -32,6 +38,12 @@ You don't have to compile the file =emacs_init.el= but you can do it with:
 #+end_SRC screen
 
 in the =/path/to/foggycowinn/emacs/= directory.
+
+** Emacs 24 or Emacs 23
+
+I created a branch called 'emacs24' in my git repository. You can switch to this
+branch with a =git checkout emacs24=. In Emacs 24, 'color-theme' won't be
+used. It is replaced by a new version bundled with Emacs 24.
 
 
 * Packages List
