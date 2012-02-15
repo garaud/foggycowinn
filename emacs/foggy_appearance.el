@@ -107,12 +107,12 @@
 
 
 ;; Emacs Goodies
-(require 'emacs-goodies-el)
-(require 'color-theme)
+;;(require 'emacs-goodies-el)
+;;(require 'color-theme)
 ;;(color-theme-dark-laptop)
 ;; (color-theme-gnome2)
-(require 'color-theme-tangotango)
-(color-theme-tangotango)
+;;(require 'color-theme-tangotango)
+;;(color-theme-tangotango)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
