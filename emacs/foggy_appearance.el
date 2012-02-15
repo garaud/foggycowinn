@@ -78,9 +78,9 @@
 (setq font-lock-maximum-decoration t)
 (setq transient-mark-mode t)
 ;; Highlight the current line.
-(global-hl-line-mode t)
+;;(global-hl-line-mode t)
 ;; For dark theme.
-(set-face-background 'hl-line "#282828")
+;;(set-face-background 'hl-line "#282828")
 ;; For light theme.
 ;;(set-face-background 'hl-line "#F0F8FF")
 ;; Shows the column number.
@@ -106,11 +106,8 @@
 (setq uniquify-ignore-buffers-re "^\\*")
 
 
-;; Emacs Goodies
-;;(require 'emacs-goodies-el)
-;;(require 'color-theme)
-;;(color-theme-dark-laptop)
-;; (color-theme-gnome2)
+;; Emacs Theme
+(load-theme 'tango-dark)
 ;;(require 'color-theme-tangotango)
 ;;(color-theme-tangotango)
 
