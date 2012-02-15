@@ -27,14 +27,14 @@
 ;; Damien G.: some python has not been tested yet. That's why there are a few
 ;; commented lines.
 
-(require 'python-mode)
-
-;; Set Python mode for SConsctruct file
-(add-to-list 'auto-mode-alist '("\\SConstruct*" . python-mode))
+;;(require 'python-mode)
 
 ;; Load python-mode if available, otherwise use builtin emacs python package
 (when (not(require 'python-mode nil t))
   (require 'python))
+
+;; Set Python mode for SConsctruct file
+(add-to-list 'auto-mode-alist '("\\SConstruct*" . python-mode))
 
 ;; Cython mode
 (add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
