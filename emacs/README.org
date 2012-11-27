@@ -50,20 +50,22 @@ used. It is replaced by a new version bundled with Emacs 24.
 
   Names of different "packages" used in this Emacs configuration.
 
-  | Package name | File       | Link (main page or source code)                    |
-  |--------------+------------+----------------------------------------------------|
-  | tangotango   | appearance | https://github.com/juba/color-theme-tangotango.git |
-  | python-mode  | dev        |                                                    |
-  | zencoding    | dev        | https://github.com/rooney/zencoding                |
-  | lua-mode     | dev        | https://github.com/immerrr/lua-mode.git            |
-  | magit        | git        | GNU/Linux package                                  |
-  | auctex       | latex      | GNU/Linux package                                  |
-  | mingus       | music      | https://github.com/pft/mingus.git                  |
-  | org-mode     | orgmode    | GNU/Linux package                                  |
-  | erc          | web        | GNU/Linux package                                  |
-  | identica     | web        | http://git.savannah.gnu.org/cgit/identica-mode.git |
-  | emacs-oauth  | web        | https://github.com/psanford/emacs-oauth.git        |
-  | w3m          | web        | GNU/Linux package                                  |
+  | Package name  | File       | Link (main page or source code)                    |
+  |---------------+------------+----------------------------------------------------|
+  | tangotango    | appearance | https://github.com/juba/color-theme-tangotango.git |
+  | emacs-goodies | appearance | GNU/Linux package (for Emacs version < 24)         |
+  | python-mode   | dev        |                                                    |
+  | zencoding     | dev        | https://github.com/rooney/zencoding                |
+  | lua-mode      | dev        | https://github.com/immerrr/lua-mode.git            |
+  | doxymacs      | dev        | GNU/Linux package                                  |
+  | magit         | git        | GNU/Linux package                                  |
+  | auctex        | latex      | GNU/Linux package                                  |
+  | mingus        | music      | https://github.com/pft/mingus.git                  |
+  | org-mode      | orgmode    | GNU/Linux package                                  |
+  | erc           | web        | GNU/Linux package                                  |
+  | identica      | web        | http://git.savannah.gnu.org/cgit/identica-mode.git |
+  | emacs-oauth   | web        | https://github.com/psanford/emacs-oauth.git        |
+  | w3m           | web        | GNU/Linux package                                  |
 
 
   You can launch the Shell script =package_download.sh= to download/clone all no
