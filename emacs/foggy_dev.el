@@ -11,6 +11,14 @@
 (setq lua-mode-path (format "%s/%s" emacs-foggy-package-dir "lua-mode"))
 (add-to-list 'load-path lua-mode-path)
 
+;; Loading for yaml-mode.
+(setq yaml-mode-path (format "%s/%s" emacs-foggy-package-dir "yaml-mode"))
+(add-to-list 'load-path yaml-mode-path)
+
+;; Loading for jinja2-mode.
+(setq jinja-mode-path (format "%s/%s" emacs-foggy-package-dir "jinja2-mode"))
+(add-to-list 'load-path jinja-mode-path)
+
 ;; Loading for Auto-complete.
 (setq auto-complete-path (format "%s/%s" emacs-foggy-package-dir "auto-complete"))
 (add-to-list 'load-path auto-complete-path)
@@ -18,6 +26,28 @@
 (setq ac-dict-path (format "%s/%s" emacs-foggy-package-dir "auto-complete/ac-dict"))
 (add-to-list 'ac-dictionary-directories ac-dict-path)
 (ac-config-default)
+
+
+;;;;;;;;;;
+;; YAML ;;
+;;;;;;;;;;
+
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
+;; Unlike python-mode, this mode follows the Emacs convention of not binding the
+;; ENTER key to `newline-and-indent'.  To get this behavior, add the key
+;; definition to `yaml-mode-hook':
+(add-hook 'yaml-mode-hook
+          '(lambda ()
+             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+;;;;;;;;;;;;
+;; Jinja2 ;;
+;;;;;;;;;;;;
+
+(require 'jinja2-mode)
+(add-to-list 'auto-mode-alist '("\\.j2$" . jinja2-mode))
 
 
 ;;;;;;;;;;;;
