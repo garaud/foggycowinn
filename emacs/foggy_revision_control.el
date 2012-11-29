@@ -16,6 +16,21 @@
 ;; Mercurial ;;
 ;;;;;;;;;;;;;;;
 
+;; Loading for monky (a magit-like for Hg).
+(setq monky-path (format "%s/%s" emacs-foggy-package-dir "monky"))
+(add-to-list 'load-path monky-path)
+
+(require 'monky)
+
+;; By default monky spawns a seperate hg process for every command.
+;; This will be slow if the repo contains lot of changes.
+;; if `monky-process-type' is set to cmdserver then monky will spawn a single
+;; cmdserver and communicate over pipe.
+;; Available only on mercurial versions 1.9 or higher
+
+(setq monky-process-type 'cmdserver)
+
+
 ;;; This version has better chances to run on windows
 (setq hg-grep-command "grep --color=always -nH -e ")
 (setq hg-grep-tempfile (make-temp-file "grep"))
