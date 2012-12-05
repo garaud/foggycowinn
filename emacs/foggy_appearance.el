@@ -105,6 +105,16 @@
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
 
+;; Conf-mode for 'rc' files.
+(add-to-list 'auto-mode-alist '("hgrc\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '(".hgrc\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '("vimrc\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '(".vimrc\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '(".colorgccrc\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '("colorgccrc\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '("todorc\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '(".todorc\\'" . conf-mode))
+
 
 ;; Emacs Theme
 (load-theme 'tango-dark)
