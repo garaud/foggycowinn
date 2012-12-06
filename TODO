@@ -24,3 +24,4 @@ Emacs
    more complex than a copy of the project --- is needed.
 * Try to manage default size according to screen resolution
 * [emacs24] Fix errors and deprecated stuff
+* Do a 'delete-trailing-whitespace' before saving
