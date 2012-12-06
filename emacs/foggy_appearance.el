@@ -95,6 +95,9 @@
 ;; 80th column is not be crossed.
 (setq-default fill-column 80)
 
+;; Fill column indicator (see http://www.emacswiki.org/FillColumnIndicator)
+(require 'fill-column-indicator)
+
 ;; Use spaces instead of tabs.
 (setq-default indent-tabs-mode nil)
 
