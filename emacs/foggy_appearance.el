@@ -92,6 +92,28 @@
 ;; Shows the complains!
 (setq visible-bell t)
 
+
+;; highlight XXX style code tags in source files
+(font-lock-add-keywords 'python-mode
+  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
+(font-lock-add-keywords 'c++-mode
+  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
+(font-lock-add-keywords 'c-mode
+  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
+(font-lock-add-keywords 'rst-mode
+  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
+(font-lock-add-keywords 'tex-mode
+  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
+(font-lock-add-keywords 'cmake-mode
+  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
+(font-lock-add-keywords 'conf-mode
+  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
+(font-lock-add-keywords 'makefile-mode
+  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
+(font-lock-add-keywords 'lisp-mode
+  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
+
+
 ;; 80th column is not be crossed.
 (setq-default fill-column 80)
 
