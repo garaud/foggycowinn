@@ -44,10 +44,15 @@
 ;; Enables C-next.
 (put 'scroll-left 'disabled nil)
 
+;; Makes killing/yanking interact with clipboard X11 selection
+(setq x-select-enable-clipboard t)
+
 ;; Windmove to easily move among windows.
 (require 'windmove)
 (windmove-default-keybindings 'meta)
 
+;; 'yes' & 'no' with one character 'y' & 'n'.
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Note: excellent pour passer d'un buffer a l'autre et pour ouvrir des
 ;; fichiers: Interactively do things.
