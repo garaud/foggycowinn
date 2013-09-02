@@ -72,7 +72,7 @@
 (setq save-abbrevs 'silently)
 
 ;; Shows the buffer name in window title bar.
-(setq frame-title-format "%b - emacs")
+(setq frame-title-format "emacs - %b")
 
 ;; Highlights as much as possible.
 (setq font-lock-maximum-decoration t)
