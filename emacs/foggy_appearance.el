@@ -31,6 +31,11 @@
 ;; Show trailing white space.
 (setq-default show-trailing-whitespace t)
 
+;; Show empty lines.
+(setq-default indicate-empty-lines t)
+(when (not indicate-empty-lines)
+  (toggle-indicate-empty-lines))
+
 ;; Show time.
 (display-time)
 
