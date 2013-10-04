@@ -31,6 +31,11 @@
 ;; Show trailing white space.
 (setq-default show-trailing-whitespace t)
 
+;; Show empty lines.
+(setq-default indicate-empty-lines t)
+(when (not indicate-empty-lines)
+  (toggle-indicate-empty-lines))
+
 ;; Show time.
 (display-time)
 
@@ -72,7 +77,7 @@
 (setq save-abbrevs 'silently)
 
 ;; Shows the buffer name in window title bar.
-(setq frame-title-format "%b - emacs")
+(setq frame-title-format "emacs - %b")
 
 ;; Highlights as much as possible.
 (setq font-lock-maximum-decoration t)

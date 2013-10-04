@@ -61,6 +61,10 @@
 ;; Prefer python.el (instead of python-mode). python-mode manages docstring and
 ;; triple quotes very badly.
 
+;; Automatic indent after 'RET'
+(add-hook 'python-mode-hook '(lambda ()
+  (local-set-key (kbd "RET") 'newline-and-indent)))
+
 ;; Set Python mode for SConsctruct file
 (add-to-list 'auto-mode-alist '("\\SConstruct" . python-mode))
 
