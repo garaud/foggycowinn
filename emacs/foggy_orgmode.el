@@ -21,6 +21,8 @@
 ;; Highlight the current line in agenda views.
 ;;(add-hook 'org-agenda-mode-hook 'highlight-current-line-minor-mode)
 
+;; Display date when a task is done.
+(setq org-log-done t)
 
 ;;;;;;;;;;;;;;;;;
 ;; Keybindings ;;
