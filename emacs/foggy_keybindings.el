@@ -59,7 +59,7 @@
                             (setq ispell-personal-dictionary "~/.ispell-priv-fr")))
 
 ;; Set the mark-ring to Shift + left
-(global-set-key (kbd "<s-left>") (kbd "C-u C-SPC"))
+(global-set-key (kbd "<S-left>") (kbd "C-u C-SPC"))
 
 ;; Open different symbols of the current buffer (function, class, etc.) with ido.
 (global-set-key (kbd "M-i") 'ido-goto-symbol)
