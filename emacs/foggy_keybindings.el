@@ -64,6 +64,9 @@
 ;; Open different symbols of the current buffer (function, class, etc.) with ido.
 (global-set-key (kbd "M-i") 'ido-goto-symbol)
 
+;; Search the current word in a TAGS file.
+(global-set-key (kbd "C-c w") 'search-word-tags)
+
 ;;;;;;;;;;
 ;; ReST ;;
 ;;;;;;;;;;
