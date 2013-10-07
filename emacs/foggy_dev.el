@@ -186,15 +186,28 @@
 (if (file-exists-p astyle-file) (load astyle-file))
 
 ;; Write a cout-c++-like for a specific variable.
-(defun cppout (name)
-  "Write a c++ output with 'name'."
-  (interactive "s")
-  (setq content (format "cout << \"%s: \" << %s << endl;" name name))
+(defun cppout ()
+  "Write a c++ output of the current word."
+  (interactive)
+  (setq cword (current-word))
+  (setq content (format "cout << \"%s: \" << %s << endl;" cword cword))
   (end-of-line 1)
   (newline)
   (beginning-of-line 1)
   (insert content)
 )
+
+(defun search-word-tags ()
+  "Search the current word in tags via 'tags-apropos'."
+  (interactive)
+  ;; Try to be clever than that.
+  ;;   - case sensitive REGEXP
+  (setq case-fold-search nil) ;; or 't' does not seem work to put the word in apropos REGEXP case sensitive.
+  ;; Match with 'class|def word(' for instance (case insensitive for now).
+  ;; Take a look at a TAGS file.
+  (tags-apropos (concat "[^_]\\<" (current-word) "\\>\("))
+)
+
 
 ;; TODO Clean up all this stuff.
 
