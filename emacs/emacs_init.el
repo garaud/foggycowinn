@@ -66,7 +66,6 @@
 ;; Auto fill-adapt for text-mode.
 (setq major-mode 'text-mode)
 (setq text-mode-hook 'turn-on-auto-fill)
-(add-hook 'text-mode-hook 'turn-on-filladapt-mode)
 
 ;; Flyspell mode.
 ;; (add-hook 'text-mode-hook (lambda () (flyspell-mode 1)))

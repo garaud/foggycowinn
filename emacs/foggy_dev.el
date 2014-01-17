@@ -64,6 +64,19 @@
 ;; Prefer python.el (instead of python-mode). python-mode manages docstring and
 ;; triple quotes very badly.
 
+;; Linum mode with Python.
+(add-hook 'python-mode-hook 'linum-mode)
+
+;; Rope (via ropemacs) & pymacs.
+;;(require 'pymacs)
+;; (pymacs-load "ropemacs")
+;;(pymacs-load "ropemacs" "rope-")
+
+;; Jedi setup.
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:setup-keys t)
+;; (setq jedi:complete-on-dot t)
+
 ;; Automatic indent after 'RET'
 (add-hook 'python-mode-hook '(lambda ()
   (local-set-key (kbd "RET") 'newline-and-indent)))
