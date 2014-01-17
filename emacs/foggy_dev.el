@@ -27,6 +27,9 @@
 (add-to-list 'ac-dictionary-directories ac-dict-path)
 (ac-config-default)
 
+;; Yasnippet.
+(yas-global-mode 1)
+
 
 ;;;;;;;;;;
 ;; YAML ;;
