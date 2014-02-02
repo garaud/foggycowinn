@@ -1,0 +1,20 @@
+set bell-style none
+
+
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+
+"\ep": history-search-backward
+"\en": history-search-forward
+
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+"\e[5C": forward-word
+"\e[5D": backward-word
+
+"\e[3~": delete-char
+"\e[3;5~": kill-word

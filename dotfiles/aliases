@@ -1,0 +1,74 @@
+
+# cd
+alias .='cd ../'
+alias ..='cd ../../'
+alias ...='cd ../../../'
+
+# Editor
+alias vi=vim
+alias emc='emacsclient -n'
+alias ec='emacsclient -n'
+alias e='emacsclient -n'
+
+# List dir & grep.
+alias ls='ls --color=auto'
+alias ll='ls -lF'
+alias la='ls -A'
+alias l='ls -CF'
+alias grep='grep --color=auto'
+alias ag='ag --color-line-number="1;32;40" --color-path="1;37;44" --color-match="1;31;40"'
+alias pyg='ag -G \.py$'
+alias hpg='grep -r --include="*.h" --include="*.hpp" --exclude-dir=".svn" --exclude-dir=".git" --exclude-dir=".hg"'
+alias ccg='grep -r --include="*.cpp" --include="*.cc" --exclude-dir=".svn" --exclude-dir=".git" --exclude-dir=".hg"'
+alias cmgrep='grep -r --include="*.cmake" --include="CMakeLists.txt" --exclude-dir=".svn" --exclude-dir=".git" --exclude-dir=".hg"'
+
+# DCVS.
+alias gitka='gitk --all'
+alias mq='hg -R `hg root`/.hg/patches'
+alias hgl='hg log -G'
+alias tig='tig --all'
+
+##########
+# Dev and debug tools.
+# Valgrind.
+alias val='valgrind -v --error-limit=no --leak-check=yes --show-reachable=yes --num-callers=10 --log-file=valgrind_output-%p'
+alias valfull='valgrind -v --leak-check=full --leak-resolution=high --read-var-info=yes --show-reachable=yes --track-origins=yes --log-file=valgrind-full_output-%p'
+alias valcache='valgrind --tool=callgrind'
+# IPython
+alias ipydata='ipython --profile=datasci' # With numpy, pandas, matplotlib
+# CMake
+alias cmake-release='cmake -DCMAKE_BUILD_TYPE:STRING=Release'
+alias ccmake-release='ccmake -DCMAKE_BUILD_TYPE:STRING=Release'
+alias cmake-debug='cmake -DCMAKE_BUILD_TYPE:STRING=Debug'
+alias cmake-verbose='cmake -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=2 -DCMAKE_VERBOSE_MAKEFILE:BOOL=TRUE'
+alias ccmake-debug='ccmake -DCMAKE_BUILD_TYPE:STRING=Debug'
+alias cmake-clang-debug='CC=clang CXX=clang++ cmake -DCMAKE_CXX_FLAGS:STRING="-g"'
+alias cmake-clang-relase='CC=clang CXX=clang++ cmake -DCMAKE_CXX_FLAGS:STRING="" -DCMAKE_BUILD_TYPE:STRING=Release'
+alias cmake-plapril='cmake -DAPRIL_PROJECT_DIR=/home/dag/src/april -DEIGEN3_INCLUDE_DIR=/home/dag/usr/include/eigen3/ -DCPLEX_INSTALL_DIR=/home/dag/var/ibm/CPLEX_Studio_Preview124'
+alias cmhlistvar='cmake --help-variable-list'
+alias cmhlistcmd='cmake --help-command-list'
+alias cmhlistprop='cmake --help-property-list'
+alias cmhvariable='cmake --help-variable'
+alias cmhcommand='cmake --help-command'
+alias cmhproperty='cmake --help-property'
+alias cmhmodule='cmake --help-module'
+
+# Misc.
+alias ta='todo -A'
+alias dusort='du --max-depth=1 -x --block-size=1048576 | sort -nr'
+
+# For make, C style compliant. It's useful to use colorgcc. UTF-8 encoding has
+# not been supported by the Perl script colorgcc yet (where code is between
+# ticks).
+alias make='LC_CTYPE=C make'
+
+# Cubicweb
+alias cw-ctl='cubicweb-ctl'
+
+# Apt-stuff
+alias asearch='apt-cache search'
+alias ashow='apt-cache show'
+alias agu='sudo apt-get update'
+alias agi='sudo apt-get install'
+alias agg='sudo apt-get upgrade'
+alias agr='sudo apt-get remove'
