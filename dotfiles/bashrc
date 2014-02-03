@@ -68,6 +68,10 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
+# If use 'powerline'
+if [ -f ~/code/powerline/powerline/bindings/bash/powerline.sh ]; then
+    source ~/code/powerline/powerline/bindings/bash/powerline.sh
+fi
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
