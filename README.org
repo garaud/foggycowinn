@@ -3,8 +3,8 @@
 
 * About
 
-'FoggyCowInn' is an anagram of "my own config". You have theses following
-directories:
+"FoggyCowInn" comes from "FogCowInn", an anagram of "own config". You have
+theses following directories:
 
 - =dotfiles=: generic "rc" configuration files for bash, zsh, etc.
 - =emacs=: a few ELisp files to configure my Emacs 24 environment.
@@ -13,3 +13,5 @@ directories:
 
   - Avoid downloading/installing Emacs extensions manually. Use a packaging
     system instead.
+  - Add a =powerline= configuration.
+  - Add an =i3= configuration.
