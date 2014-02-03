@@ -10,7 +10,7 @@
 
 ;;(set-default-font "9x15")
 (set-default-font "8x13")
-(set-default-font "Monospace-12")
+(set-default-font "DejaVu Sans Mono-12")
 ;; If Emacs 23 is in use, enjoy a great font!
 ;; (setq running-emacs-23 (> emacs-major-version 22))
 ;; (if running-emacs-23
