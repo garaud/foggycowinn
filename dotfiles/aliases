@@ -1,8 +1,8 @@
 
 # cd
-alias .='cd ../'
-alias ..='cd ../../'
-alias ...='cd ../../../'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
 
 # Editor
 alias vi=vim
