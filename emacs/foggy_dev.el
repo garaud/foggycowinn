@@ -192,6 +192,10 @@
 ;; I want to have a C++ mode even for *.h files.
 (setq auto-mode-alist (cons '("\\.h$" . c++-mode) auto-mode-alist))
 
+;; Linum mode for C++
+(add-hook 'c++-mode-hook 'linum-mode)
+
+
 ;; The Lisp file from Astyle project http://astyle.sourceforge.net/scripts.html
 ;; with (setq c-default-style "bsd") sets a fine C++ coding convention for me
 ;; --- brackets, indentation and so on. Do nothing if the file does not exist.
