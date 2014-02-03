@@ -1,0 +1,4 @@
+syn on
+filetype plugin indent on
+set sw=4
+set et
