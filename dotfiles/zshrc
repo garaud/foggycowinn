@@ -45,7 +45,7 @@ at_reverseoff=$'\e[27m'
 at_strikeoff=$'\e[29m'
 
 # Looks like '@host [time] current dir '
-PROMPT="${fg_pink}@%m ${fg_lblue}[%T] ${fg_white}${at_bold}%~${at_normal}
+PROMPT="${bg_blue}${at_bold}@%m${at_normal} ${fg_pink}[%T] ${fg_white}%~${at_normal}
 > "
 # RPROMPT="${fg_lblue}[%T]${at_normal}"
 
