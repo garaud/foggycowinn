@@ -1,3 +1,12 @@
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+# Oh-my-zsh plugins.
+plugins=(git mercurial zshmarks)
+
+source $ZSH/oh-my-zsh.sh
+
+
 # Set up the prompt
 autoload -Uz promptinit
 promptinit
@@ -45,7 +54,7 @@ at_reverseoff=$'\e[27m'
 at_strikeoff=$'\e[29m'
 
 # Looks like '@host [time] current dir '
-PROMPT="${bg_blue}${at_bold}@%m${at_normal} ${fg_pink}[%T] ${fg_white}%~${at_normal}
+PROMPT="${bg_blue}${at_bold}@%m${at_normal} ${fg_pink}${at_bold}[%T]${at_normal} ${fg_gray}${at_bold}%~${at_normal}
 > "
 # RPROMPT="${fg_lblue}[%T]${at_normal}"
 
@@ -55,14 +64,13 @@ PROMPT="${bg_blue}${at_bold}@%m${at_normal} ${fg_pink}[%T] ${fg_white}%~${at_nor
 #fi
 
 setopt histignorealldups sharehistory
-
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
-
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
+
+# Use emacs keybindings even if our EDITOR is set to vi
+bindkey -e
 
 # Use modern completion system
 autoload -Uz compinit
@@ -89,4 +97,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # Some aliases.
 if [ -f ~/.aliases ]; then
     source ~/.aliases
+fi
+
+# Extra config.
+if [ -f ~/.extra ]; then
+    source ~/.extra
 fi
