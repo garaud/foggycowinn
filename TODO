@@ -8,20 +8,27 @@ TODO File
 General
 -------
 
-* Import new configuration files: Emacs, vim, Git, Bash, ...
-* Write a README
 * Add a License
 * Write a THANKS file
 
+Dotfiles
+--------
+
+* Add an =i3= configuration.
+* Use zsh 'colors' for the prompt instead of hard-code colors.
+* zsh prompt: display if the tracked (git or hg) files are currently modified in
+  a repo.
+* Use a Git sub-module of a fork from oh-my-zsh? Allow to clone it and configure
+  it thanks to the =bootstrap.sh= script?
+* Use Prezto instead of oh-my-zsh?
 
 Emacs
 -----
 
 * Add some contents about Emacs server to the emacs/README.org file.
-* Find a way to test Emacs configuration without copy/install everything
+* Find a way to test Emacs configuration without copy/install everything - Avoid
+  downloading/installing Emacs extensions manually. Use a packaging system
+  instead.
 * Clean up 'emacs/foggy_dev.el': Python part and C++ part. Too many comments !
-* Explain how to install 'auto-complete'. A complete installation ---
-   more complex than a copy of the project --- is needed.
 * Try to manage default size according to screen resolution
 * [emacs24] Fix errors and deprecated stuff
-* Do a 'delete-trailing-whitespace' before saving
