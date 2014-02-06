@@ -1,4 +1,5 @@
-syn on
+syntax on
+colorscheme desert
 filetype plugin indent on
-set sw=4
-set et
+set shiftwidth=4
+set expandtab
