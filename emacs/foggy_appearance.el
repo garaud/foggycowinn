@@ -3,6 +3,10 @@
 ;; 2011-2014
 ;; Author(s): Damien Garaud
 
+;; Emacs Theme
+;; (load-theme 'tango-dark)
+(load-theme 'tangotango t)
+
 ;;(set-default-font "9x15")
 (set-default-font "8x13")
 (set-default-font "DejaVu Sans Mono-12")
@@ -132,11 +136,6 @@
 (add-to-list 'auto-mode-alist '("todorc\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '(".todorc\\'" . conf-mode))
 
-
-;; Emacs Theme
-(load-theme 'tango-dark)
-;;(require 'color-theme-tangotango)
-;;(color-theme-tangotango)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
