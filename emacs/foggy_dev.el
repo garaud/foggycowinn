@@ -1,35 +1,16 @@
 ;; -*- coding: utf-8 -*-
 ;; Emacs configuration file for development
-;; 2011
+;; 2011-2014
 ;; Author(s): Damien Garaud
 
-;; Loading path.
-(setq zencoding-path (format "%s/%s" emacs-foggy-package-dir "zencoding"))
-(add-to-list 'load-path zencoding-path)
-
-;; Loading for lua-mode.
-(setq lua-mode-path (format "%s/%s" emacs-foggy-package-dir "lua-mode"))
-(add-to-list 'load-path lua-mode-path)
-
-;; Loading for yaml-mode.
-(setq yaml-mode-path (format "%s/%s" emacs-foggy-package-dir "yaml-mode"))
-(add-to-list 'load-path yaml-mode-path)
-
-;; Loading for jinja2-mode.
-(setq jinja-mode-path (format "%s/%s" emacs-foggy-package-dir "jinja2-mode"))
-(add-to-list 'load-path jinja-mode-path)
-
-;; Loading for Auto-complete.
-(setq auto-complete-path (format "%s/%s" emacs-foggy-package-dir "auto-complete"))
-(add-to-list 'load-path auto-complete-path)
+;; Auto Complete
 (require 'auto-complete-config)
-(setq ac-dict-path (format "%s/%s" emacs-foggy-package-dir "auto-complete/ac-dict"))
-(add-to-list 'ac-dictionary-directories ac-dict-path)
+;;(setq ac-dict-path (format "%s/%s" emacs-foggy-package-dir "auto-complete/ac-dict"))
+;;(add-to-list 'ac-dictionary-directories ac-dict-path)
 (ac-config-default)
 
 ;; Yasnippet.
 (yas-global-mode 1)
-
 
 ;;;;;;;;;;
 ;; YAML ;;
@@ -202,8 +183,8 @@
 ;; The Lisp file from Astyle project http://astyle.sourceforge.net/scripts.html
 ;; with (setq c-default-style "bsd") sets a fine C++ coding convention for me
 ;; --- brackets, indentation and so on. Do nothing if the file does not exist.
-(setq astyle-file (fullpath-relative-to-current-file "astyle-hooks.el"))
-(if (file-exists-p astyle-file) (load astyle-file))
+;;(setq astyle-file (fullpath-relative-to-current-file "astyle-hooks.el"))
+;;(if (file-exists-p astyle-file) (load astyle-file))
 
 ;; Write a cout-c++-like for a specific variable.
 (defun cppout ()
@@ -294,12 +275,6 @@
 (add-to-list 'auto-mode-alist '("\\.cmake\\'" . cmake-mode))
 
 
-;;;;;;;;;;;;;;;
-;; Zencoding ;;
-;;;;;;;;;;;;;;;
-(require 'zencoding-mode)
-(add-hook 'sgml-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
-
 ;;;;;;;;;;;
 ;;  ECB  ;;
 ;;;;;;;;;;;
@@ -337,3 +312,7 @@
 
 ;; Open many windows when you launch 'gdb'.
 (setq gdb-many-windows t)
+
+
+(setq foggy_dev-loaded t)
+(provide 'foggy_dev)
