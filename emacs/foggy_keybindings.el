@@ -1,12 +1,17 @@
 ;; -*- coding: utf-8 -*-
 ;; Emacs configuration file for key bindings.
-;; 2011
+;; 2011-2014
 ;; Author(s): Damien Garaud
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; GLOBAL BINDINGS ;;
 ;;;;;;;;;;;;;;;;;;;;;
 
+;; Kill current buffer without boring message.
+(global-set-key (kbd "C-x k")
+                '(lambda () (interactive)
+                   (if server-buffer-clients
+                       (server-done) (kill-this-buffer))))
 
 (global-unset-key "\C-x\i")
 (global-set-key "\C-x\i" 'indent-region)
@@ -89,3 +94,6 @@
 (global-set-key "\C-cde" "\\f$\\f$\C-b\C-b\C-b")
 
 ;; TODO: I would like allow this keybinding only if doxy-mode is used.
+
+(setq foggy_keybindings-loaded t)
+(provide 'foggy_keybindings)
