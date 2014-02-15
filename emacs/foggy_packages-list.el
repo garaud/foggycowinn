@@ -16,6 +16,7 @@
     monky
     ;;mingus
     org
+    tangotango-theme
     yaml-mode
     yasnippet
     )
