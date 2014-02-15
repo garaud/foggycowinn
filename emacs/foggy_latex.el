@@ -1,8 +1,7 @@
 ;; -*- coding: utf-8 -*-
 ;; Emacs configuration file for LaTeX
-;; 2011
+;; 2011-2014
 ;; Author(s): Damien Garaud
-
 
 ;;;;;;;;;;;
 ;; LATEX ;;
@@ -90,3 +89,6 @@ all the regular expressions must match for the element to apply."
 		  (regexp :tag "Extension")
 		  (choice regexp (repeat :tag "List" regexp))
 		  (string :tag "Command"))))
+
+(setq foggy_latex-loaded t)
+(provide 'foggy_latex)
