@@ -3,80 +3,31 @@
 
 * About
 
-So empty...
-
+List of Emacs Lisp files for my own Emacs configuration.
 
 * How to use it?
-
-
 ** Copy the FoggyCowInn Emacs directory
 
 Do =git clone http://git.gitorious.org/foggycowinn/foggycowinn.git= or
  =git clone git://gitorious.org/foggycowinn/foggycowinn.git=.
 
+See also on Github at https://github.com/garaud/foggycowinn
 
 ** Create or modify your Emacs configuration file
 
-See if you have an Emacs configuration file named =.emacs= in your home
-directory. Then you can write
+Take a look the the =.emacs.example= in the =emacs= directory.
 
-#+begin_src lisp
- ;; A variable used by FoggyCowInn Emacs config.
- ;; Here you specify the directory for installed Emacs external packages used by
- ;; this Emacs configuration (see '/path/to/foggycowinn/emacs/README.org' and
- ;; '/path/to/foggycowinn/emacs/package_list'.
- (setq emacs-foggy-package-dir "~/applications/emacs")
-
- ;; Load configuration from FoggyCowInn.
- (load "/path/to/foggycowinn/emacs/emacs_init")
-#+end_SRC lisp
-
-You don't have to compile the file =emacs_init.el= but you can do it with:
-
-#+begin_src screen
-  > make
-#+end_SRC screen
-
-in the =/path/to/foggycowinn/emacs/= directory.
+The =emacs_init.el= is the main configuration file. It loads the different
+files =foggy_*.el=.
 
 ** Emacs 24 or Emacs 23
 
-I created a branch called 'emacs24' in my git repository. You can switch to this
-branch with a =git checkout emacs24=. In Emacs 24, 'color-theme' won't be
-used. It is replaced by a new version bundled with Emacs 24.
-
+I use Emacs 24 for a while now. These configuration should not work with
+Emacs 23.
 
 * Packages List
 
-  Names of different "packages" used in this Emacs configuration.
-
-  | Package name  | File             | Link (main page or source code)                    |
-  |---------------+------------------+----------------------------------------------------|
-  | tangotango    | appearance       | https://github.com/juba/color-theme-tangotango.git |
-  | emacs-goodies | appearance       | GNU/Linux package (for Emacs version < 24)         |
-  | python-mode   | dev              |                                                    |
-  | zencoding     | dev              | https://github.com/rooney/zencoding                |
-  | lua-mode      | dev              | https://github.com/immerrr/lua-mode.git            |
-  | doxymacs      | dev              | GNU/Linux package                                  |
-  | magit         | revision_control | GNU/Linux package                                  |
-  | monky         | revision_control | https://github.com/ananthakumaran/monky.git        |
-  | auctex        | latex            | GNU/Linux package                                  |
-  | mingus        | music            | https://github.com/pft/mingus.git                  |
-  | org-mode      | orgmode          | GNU/Linux package                                  |
-  | erc           | web              | GNU/Linux package                                  |
-  | identica      | web              | http://git.savannah.gnu.org/cgit/identica-mode.git |
-  | emacs-oauth   | web              | https://github.com/psanford/emacs-oauth.git        |
-  | w3m           | web              | GNU/Linux package                                  |
-
-
-  You can launch the Shell script =package_download.sh= to download/clone all no
-  GNU/Linux packaged Emacs extension in a dedicated directory which can be
-  specified by yourself. Open and read/modify =package_download.sh=.
-
-  May be you would like to have a more Lisp/Emacs user-friendly extension such
-  as ELPA for Emacs Lisp Package Archive --- http://tromey.com/elpa/index.html
-  --- which will be added to vanilla GnuEmacs, version 24.
-
+  See =emacs/foggy_packages-list.el=
 
 * Turn me into a HTML/PDF file
 
