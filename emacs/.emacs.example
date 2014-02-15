@@ -1,18 +1,13 @@
+;; -*- mode: lisp -*-
 (server-start)
 
-;; Kill current buffer without boring message.
-(global-set-key (kbd "C-x k")
-                '(lambda () (interactive)
-                   (if server-buffer-clients
-                       (server-done) (kill-this-buffer))))
+;; Global variables.
+;; Path of the emacs configs directory.
+(setq emacs-foggy-dir "~/src/foggycowinn/emacs"
+      packages-list-file (expand-file-name "foggy_packages-list.el" emacs-foggy-dir)
+      setup-packages-file (expand-file-name "foggy_packages-setup.el" emacs-foggy-dir)
+      init-emacs-file (expand-file-name "emacs_init.el" emacs-foggy-dir))
 
-;; Path where you would like to put emacs packages.
-(setq emacs-foggy-package-dir "~/applications/emacs")
-
-;; It can be a more usual path such as "~/.emacs.d/".
-;; XXX This path must be the same as the path specified in the shell script
-;; 'foggycowinn/emacs/package_download.sh'. See the shell variable
-;; 'package_dir'.
-
-;; Load configuration from FoggyCowInn.
-(load "~/src/foggycowinn/emacs/emacs_init")
+(load packages-list-file)
+(load setup-packages-file)
+(load init-emacs-file)
