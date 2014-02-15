@@ -1,12 +1,7 @@
 ;; -*- coding: utf-8 -*-
 ;; Emacs configuration file for appearance
-;; 2011
+;; 2011-2014
 ;; Author(s): Damien Garaud
-
-;; Loading path.
-;;(add-to-list 'load-path "~/applications/emacs/color-theme-tangotango/")
-(setq tangotango-path (format "%s/%s" emacs-foggy-package-dir "color-theme-tangotango"))
-(add-to-list 'load-path tangotango-path)
 
 ;;(set-default-font "9x15")
 (set-default-font "8x13")
@@ -123,7 +118,7 @@
 (setq-default fill-column 80)
 
 ;; Fill column indicator (see http://www.emacswiki.org/FillColumnIndicator)
-(require 'fill-column-indicator)
+;; (require 'fill-column-indicator)
 
 ;; Use spaces instead of tabs.
 (setq-default indent-tabs-mode nil)
@@ -163,3 +158,6 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  )
+
+(setq foggy-appearance-loaded t)
+(provide 'foggy_appearance)
