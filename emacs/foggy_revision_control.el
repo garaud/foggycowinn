@@ -1,6 +1,6 @@
 ;; -*- coding: utf-8 -*-
 ;; Emacs configuration file for Git and Mercurial.
-;; 2011
+;; 2011-2014
 ;; Author(s): Damien Garaud
 
 ;;;;;;;;;
@@ -15,10 +15,6 @@
 ;;;;;;;;;;;;;;;
 ;; Mercurial ;;
 ;;;;;;;;;;;;;;;
-
-;; Loading for monky (a magit-like for Hg).
-(setq monky-path (format "%s/%s" emacs-foggy-package-dir "monky"))
-(add-to-list 'load-path monky-path)
 
 (require 'monky)
 
@@ -63,3 +59,6 @@
 
   (hg-grep (buffer-substring start end))
 )
+
+(setq foggy_revision_control-loaded t)
+(provide 'foggy_revision_control)
