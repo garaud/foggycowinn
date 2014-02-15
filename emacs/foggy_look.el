@@ -1,5 +1,5 @@
 ;; -*- coding: utf-8 -*-
-;; Emacs configuration file for appearance
+;; Emacs configuration file for the Emacs look
 ;; 2011-2014
 ;; Author(s): Damien Garaud
 
@@ -150,5 +150,5 @@
   ;; If there is more than one, they won't work right.
  )
 
-(setq foggy-appearance-loaded t)
-(provide 'foggy_appearance)
+(setq foggy-look-loaded t)
+(provide 'foggy_look)

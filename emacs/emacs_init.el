@@ -212,7 +212,7 @@ Goes backward if ARG is negative; error if CHAR not found."
        "Project file: " (tags-table-files) nil t)))))
 
 ;; Load
-(require 'foggy_appearance)
+(require 'foggy_look)
 (require 'foggy_dev)
 (require 'foggy_revision_control)
 (require 'foggy_keybindings)
