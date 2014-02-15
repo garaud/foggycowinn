@@ -1,11 +1,7 @@
 ;; -*- coding: utf-8 -*-
 ;; Main Emacs configuration file.
-;; 2011
+;; 2011-2014
 ;; Author(s): Damien Garaud
-
-;;(add-to-list 'load-path "~/applications/emacs/")
-(add-to-list 'load-path emacs-foggy-package-dir)
-
 
 ;;;;;;;;;;;;;
 ;; GENERAL ;;
@@ -153,31 +149,6 @@ Goes backward if ARG is negative; error if CHAR not found."
     (error "Mark is not active. Region not duplicated."))
   )
 
-(defun fullpath-relative-to-current-file (file-relative-path)
-  "Returns the full path of FILE-RELATIVE-PATH, relative to file location where this function is called.
-
-Example: If the file that calls fullpath-relative-to-call-location is at:
-/Users/xah/web/emacs/emacs_init.el then,
- (fullpath-relative-to-call-location \"xyz.el\")
-returns
- /Users/xah/web/emacs/xyz.el
-
-This function solves 2 problems.
-
- (1) if you have file A, that calls the “load” on a file at B, and
- B calls “load” on file C using a relative path, then Emacs will
- complain about unable to find C. Because, emacs does not switch
- current directory with “load”.
-
- (2) To know the current file's full path, emacs has 2 ways:
- load-file-name and buffer-file-name.  If the file is loaded by
- “load”, then load-file-name works but buffer-file-name doesn't.
- If the file is called by eval-buffer, then load-file-name is
- nil. You want to be able to get the full path regardless the
- file is run by “load” or interactively by “eval-buffer”."
-  (concat (file-name-directory (or load-file-name buffer-file-name)) file-relative-path)
-)
-
 ;; From http://www.emacswiki.org/emacs/ImenuMode#toc11 and
 ;; https://raw.github.com/xaccrocheur/kituu/master/.emacs
 (defun ido-goto-symbol (&optional symbol-list)
@@ -240,16 +211,12 @@ This function solves 2 problems.
       (ido-completing-read
        "Project file: " (tags-table-files) nil t)))))
 
-;; Add the dir of this file to load path.
-(add-to-list 'load-path (fullpath-relative-to-current-file ""))
-
 ;; Load
-(load (fullpath-relative-to-current-file "foggy_appearance.el"))
-(load (fullpath-relative-to-current-file "foggy_dev.el"))
-(load (fullpath-relative-to-current-file "foggy_revision_control.el"))
-(load (fullpath-relative-to-current-file "foggy_keybindings.el"))
-(load (fullpath-relative-to-current-file "foggy_latex.el"))
-(load (fullpath-relative-to-current-file "foggy_orgmode.el"))
-;;(load (fullpath-relative-to-current-file "personal_data.el"))
-(load (fullpath-relative-to-current-file "foggy_web.el"))
-(load (fullpath-relative-to-current-file "foggy_music.el"))
+(require 'foggy_appearance)
+(require 'foggy_dev)
+(require 'foggy_revision_control)
+(require 'foggy_keybindings)
+(require 'foggy_latex)
+(require 'foggy_orgmode)
+(require 'foggy_web)
+(require 'foggy_music)
