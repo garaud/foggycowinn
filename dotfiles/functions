@@ -1,0 +1,25 @@
+# -*- mode: sh -*-
+
+# Change Python env for CW.
+function cwenv
+{
+    export _OLD_CWENV_PATH=$PATH
+    export _OLD_CWENV_PYTHONPATH=$PYTHONPATH
+    export _OLD_CWENV_PS1=$PS1
+
+    export PATH="$(pwd)/cubicweb/bin:$PATH"
+    export PYTHONPATH=$(pwd):$PYTHONPATH
+    export PS1="[cwenv]$PS1"
+    export PGCLUSTER="9.1/main"
+}
+
+# Get back env. from CWENV
+function cwenvback
+{
+    export PATH=$_OLD_CWENV_PATH
+    export PYTHONPATH=$_OLD_CWENV_PYTHONPATH
+    export PS1=$_OLD_CWENV_PS1
+    unset _OLD_CWENV_PATH
+    unset _OLD_CWENV_PYTHONPATH
+    unset _OLD_CWENV_PS1
+}
