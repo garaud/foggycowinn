@@ -71,3 +71,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
+
+# Some functions.
+if [ -f ~/.functions ]; then
+    source ~/.functions
+fi
