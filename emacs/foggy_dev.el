@@ -5,8 +5,6 @@
 
 ;; Auto Complete
 (require 'auto-complete-config)
-;;(setq ac-dict-path (format "%s/%s" emacs-foggy-package-dir "auto-complete/ac-dict"))
-;;(add-to-list 'ac-dictionary-directories ac-dict-path)
 (ac-config-default)
 
 ;; Yasnippet.
@@ -209,62 +207,6 @@
   (tags-apropos (concat "[^_]\\<" (current-word) "\\>\("))
 )
 
-
-;; TODO Clean up all this stuff.
-
-;; (defun my-c-mode-hook ()
-;;   ;; style
-;;   (setq c-basic-offset 4)
-;;   (setq default-tab-width 4)
-;; )
-;; (add-hook 'c++-mode-hook 'my-c-mode-hook)
-
-;;(setq default-tab-width 4)
-
-;;(setq c-default-style "mine")
-
-;; Special option for April.
-;; (defun april-c++-mode ()
-  ;;(interactive)
-  ;;(add-hook 'before-save-hook 'delete-trailing-whitespace t t)
-  ;; (setq c-basic-offset 4)
-  ;; (setq c-offsets-alist
-  ;;       '((statement-block-intro . +))
-  ;;       '((substatement-open . 0))
-  ;;       '((substatement-label . 0))
-  ;;       '((label . 0))
-  ;;       '((statement-cont . +))
-  ;;       ;;'((innamespace . -))
-  ;;       '((inline-open . 0))
-  ;;       '((template-args-cont . +))
-  ;;       )
-  ;;(setq c-default-style "mine")
-;; c-set-offset 'substatement-open 0)
-  ;;(setq c-default-style "gnu"
-  ;;(setq default-tab-width 4)
-;;  )
-;; (defun april-c++-mode-hook ()
-;;   (if (string-match "april" buffer-file-name)
-;;       (april-c++-mode)))
-;;(add-hook 'c++-mode-hook 'april-c++-mode-hook)
-
-;; (c-add-style
-;;  "mine"
-;;  (quote
-;;   (
-;;    (c-basic-offset . 4)
-;;    (statement-block-intro . 0)
-;;    (substatement-open . -)
-;;    (substatement-label . 0)
-;;    (label . 0)
-;;    (statement-cont . +)
-;;    (innamespace . -)
-;;    (inline-open . 0)
-;;    (template-args-cont . +)
-;;  )))
-;; (setq c-default-style "mine")
-;;(setq c-default-style "stroustrup")
-
 ;;;;;;;;;;;;;
 ;;  CMake  ;;
 ;;;;;;;;;;;;;
@@ -295,6 +237,9 @@
 
 ;; Par ailleurs, il y a aussi un mode mineur pour Doxygen: Ce mode sert à
 ;; insérer rapidement des commentaires Doxygen (C-c d C-h).
+;; XXX Seems to be not maintained. See SO
+;; http://stackoverflow.com/questions/11324752/emacs-c-c-doxygen-alternative-to-doxymacs-with-yasnippet
+;; TODO Maybe can use yasnippet instead.
 (require 'doxymacs)
 (add-hook 'c-mode-common-hook 'doxymacs-mode)
 (defun my-doxymacs-font-lock-hook ()
@@ -309,7 +254,6 @@
 ;;;;;;;;;
 
 ;; Use the gdb debugging tool with 'M-x gdb'.
-
 ;; Open many windows when you launch 'gdb'.
 (setq gdb-many-windows t)
 
