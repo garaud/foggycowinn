@@ -1,6 +1,6 @@
 ;; -*- coding: utf-8 -*-
 ;; Emacs configuration file for org-mode
-;; 2011
+;; 2011-2014
 ;; Author(s): Damien Garaud
 
 ;; Remember.
@@ -40,3 +40,6 @@
 (define-key global-map "\C-cr" 'org-remember)
 
 (define-key global-map "\C-cL" 'org-store-link)
+
+(setq foggy_orgmode-loaded t)
+(provide 'foggy_orgmode)
