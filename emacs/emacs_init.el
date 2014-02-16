@@ -211,6 +211,15 @@ Goes backward if ARG is negative; error if CHAR not found."
       (ido-completing-read
        "Project file: " (tags-table-files) nil t)))))
 
+
+;; The Lisp file from Astyle project http://astyle.sourceforge.net/scripts.html
+;; with (setq c-default-style "bsd") sets a fine C++ coding convention for me
+;; --- brackets, indentation and so on.
+(setq astyle-hooks-file (expand-file-name "astyle-hooks.el" emacs-foggy-dir))
+;; Do nothing if the file does not exist.
+(if (file-exists-p astyle-hooks-file)
+    (load astyle-hooks-file))
+
 ;; Load
 (require 'foggy_look)
 (require 'foggy_dev)

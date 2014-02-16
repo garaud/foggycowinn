@@ -177,12 +177,8 @@
 ;; Linum mode for C++
 (add-hook 'c++-mode-hook 'linum-mode)
 
-
-;; The Lisp file from Astyle project http://astyle.sourceforge.net/scripts.html
-;; with (setq c-default-style "bsd") sets a fine C++ coding convention for me
-;; --- brackets, indentation and so on. Do nothing if the file does not exist.
-;;(setq astyle-file (fullpath-relative-to-current-file "astyle-hooks.el"))
-;;(if (file-exists-p astyle-file) (load astyle-file))
+(if (file-exists-p astyle-hooks-file)
+    (setq c-default-style "bsd"))
 
 ;; Write a cout-c++-like for a specific variable.
 (defun cppout ()
