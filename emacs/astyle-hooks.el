@@ -1,3 +1,4 @@
+;; From http://astyle.sourceforge.net/scripts.html
 ;; Set Formatting Style  ##################################
 ;; set these options for testing
 ;; Emacs defaults for c-default-style is (java-mode, "java") (awk-mode, "awk") (other, "gnu")
