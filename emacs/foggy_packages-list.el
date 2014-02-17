@@ -9,6 +9,7 @@
     auctex
     auto-complete fuzzy
     cmake-mode
+    htmlize
     ido-ubiquitous
     lua-mode
     jinja2-mode
