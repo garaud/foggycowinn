@@ -9,7 +9,6 @@
 
 ;; AUCTeX.
 (require 'tex-site)
-(load "preview-latex")
 
 ;; Reference mode.
 (autoload 'reftex-mode "reftex" "RefTeX Minor Mode" t)
