@@ -34,7 +34,7 @@
 (display-time)
 
 ;; To select a default font, and windows width and height.
-(set-frame-width (selected-frame) 80)
+(set-frame-width (selected-frame) 88)
 (set-frame-height (selected-frame) 42)
 
 ;; Frame maximization.
