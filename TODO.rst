@@ -24,8 +24,15 @@ Dotfiles
 Emacs
 -----
 
-* Add some contents about Emacs server to the emacs/README.org file.
+* Move the ``custom`` part in ``foggy_look`` to a dedicated ELisp file.
+* Try to decrease the title size of Org-Mode for the theme tangotango
+* Improve the funtion ``ccppout`` at ``foggy_dev``:
+  - use the word where the cursor is
+  - genelarize the concept to print an arbiratry variable even in Python
+  - use ``save-excursion`` to store the cursor position
+  - bind the function (find a keybinding)
+* Add some contents about Emacs server to the ``emacs/README.org`` file.
 * Clean up 'emacs/foggy_dev.el': Python part and C++ part. Too many comments !
 * Try to manage default size according to screen resolution
 * Fix errors and deprecated stuff (emacs23 => emacs24)
-* Find a way to add some snippet (doxygen, python) to yasnippet
+* Find a way to add some snippets (doxygen, python) to yasnippet
