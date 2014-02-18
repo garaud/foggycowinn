@@ -27,6 +27,7 @@ alias cmgrep='grep -r --include="*.cmake" --include="CMakeLists.txt" --exclude-d
 alias gitka='gitk --all'
 alias mq='hg -R `hg root`/.hg/patches'
 alias hgl='hg log -G'
+alias hgv='hgview &'
 alias tig='tig --all'
 
 ##########
