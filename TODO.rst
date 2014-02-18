@@ -25,7 +25,6 @@ Emacs
 -----
 
 * Move the ``custom`` part in ``foggy_look`` to a dedicated ELisp file.
-* Try to decrease the title size of Org-Mode for the theme tangotango
 * Improve the funtion ``ccppout`` at ``foggy_dev``:
   - use the word where the cursor is
   - genelarize the concept to print an arbiratry variable even in Python
