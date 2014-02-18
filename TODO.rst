@@ -25,6 +25,8 @@ Emacs
 -----
 
 * Move the ``custom`` part in ``foggy_look`` to a dedicated ELisp file.
+* Move some functions to a dedicated file (instead of ``emacs_init.el`` or
+  elsewhere)
 * Improve the funtion ``ccppout`` at ``foggy_dev``:
   - use the word where the cursor is
   - genelarize the concept to print an arbiratry variable even in Python
