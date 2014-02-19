@@ -14,6 +14,7 @@ General
 Dotfiles
 --------
 
+* Try to well display my ZSH prompt with URxvt (the clock is not displayed)
 * Add an =i3= configuration.
 * zsh prompt: display if the tracked (git or hg) files are currently modified in
   a repo.
