@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: doxygen
+# key: dox
+# --
+//! ${short}
+/*! ${long}
+ \param ${first}
+ */

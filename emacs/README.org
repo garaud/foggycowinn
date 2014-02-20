@@ -25,6 +25,11 @@ files =foggy_*.el=.
 I use Emacs 24 for a while now. These configuration should not work with
 Emacs 23.
 
+* Snippets
+
+  I use =yasnippets= Emacs packages. I wrote some in the =emacs/snippets=
+  directory. For now, I symlik =~/.emacs.d/snippets= to my =snippets=.
+
 * Packages List
 
   See =emacs/foggy_packages-list.el=
