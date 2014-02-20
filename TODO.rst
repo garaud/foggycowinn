@@ -26,6 +26,7 @@ Emacs
 -----
 
 * Move the ``custom`` part in ``foggy_look`` to a dedicated ELisp file.
+* Understand why packages are not installed in the ``elpa`` dir in my ``emacs`` dir.
 * Move some functions to a dedicated file (instead of ``emacs_init.el`` or
   elsewhere)
 * Improve the funtion ``ccppout`` at ``foggy_dev``:
