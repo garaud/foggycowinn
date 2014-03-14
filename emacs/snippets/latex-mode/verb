@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: verb
+# key: v
+# --
+\verb+$1+$0
