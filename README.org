@@ -7,3 +7,18 @@ theses following directories:
 - =dotfiles=: generic "rc" configuration files for bash, zsh, etc.
 - =emacs=: a few ELisp files to configure my Emacs 24 environment.
 
+* Emacs configuration
+
+  I use the Emacs packages features to install and upgrade the packages that I
+  use. They can come from ELPA, Melpa or Marmelade.
+
+  The packages management (startup checking and installing) is inspired from
+  https://github.com/kaushalmodi/.emacs.d/ Thanks to him.
+
+  Another stuff, tips and tricks come from my colleagues or some blogs/websites
+  as [[http://www.masteringemacs.org/][Mastering Emacs]], [[http://whattheemacsd.com/][What the emacs.d]], [[http://emacs-fu.blogspot.fr/][Emacs-fu]] or [[http://ergoemacs.org/emacs/][Xah Emacs]].
+
+  For my own snippets (yasnippet package), I just make a symbolic link at
+  =~/.emacs.d/snippets= to my =emacs/snippets= directory.
+
+  See also [[https://github.com/garaud/foggycowinn/blob/master/emacs/README.org][README file for my Emacs config]].
