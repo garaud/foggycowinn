@@ -3,13 +3,14 @@ TODO File
 =========
 
 :author: Damien Garaud
-:date: 2011-08-23
+:date: 2014-03-20
 
 General
 -------
 
 * Add a License
 * Write a THANKS file
+* Write more contents in the README file about Emacs config and dotfiles
 
 Dotfiles
 --------
@@ -27,10 +28,10 @@ Emacs
 -----
 
 * Move the ``custom`` part in ``foggy_look`` to a dedicated ELisp file.
+* Check if there are some function in ``*.el`` files that I can move into
+  ``foggy_functions.el``
 * Make the ``ido-goto-symbol`` function work (at work).
 * Understand why packages are not installed in the ``elpa`` dir in my ``emacs`` dir.
-* Move some functions to a dedicated file (instead of ``emacs_init.el`` or
-  elsewhere)
 * Improve the funtion ``ccppout`` at ``foggy_dev``:
   - use the word where the cursor is
   - genelarize the concept to print an arbiratry variable even in Python
