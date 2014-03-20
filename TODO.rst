@@ -27,7 +27,7 @@ Emacs
 -----
 
 * Move the ``custom`` part in ``foggy_look`` to a dedicated ELisp file.
-* Make the ``ido-goto-symbol`` function work.
+* Make the ``ido-goto-symbol`` function work (at work).
 * Understand why packages are not installed in the ``elpa`` dir in my ``emacs`` dir.
 * Move some functions to a dedicated file (instead of ``emacs_init.el`` or
   elsewhere)
@@ -40,4 +40,5 @@ Emacs
 * Clean up 'emacs/foggy_dev.el': Python part and C++ part. Too many comments !
 * Try to manage default size according to screen resolution
 * Fix errors and deprecated stuff (emacs23 => emacs24)
-* Find a way to add some snippets (doxygen, python) to yasnippet
+* Make doc-mode work to edit/modify Doxygen comments (in C++ file)
+* Configure Org-mode properly (agile, Getting Things Done, ...)
