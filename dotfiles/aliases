@@ -29,6 +29,7 @@ alias mq='hg -R `hg root`/.hg/patches'
 alias hgl='hg log -G'
 alias hgu='hg pull'
 alias hr='hg pull review'
+alias hu='hg up'
 alias hgv='hgview &'
 alias tig='tig --all'
 
