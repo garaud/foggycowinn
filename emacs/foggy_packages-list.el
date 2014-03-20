@@ -9,6 +9,7 @@
     auctex
     auto-complete fuzzy
     cmake-mode
+    expand-region
     htmlize
     ido-ubiquitous
     lua-mode
