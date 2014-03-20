@@ -20,7 +20,7 @@
 (setq inhibit-startup-message t)
 
 ;; No blinked cursor.
-(blink-cursor-mode nil)
+(blink-cursor-mode -1)
 
 ;; Show trailing white space.
 (setq-default show-trailing-whitespace t)
@@ -36,29 +36,6 @@
 ;; To select a default font, and windows width and height.
 (set-frame-width (selected-frame) 88)
 (set-frame-height (selected-frame) 42)
-
-;; Frame maximization.
-(defun frame-fullscreen (frame)
-  (set-frame-parameter frame 'fullscreen
-                       (if (frame-parameter frame 'fullscreen)
-                           frame 'fullboth)))
-(defun frame-maximize-vertically (frame)
-  (set-frame-parameter frame 'fullscreen
-                       (if (frame-parameter frame 'fullscreen)
-                           frame 'fullheight)))
-(defun fullscreen ()
-  (interactive)
-  (frame-fullscreen nil))
-(defun maximize-vertically ()
-  (interactive)
-  (frame-maximize-vertically nil))
-;; Maximizes the window vertically at startup.
-(add-hook 'window-setup-hook 'maximize-vertically)
-;; Maximizes a new frame vertically at startup.
-(add-hook 'after-make-frame-functions 'frame-maximize-vertically)
-
-;; Enables the mouse wheel (for old versions of Emacs).
-;; (mouse-wheel-mode)
 
 ;; Sets default encoding to UTF-8.
 (prefer-coding-system 'utf-8)
@@ -77,9 +54,9 @@
 (setq font-lock-maximum-decoration t)
 (setq transient-mark-mode t)
 ;; Highlight the current line.
-;;(global-hl-line-mode t)
+(global-hl-line-mode t)
 ;; For dark theme.
-;;(set-face-background 'hl-line "#282828")
+(set-face-background 'hl-line "#282828")
 ;; For light theme.
 ;;(set-face-background 'hl-line "#F0F8FF")
 ;; Shows the column number.
