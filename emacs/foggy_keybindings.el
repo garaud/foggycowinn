@@ -47,11 +47,6 @@
 (global-unset-key "\C-x\C-o")
 (global-set-key "\C-x\C-o" "\C-x\o")
 
-;; In order to ease application of macros, accepts C-x C-e in addition to the
-;; regular C-x e.
-(global-unset-key "\C-x\C-e")
-(global-set-key "\C-x\C-e" 'kmacro-end-and-call-macro)
-
 (global-set-key [(meta j)] 'hippie-expand)
 
 ;; Switches to american dictionary.
