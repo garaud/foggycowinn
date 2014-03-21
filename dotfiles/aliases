@@ -11,6 +11,10 @@ alias emc='emacsclient -n'
 alias ec='emacsclient -n'
 alias e='emacsclient -n'
 
+# Keyboard layouts.
+alias kus='setxkbmap us'
+alias kfr='setxkbmap fr'
+
 # List dir & grep.
 alias ls='ls --color=auto'
 alias ll='ls -lF'
