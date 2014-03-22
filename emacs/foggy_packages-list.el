@@ -18,6 +18,7 @@
     monky
     ;;mingus
     org
+    smartscan
     tangotango-theme
     yaml-mode
     yasnippet
