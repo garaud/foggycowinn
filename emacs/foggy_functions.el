@@ -137,6 +137,17 @@ Goes backward if ARG is negative; error if CHAR not found."
       (ido-completing-read
        "Project file: " (tags-table-files) nil t)))))
 
+(defun search-word-tags ()
+  "Search the current word in tags via 'tags-apropos'."
+  (interactive)
+  ;; Try to be clever than that.
+  ;;   - case sensitive REGEXP
+  (setq case-fold-search nil) ;; or 't' does not seem work to put the word in apropos REGEXP case sensitive.
+  ;; Match with 'class|def word(' for instance (case insensitive for now).
+  ;; Take a look at a TAGS file.
+  (tags-apropos (concat "[^_]\\<" (current-word) "\\>\("))
+)
+
 
 (setq foggy_functions-loaded t)
 (provide 'foggy_functions)

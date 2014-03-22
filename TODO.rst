@@ -39,7 +39,6 @@ Emacs
   - use ``save-excursion`` to store the cursor position
   - bind the function (find a keybinding)
 * Add some contents about Emacs server to the ``emacs/README.org`` file.
-* Clean up 'emacs/foggy_dev.el': Python part and C++ part. Too many comments !
 * Try to manage default size according to screen resolution
 * Make doc-mode work to edit/modify Doxygen comments (in C++ file)
 * Configure Org-mode properly (agile, Getting Things Done, ...)
