@@ -28,7 +28,7 @@
 (setq org-src-fontify-natively t)
 
 ;; Use to highlight the code blocks for HTML exporting.
-(require 'htmlize) ;; Provided by the emacs-goodies package.
+(require 'htmlize)
 
 ;;;;;;;;;;;;;;;;;
 ;; Keybindings ;;
