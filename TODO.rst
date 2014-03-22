@@ -27,11 +27,11 @@ Emacs
 -----
 
 * Move the ``custom`` part in ``foggy_look`` to a dedicated ELisp file.
+* Find why the buffer ``*scratch*`` is no in Lisp mode.
 * Check if there are some function in ``*.el`` files that I can move into
   ``foggy_functions.el``
 * Understand why packages are not installed in the ``elpa`` dir in my ``emacs``
   dir.
-* Take a look at smart-scan (use it instead of ``ido-goto-symbol``?)
 * Improve the funtion ``ccppout`` at ``foggy_dev``:
   - use the word where the cursor is
   - genelarize the concept to print an arbiratry variable even in Python

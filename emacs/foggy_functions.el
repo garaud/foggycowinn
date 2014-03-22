@@ -77,7 +77,6 @@ Goes backward if ARG is negative; error if CHAR not found."
 
 ;; From http://www.emacswiki.org/emacs/ImenuMode#toc11 and
 ;; https://raw.github.com/xaccrocheur/kituu/master/.emacs
-;; TODO Replace it by smart-scan?? https://github.com/mickeynp/smart-scan/blob/master/smartscan.el
 (defun ido-goto-symbol (&optional symbol-list)
   "Refresh imenu and jump to a place in the buffer using Ido."
   (interactive)
