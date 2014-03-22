@@ -7,8 +7,6 @@
 ;; (load-theme 'tango-dark)
 (load-theme 'tangotango t)
 
-;;(set-default-font "9x15")
-(set-default-font "8x13")
 (set-default-font "DejaVu Sans Mono-12")
 
 ;; Gets rid of the useless tool bar and menu bar.
@@ -36,6 +34,9 @@
 ;; To select a default font, and windows width and height.
 (set-frame-width (selected-frame) 88)
 (set-frame-height (selected-frame) 42)
+
+;; 80th column is not be crossed.
+(setq-default fill-column 80)
 
 ;; Sets default encoding to UTF-8.
 (prefer-coding-system 'utf-8)
@@ -68,7 +69,7 @@
 ;; Shows the complains!
 (setq visible-bell t)
 
-
+;; TODO Refactor this!
 ;; highlight XXX style code tags in source files
 (font-lock-add-keywords 'python-mode
   '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
@@ -88,13 +89,8 @@
   '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
 (font-lock-add-keywords 'lisp-mode
   '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
-
-
-;; 80th column is not be crossed.
-(setq-default fill-column 80)
-
-;; Use spaces instead of tabs.
-(setq-default indent-tabs-mode nil)
+(font-lock-add-keywords 'emacs-lisp-mode
+  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
 
 ;; For a better naming of the buffers (that is, not filename.txt<2>!).
 (require 'uniquify)
@@ -103,6 +99,7 @@
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
 
+;; XXX Is there a better way?
 ;; Conf-mode for 'rc' files.
 (add-to-list 'auto-mode-alist '("hgrc\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '(".hgrc\\'" . conf-mode))
@@ -114,6 +111,7 @@
 (add-to-list 'auto-mode-alist '(".todorc\\'" . conf-mode))
 
 
+;; TODO Move this in a dedicated file.
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.

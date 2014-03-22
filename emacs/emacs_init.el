@@ -37,6 +37,9 @@
 ;; In order to completely delete the selected area hitting backspace (DEL).
 (delete-selection-mode 1)
 
+;; Use spaces instead of tabs.
+(setq-default indent-tabs-mode nil)
+
 ;; Enables C-next.
 (put 'scroll-left 'disabled nil)
 
