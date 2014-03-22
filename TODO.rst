@@ -30,6 +30,7 @@ Emacs
 * Find why the buffer ``*scratch*`` is no in Lisp mode.
 * Check if there are some function in ``*.el`` files that I can move into
   ``foggy_functions.el``
+* Try to refactor the 'highlight XXX and TODO words' in the file ``foggy_look.el``
 * Understand why packages are not installed in the ``elpa`` dir in my ``emacs``
   dir.
 * Improve the funtion ``ccppout`` at ``foggy_dev``:
