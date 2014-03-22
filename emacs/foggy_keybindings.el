@@ -20,7 +20,6 @@
 (global-set-key "\C-x\<" "\C-u\M-x\comment-region")
 
 (global-set-key [(meta g)] 'goto-line)
-
 (global-set-key [(meta v)] 'fill-region)
 
 ;; Deletes a line.
@@ -41,11 +40,6 @@
 ;; the regular C-x b.
 (global-unset-key "\C-x\C-b")
 (global-set-key "\C-x\C-b" 'switch-to-buffer)
-
-;; In order to ease switching between windows, accepts C-x C-o in addition to
-;; the regular C-x o.
-(global-unset-key "\C-x\C-o")
-(global-set-key "\C-x\C-o" "\C-x\o")
 
 (global-set-key [(meta j)] 'hippie-expand)
 
