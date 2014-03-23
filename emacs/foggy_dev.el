@@ -66,6 +66,9 @@
 ;; Linum mode for C++
 (add-hook 'c++-mode-hook 'linum-mode)
 
+;; Semantic mode for C++.
+(add-hook 'c++-mode-hook 'semantic-mode)
+
 (if (file-exists-p astyle-hooks-file)
     (setq c-default-style "bsd"))
 
