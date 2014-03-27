@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+
+# NOTE: this file is include thanks to the
+#   [include]
+#   path = main_gitconfig
+# feature. Git >= 1.7.10
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = always
+[pager]
+	status = true
+[alias]
+	wdiff = diff --color-words
+	st = status
+	ci = commit
+        co = checkout
+	l = log
+        ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+        ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+        lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+        le = log --oneline --decorate
+        logtree = log --graph --oneline --decorate --all
+        grep = grep -Ii
+        lasttag = describe --tags --abbrev=0
