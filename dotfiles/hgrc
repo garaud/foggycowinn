@@ -10,17 +10,15 @@ merge = merge
 ignore = ~/.global_hgignore
 
 [extensions]
-hgext.color =
-hgext.pager =
-hgext.transplant =
-hgext.mq =
-hgext.hgview=
+hgext.color=
+hgext.pager=
+hgext.transplant=
+hgext.mq=
 hgext.rebase=
 hgext.graphlog=
-hgext.convert =
-hgext.evolve =
-hgext.histedit =
-hgext.purge =
+hgext.convert=
+hgext.histedit=
+hgext.purge=
 
 [phases]
 publish = False
