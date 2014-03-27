@@ -1,0 +1,88 @@
+# -*- coding: utf-8; mode: conf -*-
+
+# This file is included in the main $HOME/.hgrc thanks to the
+# '%include my_hgrc_file' syntax.
+
+verbose = False
+# Do not open a diff merge tools. Resolve with 'resolve'.
+merge = merge
+# Global hgignore
+ignore = ~/.global_hgignore
+
+[extensions]
+hgext.color =
+hgext.pager =
+hgext.transplant =
+hgext.mq =
+hgext.hgview=
+hgext.rebase=
+hgext.graphlog=
+hgext.convert =
+hgext.evolve =
+hgext.histedit =
+hgext.purge =
+
+[phases]
+publish = False
+
+[diff]
+git = True
+showfunc = True
+
+[color]
+status.modified = blue bold underline
+status.added = green bold
+status.removed = red bold blue_background
+status.deleted = cyan bold underline
+status.unknown = magenta bold underline
+status.ignored = black bold
+qseries.applied = blue bold underline
+qseries.unapplied = cyan
+qseries.guarded = magenta
+qseries.missing = red bold
+diff.diffline = bold
+diff.extended = cyan bold
+diff.file_a = red bold
+diff.file_b = green bold
+diff.hunk = magenta
+diff.deleted = red
+diff.inserted = green
+diff.changed = white
+diff.trailingwhitespace = bold red_background
+
+[pager]
+pager = LESS='FSRX' less
+
+[alias]
+# MQ (not very used)
+qput = qpush
+qnew = qnew -U
+qref = qref -D
+qseries = qseries -vs
+qcrecord = qcrecord -U
+qcrefresh = qcrefresh -D
+tdiff = diff -c tip
+cdiff = diff -c .
+ublame = blame -n -d -l -u
+# Should not use 'graft -O'.
+grab = rebase -d . -r $1
+amend = ci --amend
+sha = log -r $1 --template "node: {node} -- {desc}\n"
+sst = !hg status $($HG root) $HG_ARGS
+# bold XXX, TODO and FIXME in diff.
+d = !hg diff --color always | sed -e "s#\(TODO\|XXX\|FIXME\)#\\x1b[1m\1\\x1b[21m#g"
+# diff
+pdiff=diff --rev .^
+# diff with the previous amend
+odiff=diff --rev 'limit(obsparents(.),1)' --rev .
+
+[hgview]
+# http://doc.qt.digia.com/qt/qcolor.html (QColor to get the different Qt color names).
+diffbgcolor = white
+difffgcolor = black
+diffsectioncolor = darkBlue
+diffminuscolor = red
+diffpluscolor = green
+fontsize = 12
+font = DejaVu Sans Mono
+nonpublicontop = True
