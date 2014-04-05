@@ -28,6 +28,9 @@ at_bold=$'\e[1m'
 # Looks like '@host [time] current dir '
 PROMPT="%{$bg_bold[blue]%}@%m$reset_color ${fg_pink}${at_bold}⌚ %T${at_normal} ${fg_gray}${at_bold}%~$reset_color
 ▶ "
+# Light background
+#PROMPT="%{$fg_bold[blue]%}@%m$reset_color ${fg_black}${at_bold}⌚ %T${at_normal} ${fg_gray}${at_bold}%~$reset_color
+#▶ "
 # RPROMPT="${fg_lblue}[%T]${at_normal}"
 
 
