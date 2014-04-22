@@ -15,6 +15,7 @@
     lua-mode
     jinja2-mode
     magit
+    markdown-mode
     monky
     ;;mingus
     org
