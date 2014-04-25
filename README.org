@@ -4,7 +4,7 @@
 "FoggyCowInn" comes from "FogCowInn", an anagram of "own config". You have
 theses following directories:
 
-- =dotfiles=: generic "rc" configuration files for bash, zsh, etc.
+- =dotfiles=: generic "rc" configuration files for bash, zsh, git, mercurial, etc.
 - =emacs=: a few ELisp files to configure my Emacs 24 environment.
 
 * Emacs configuration
