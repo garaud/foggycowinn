@@ -18,6 +18,7 @@
     markdown-mode
     monky
     ;;mingus
+    multiple-cursors
     org
     smartscan
     tangotango-theme
