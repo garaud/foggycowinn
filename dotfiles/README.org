@@ -1,0 +1,65 @@
+#+TITLE: README for dotfiles
+#+AUTHOR: Damien Garaud
+
+A folder which contains some "dot" configuration files about zsh, Git,
+Mercurial and so on.
+
+An incomplete =bootstrap.sh= which should carry out symlink between your =HOME=
+and these files.
+
+* zsh
+
+  This file depends on the project [[http://ohmyz.sh/][oh my zsh]]. Extra variables or functions can
+  be sourced via the file =~/.extra=. I've for instance different =extra=
+  files according to the computer (work, home, etc.). You can also find:
+
+  - =functions=: Shell functions
+  - =aliases=: a list of Shell aliases
+
+* Git & Mercurial
+
+  Common Git and Mercurial configurations that I use: aliases, hg extentions,
+  etc.
+
+  I use the the =include= Git and Mecurial features to split these files into
+  two parts:
+
+  - username, mail and authentication in my =~/.gitconfig= and
+    =~/.hgrc= ;
+  - aliases, extensions and common stuff into the following files.
+
+  Examples:
+
+  for Git (read the "Include" section at http://git-scm.com/docs/git-config)
+
+  #+NAME: git
+  #+BEGIN_SRC conf
+  [user]
+      name = john d.
+      email = jd@mail.com
+  [include]
+      path = /path/to/git_common_config
+  #+END_SRC
+
+  and for Mercurial (read the "Syntax" section in
+  http://www.selenic.com/mercurial/hgrc.5.html)
+
+  #+NAME: hg
+  #+BEGIN_SRC conf
+  [ui]
+  username = John D. <jd@mail.com>
+
+  # some extensions...
+
+  %include hg_common_config
+  #+END_SRC
+
+* Others
+
+  - a tiny vim configuration file just to read file (I'm not used vim to edit)
+  - =inputrc= use escape characters in order to delete words or move my cursor by
+    words in the Shell
+  - =xresources= to mainly configure urxvt
+  - a file to specify colors for =colorgcc=
+  - an old =todorc= (I mainly use the Emacs Org-mode to manage my tasks
+    list). This was used by the =devtodo= CLI tool.

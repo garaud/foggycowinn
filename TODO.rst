@@ -14,7 +14,6 @@ General
 Dotfiles
 --------
 
-* Write a dedicated README file for this folder
 * Try to well display my ZSH prompt with URxvt (the clock is not displayed)
 * Add an =i3= configuration.
 * Add my IPython profile with numpy and pandas
