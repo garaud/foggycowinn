@@ -1,4 +1,7 @@
 
+!! To reload this file do:
+!!   > xrdb -merge ~/.xresources
+
 !! Tango Colors
 URxvt.foreground: #FFFFFF
 URxvt.background: #323232
