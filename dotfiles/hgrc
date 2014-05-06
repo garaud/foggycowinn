@@ -3,6 +3,7 @@
 # This file is included in the main $HOME/.hgrc thanks to the
 # '%include my_hgrc_file' syntax.
 
+[ui]
 verbose = False
 # Do not open a diff merge tools. Resolve with 'resolve'.
 merge = merge
