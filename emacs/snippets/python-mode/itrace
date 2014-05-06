@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: itrace
+# key: itr
+# --
+import ipdb; ipdb.set_trace()
