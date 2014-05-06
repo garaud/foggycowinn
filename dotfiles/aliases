@@ -75,6 +75,7 @@ alias make='LC_CTYPE=C make'
 
 # Cubicweb
 alias cw-ctl='cubicweb-ctl'
+alias rmdb='rm -rf `hg root`/test/data/database/'
 
 # Apt-stuff
 alias asearch='apt-cache search'
