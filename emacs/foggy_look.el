@@ -69,28 +69,30 @@
 ;; Shows the complains!
 (setq visible-bell t)
 
-;; TODO Refactor this!
-;; highlight XXX style code tags in source files
-(font-lock-add-keywords 'python-mode
-  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
-(font-lock-add-keywords 'c++-mode
-  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
-(font-lock-add-keywords 'c-mode
-  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
-(font-lock-add-keywords 'rst-mode
-  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
-(font-lock-add-keywords 'tex-mode
-  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
-(font-lock-add-keywords 'cmake-mode
-  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
-(font-lock-add-keywords 'conf-mode
-  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
-(font-lock-add-keywords 'makefile-mode
-  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
-(font-lock-add-keywords 'lisp-mode
-  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
-(font-lock-add-keywords 'emacs-lisp-mode
-  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
+;; Use to highligt some keywords in these modes.
+(setq code-tag-mode-list '(
+                          python-mode
+                          c++-mode
+                          c-mode
+                          cmake-mode
+                          conf-mode
+                          makefile-mode
+                          lisp-mode
+                          emacs-lisp-mode))
+
+;; TODO: try to pass a 2nd arg as the regexp keywords.
+(defun highlight-warning-keyword (mode)
+    "Use font-lock-add-keywords to highlight with a 'warning' way
+    some specific keywords based on a regexp and a specific mode"
+    (font-lock-add-keywords
+      mode
+      '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\)" 1 font-lock-warning-face prepend)))
+    )
+
+;; Highlight as 'warning' some keywords for a list of modes.
+(map 'list (lambda (mode)
+             (highlight-warning-keyword mode))
+     code-tag-mode-list)
 
 ;; For a better naming of the buffers (that is, not filename.txt<2>!).
 (require 'uniquify)
