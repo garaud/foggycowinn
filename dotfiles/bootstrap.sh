@@ -9,7 +9,7 @@ function symlink() {
             continue
         fi
         echo  $PWD/$fname " -> " "$HOME/.$fname"
-        ln -s $PWD/$fname "$HOME/.$fname"
+        ln -fs $PWD/$fname "$HOME/.$fname"
     done
 }
 
