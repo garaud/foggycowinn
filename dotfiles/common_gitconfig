@@ -27,3 +27,4 @@
         logtree = log --graph --oneline --decorate --all
         grep = grep -Ii
         lasttag = describe --tags --abbrev=0
+        d = diff
