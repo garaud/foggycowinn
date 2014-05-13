@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
 filelist=`git ls-files`
+blacklist='README.org bootstrap.sh'
 
 function symlink() {
     for fname in  $filelist; do
-        if [ "$fname" == "bootstrap.sh" ]; then
+        if [[ $blacklist =~ $fname ]]; then
             continue
         fi
         echo  $PWD/$fname " -> " "$HOME/.$fname"
-        #ln -s $PWD/$fname "$HOME/.$fname"
+        ln -s $PWD/$fname "$HOME/.$fname"
     done
 }
 
