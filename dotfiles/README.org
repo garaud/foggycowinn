@@ -4,8 +4,15 @@
 A folder which contains some "dot" configuration files about zsh, Git,
 Mercurial and so on.
 
-An incomplete =bootstrap.sh= which should carry out symlink between your =HOME=
-and these files.
+A Bash script =bootstrap.sh= is dedicated to create symbolic link between your
+=HOME= and all files here (except the README and bootstrap files). For any file,
+it carries out:
+
+#+BEGIN_ASCII
+ln -s /path/to/foggy/dotfiles/filenamerc ~/.filenamerc
+#+END_ASCII
+
+*Note*: this script can remove existing links or files if they already exist.
 
 * zsh
 
