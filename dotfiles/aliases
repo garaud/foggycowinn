@@ -10,6 +10,7 @@ alias vi=vim
 alias emc='emacsclient -n'
 alias ec='emacsclient -n'
 alias e='emacsclient -n'
+alias mu4e='emacs -q -l .emacs.mail &' # emacs just for mail.
 
 # Keyboard layouts.
 alias kus='setxkbmap us'
