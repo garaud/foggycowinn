@@ -24,9 +24,9 @@ alias l='ls -CF'
 alias grep='grep --color=auto'
 alias ag='ag --color-line-number="1;32;40" --color-path="1;36;40" --color-match="1;31;40"'
 alias pyg='ag -G \.py$'
-alias hpg='grep -r --include="*.h" --include="*.hpp" --exclude-dir=".svn" --exclude-dir=".git" --exclude-dir=".hg"'
-alias ccg='grep -r --include="*.cpp" --include="*.cc" --exclude-dir=".svn" --exclude-dir=".git" --exclude-dir=".hg"'
-alias cmgrep='grep -r --include="*.cmake" --include="CMakeLists.txt" --exclude-dir=".svn" --exclude-dir=".git" --exclude-dir=".hg"'
+alias hpg='ag -G "\.h$|\.hpp$|\.txx$"'
+alias ccg='ag -G "\.c$|\.cc$|\.cpp$"'
+alias cmg='ag -G "\.cmake$|CMakeLists\.txt"'
 
 # DCVS.
 alias gitka='gitk --all'
