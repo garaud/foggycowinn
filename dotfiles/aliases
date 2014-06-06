@@ -46,6 +46,7 @@ alias valfull='valgrind -v --leak-check=full --leak-resolution=high --read-var-i
 alias valcache='valgrind --tool=callgrind'
 # IPython
 alias ipydata='ipython --profile=datasci' # With numpy, pandas, matplotlib
+alias ipycw='ipython --profile=cw' # For CubicWeb
 # Python current sys.path
 alias pypath="python -c 'import sys;import pprint;pprint.pprint(sys.path)'"
 # CMake
