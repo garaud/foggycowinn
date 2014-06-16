@@ -5,3 +5,4 @@ set shiftwidth=4
 set expandtab
 " Show line number
 set number
+set showcmd
