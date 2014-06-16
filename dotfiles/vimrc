@@ -3,3 +3,5 @@ colorscheme desert
 filetype plugin indent on
 set shiftwidth=4
 set expandtab
+" Show line number
+set number
