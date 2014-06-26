@@ -77,6 +77,7 @@ sha = log -r $1 --template "node: {node} -- {desc}\n"
 sst = !hg status $($HG root) $HG_ARGS
 # History modification.
 grab = rebase -d . -r $1
+paste = rebase -d . -r $1 --keep
 amend = ci --amend
 
 [hgview]
