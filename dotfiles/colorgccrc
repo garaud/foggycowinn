@@ -39,7 +39,7 @@ gcj: /usr/bin/gcj
 nocolor: dumb emacs
 
 # Text between ` and ' is usually source code.
-srcColor: clear cyan
+srcColor: clear white
 
 # Text other than a warning or error.
 introColor: reset
@@ -49,12 +49,12 @@ introColor: reset
 # Each field may be assigned a different color.
 
 # Warnings
-warningFileNameColor: clear green
-warningNumberColor:   clear blue
+warningFileNameColor: clear cyan
+warningNumberColor:   clear white
 warningMessageColor:  yellow
 
 # Errors
-errorFileNameColor: bold green
+errorFileNameColor: bold blue
 errorNumberColor:   bold white
 errorMessageColor:  bold red
 
