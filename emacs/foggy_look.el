@@ -41,8 +41,6 @@
 ;; Sets default encoding to UTF-8.
 (prefer-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
-;; Except for the keyboard!
-(set-keyboard-coding-system 'latin-1)
 
 ;; Do not run into Abbrev mode.
 (setq-default abbrev-mode nil)
