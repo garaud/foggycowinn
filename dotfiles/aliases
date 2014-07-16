@@ -45,6 +45,7 @@ alias val='valgrind -v --error-limit=no --leak-check=yes --show-reachable=yes --
 alias valfull='valgrind -v --leak-check=full --leak-resolution=high --read-var-info=yes --show-reachable=yes --track-origins=yes --log-file=valgrind-full_output-%p'
 alias valcache='valgrind --tool=callgrind'
 # IPython
+alias ipy='ipython'
 alias ipydata='ipython --profile=datasci' # With numpy, pandas, matplotlib
 alias ipycw='ipython --profile=cw' # For CubicWeb
 # Python current sys.path
