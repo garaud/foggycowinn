@@ -25,7 +25,8 @@ alias grep='grep --color=auto'
 alias ag='ag --color-line-number="1;35;40" --color-path="1;34;40" --color-match="1;4;31;40"'
 alias pyg='ag -G \.py$'
 alias hpg='ag -G "\.h$|\.hpp$|\.txx$"'
-alias ccg='ag -G "\.c$|\.cc$|\.cpp$"'
+alias ccg='ag -G "\.c$|\.cc$|\.cpp$|\.c\+\+$"'
+alias cpg='ag -G "\.h$|\.hpp$|\.txx$|\.c$|\.cc$|\.cpp$|\.c\+\+$"'
 alias cmg='ag -G "\.cmake$|CMakeLists\.txt"'
 
 # DCVS.
