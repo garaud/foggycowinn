@@ -1,8 +1,9 @@
 syntax on
-colorscheme desert
 filetype plugin indent on
 set shiftwidth=4
 set expandtab
 " Show line number
 set number
 set showcmd
+set t_Co=256
+colorscheme codeschool
