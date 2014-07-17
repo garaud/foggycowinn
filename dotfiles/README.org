@@ -64,6 +64,9 @@ ln -s /path/to/foggy/dotfiles/filenamerc ~/.filenamerc
 * Others
 
   - a tiny vim configuration file just to read file (I'm not used vim to edit)
+  - /codeschool/ colors theme for Vim. See the original one at
+    https://github.com/29decibel/codeschool-vim-theme I've just change the bg
+    color. This file should be link/copy to =~/.vim/colors=
   - =inputrc= use escape characters in order to delete words or move my cursor by
     words in the Shell
   - =xresources= to mainly configure urxvt

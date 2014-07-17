@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 filelist=`git ls-files`
-blacklist='README.org bootstrap.sh'
+blacklist='README.org bootstrap.sh codeschool.vim'
 
 function symlink() {
     for fname in  $filelist; do
@@ -25,3 +25,10 @@ else
 fi
 
 unset symlink
+
+# Just for the Vim colorscheme codeschool.
+if [[ ! -d ~/.vim/colors ]]; then
+   mkdir -p ~/.vim/colors
+fi
+echo $PWD/codeschool.vim "-> ~/.vim/colors/"
+ln -fs $PWD/codeschool.vim -t ~/.vim/colors/
