@@ -5,5 +5,6 @@ set expandtab
 " Show line number
 set number
 set showcmd
+set cursorline
 set t_Co=256
 colorscheme codeschool
