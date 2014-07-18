@@ -51,6 +51,8 @@ alias ipydata='ipython --profile=datasci' # With numpy, pandas, matplotlib
 alias ipycw='ipython --profile=cw' # For CubicWeb
 # Python current sys.path
 alias pypath="python -c 'import sys;import pprint;pprint.pprint(sys.path)'"
+# Python conda env.
+alias condenv='conda info -e'
 # CMake
 alias cmake-release='cmake -DCMAKE_BUILD_TYPE:STRING=Release'
 alias ccmake-release='ccmake -DCMAKE_BUILD_TYPE:STRING=Release'
