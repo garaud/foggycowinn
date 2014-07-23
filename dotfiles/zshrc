@@ -33,12 +33,6 @@ PROMPT="%{$bg_bold[blue]%}@%m$reset_color ${fg_pink}${at_bold}⌚ %T${at_normal}
 #▶ "
 # RPROMPT="${fg_lblue}[%T]${at_normal}"
 
-
-# If use 'powerline'
-#if [ -f ~/code/powerline/powerline/bindings/bash/powerline.sh ]; then
-#    source ~/code/powerline/powerline/bindings/zsh/powerline.zsh
-#fi
-
 setopt histignorealldups
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
