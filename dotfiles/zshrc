@@ -39,11 +39,10 @@ PROMPT="%{$bg_bold[blue]%}@%m$reset_color ${fg_pink}${at_bold}⌚ %T${at_normal}
 #    source ~/code/powerline/powerline/bindings/zsh/powerline.zsh
 #fi
 
-setopt histignorealldups sharehistory
+setopt histignorealldups
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
-HISTFILE=~/.zsh_history
 
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
