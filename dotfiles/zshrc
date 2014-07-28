@@ -72,3 +72,6 @@ fi
 if [ -f ~/.functions ]; then
     source ~/.functions
 fi
+
+# For direnv (http://direnv.net/).
+[ -x `which direnv` ] && eval "$(direnv hook zsh)"
