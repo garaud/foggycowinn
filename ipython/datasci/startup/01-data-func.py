@@ -63,7 +63,7 @@ df = _gen_random_dataframe()
 dfm = _gen_dataframe_types()
 print_datasci_version()
 msg = """\nVariables:
-- 'a': random array
+- 'a': normal random array
 - 's': Series of str
 - 'ts': Series with dates
 - 'df': DataFrame 3 columns of random float and int
