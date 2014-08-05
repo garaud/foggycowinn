@@ -16,7 +16,6 @@ Dotfiles
 
 * Try to well display my ZSH prompt with URxvt (the clock is not displayed)
 * Add an =i3= configuration.
-* Add my IPython profile with numpy and pandas
 * zsh prompt: display if the tracked (git or hg) files are currently modified in
   a repo.
 * Use a Git sub-module of a fork from oh-my-zsh? Allow to clone it and configure

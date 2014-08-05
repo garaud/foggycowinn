@@ -5,7 +5,8 @@
 theses following directories:
 
 - =dotfiles=: generic "rc" configuration files for bash, zsh, git, mercurial, etc.
-- =emacs=: a few ELisp files to configure my Emacs 24 environment.
+- =emacs=: a few Emacs Lisp files to configure my Emacs 24 environment.
+- =ipython=: store a IPython configuration and different profiles.
 
 * Emacs configuration
 
