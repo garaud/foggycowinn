@@ -1,0 +1,135 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""Dedicate to install/clean up and check different IPython profile.
+
+I have the same IPy config files for my all profiles. I jsut wan to centralize
+and source these config files.
+
+My different profiles, for now, are just a specific 'startup' directory to load
+some modules and define some function at start-up.
+"""
+
+import os
+import os.path as osp
+import logging
+import shutil
+from IPython.utils.path import get_ipython_dir
+from IPython.core.profiledir import ProfileDir, ProfileDirError
+
+IPYTHONDIR = get_ipython_dir()
+PROFILE_LIST = ('cw', 'datasci', 'image', 'default')
+IPYCONFIG_LIST = ('ipython_config.py', 'ipython_notebook_config.py',
+                  'ipython_qtconsole_config.py')
+
+# TODO Generate the three IPy config default files. Can be useful when the
+# versionof IPython changes.
+
+
+def profile_checking(ipydir, profile):
+    """Check if the profile exist.
+    """
+    try:
+        profile = ProfileDir.find_profile_dir_by_name(ipydir, profile)
+        return True
+    except ProfileDirError:
+        return False
+
+def create_profile_dir(ipydir, profile):
+    """Create the directory 'IPYTHONDIR/profile_profilename/startup' if it does not
+    exist.
+    """
+    path = osp.join(ipydir, 'profile_' + profile)
+    if not osp.isdir(path):
+        os.makedirs(osp.join(path, 'startup'))
+        return
+    logging.warning("Profile '%s' already exists.", profile)
+
+def profile_files(profile):
+    """Return a list of file paths specific to a profile.
+
+    Suppose you'll symlink all files in the 'profile/startup' directory.
+    """
+    flist = os.listdir(osp.join(profile, 'startup'))
+    profile_path = osp.join(osp.abspath('.'), profile)
+    return [osp.join(profile_path, 'startup', x) for x in flist]
+
+def config_symlink(ipydir, profile):
+    """Create a symlink between all 'profile/startup/*' files and the IPython
+    profile startup dir.
+    """
+    fexist = []
+    for fpath in profile_files(profile):
+        filename = osp.basename(fpath)
+        dest_file = osp.join(ipydir, 'profile_' + profile, 'startup',
+                                filename)
+        if osp.islink(dest_file) or osp.isfile(dest_file):
+            fexist.append(dest_file)
+        else:
+            os.symlink(fpath, dest_file)
+    logging.info("Files '%s' for profile '%s' exists.",
+                 ', '.join(sorted(fexist)), profile)
+
+def ipyconfig_symlink(ipydir, profile):
+    """Just symlink the centralized IPython config files for a specific profile.
+    """
+    fexist = []
+    for fconfig in IPYCONFIG_LIST:
+        src_path = osp.join(osp.abspath('.'), fconfig)
+        dest_file = osp.join(ipydir, 'profile_' + profile, fconfig)
+        if osp.islink(dest_file) or osp.isfile(dest_file):
+            fexist.append(dest_file)
+        else:
+            os.symlink(src_path, dest_file)
+    logging.info("Files '%s' for profile '%s' exists.",
+                 ', '.join(sorted(fexist)), profile)
+
+def cleanup_profile(ipydir, profile):
+    """Remove all files in IPYTHONDIR related to a specific profile.
+
+    Remove the directory in IPYTHONDIR/profile_name/
+    """
+    dir_to_rm = osp.join(ipydir, 'profile_' + profile)
+    print("removing '{}'".format(dir_to_rm))
+    shutil.rmtree(dir_to_rm)
+
+def deploy(ipydir, profile):
+    """Create the folder 'IPYTHONDIR/profile_name/startup' and symlink all config
+    files in it.
+    """
+    create_profile_dir(ipydir, profile)
+    if profile != 'default':
+        config_symlink(ipydir, profile)
+    ipyconfig_symlink(ipydir, profile)
+
+if __name__ == '__main__':
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-l", "--list", help="List of profiles.",
+                        action='store_true', default=False)
+    parser.add_argument('-c', '--clean', help="Clean up a specific profile.",
+                        type=str)
+    parser.add_argument('-i', '--install', help="Install a specific profile.",
+                        type=str)
+    parser.add_argument('-a', '--all', help="Try to install all profiles.",
+                        action='store_true', default=False)
+    args = parser.parse_args()
+    if args.list:
+        for profile in PROFILE_LIST:
+            if profile_checking(IPYTHONDIR, profile):
+                print("  - Profile '{}' exists.".format(profile))
+            else:
+                print("  - Profile '{}' does not exist.".format(profile))
+        parser.exit()
+    if args.install:
+        deploy(IPYTHONDIR, args.install)
+        parser.exit()
+    if args.all:
+        for profile in PROFILE_LIST:
+            print("Installing/copying profile '{}'".format(profile))
+            deploy(IPYTHONDIR, profile)
+        parser.exit()
+    if args.clean:
+        cleanup_profile(IPYTHONDIR, args.clean)
+        parser.exit()
+    parser.print_help()
