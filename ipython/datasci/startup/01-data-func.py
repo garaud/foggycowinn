@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 
+# (name, module obj)
+_PKG_LIST = (('scipy', scipy), ('numpy', np), ('pandas', pd))
+
 def print_datasci_version():
-    """Just print versions of current packages.
+    """Just print versions of some loaded packages.
     """
-    print('numpy version {}'.format(np.__version__))
-    print('pandas version {}'.format(pd.__version__))
+    msg = "  - {0} version {1}"
+    for name, module in _PKG_LIST:
+        print(msg.format(name, module.__version__))
 
 def _gen_random_dataframe(size=150, freq='B'):
     """Function which generates arbitrary dates & DataFrame with random
