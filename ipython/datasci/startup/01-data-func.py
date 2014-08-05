@@ -51,10 +51,10 @@ def _gen_dataframe_types():
 
     Usefull to show groupby, mask (isin), sort by str or int, etc.
     """
-    return pd.DataFrame({'X': [1.2, -5.6, 4.7, 0.5, -2.3, 4.9],
-                         'Q': ['d', 'g', 'e', 'z', 'k', 'a'],
-                         'U': [3, 6, 2, 7, 2, 4],
-                         'T': ['AA', 'FG', 'FG', 'AA', 'FG', 'KL']})
+    return pd.DataFrame({'X': [1.2, -5.6, 4.7, 0.5, -2.3, 4.9, -2., 5.4, 12.3],
+                         'Q': ['d', 'g', 'e', 'z', 'k', 'a', 'x', 'r', 't'],
+                         'U': [3, 6, 2, 7, 2, 4, 3, 7, 2],
+                         'T': ['AA', 'FG', 'FG', 'AA', 'FG', 'KL', 'KL', 'AA', 'MV']})
 
 a = _gen_random_array()
 s = _gen_str_series()
