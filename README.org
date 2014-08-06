@@ -8,6 +8,12 @@ theses following directories:
 - =emacs=: a few Emacs Lisp files to configure my Emacs 24 environment.
 - =ipython=: store a IPython configuration and different profiles.
 
+* dotfiles
+
+  Several configuration files for Zsh, Git, Mercurial, etc.
+
+  Read the README file at file:dotfiles/README.org
+
 * Emacs configuration
 
   I use the Emacs packages features to install and upgrade the packages that I
@@ -23,3 +29,9 @@ theses following directories:
   =~/.emacs.d/snippets= to my =emacs/snippets= directory.
 
   See also [[https://github.com/garaud/foggycowinn/blob/master/emacs/README.org][README file for my Emacs config]].
+
+* IPython
+
+  Configuration files and different [[http://ipython.org/index.html][IPyhon]] profiles.
+
+  See the README file at file:ipython/README.rst
