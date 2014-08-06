@@ -12,7 +12,7 @@ theses following directories:
 
   Several configuration files for Zsh, Git, Mercurial, etc.
 
-  Read the README file at file:dotfiles/README.org
+  See the [[https://github.com/garaud/foggycowinn/blob/master/dotfiles/README.org][dedicated README file]].
 
 * Emacs configuration
 
@@ -34,4 +34,4 @@ theses following directories:
 
   Configuration files and different [[http://ipython.org/index.html][IPyhon]] profiles.
 
-  See the README file at file:ipython/README.rst
+  See the [[https://github.com/garaud/foggycowinn/blob/master/ipython/README.rst][dedicated README file]].
