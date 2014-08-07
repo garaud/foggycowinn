@@ -74,4 +74,4 @@ if [ -f ~/.functions ]; then
 fi
 
 # For direnv (http://direnv.net/).
-[ -x `which direnv` ] && eval "$(direnv hook zsh)"
+[[ -x `which direnv` ]] && eval "$(direnv hook zsh)"
