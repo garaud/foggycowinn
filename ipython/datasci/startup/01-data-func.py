@@ -27,15 +27,23 @@ def _gen_random_array(size=(6, 4)):
     """
     return np.random.randn(*size)
 
-def _gen_str_series(rawtext=None):
+def _gen_str_series(rawtext=None, sep=None):
     """Generate a Series of strs.
 
     rawtext: str
         suppose you split the str to pick each word.
+    sep: str, None
+        Can pass a specific separator to 'split()'
+
+    ::
+
+       _gen_str_series('John Coltrane,Miles Davis', sep=',')
+
+    if you don't want to split with whitespaces.
     """
     if not rawtext:
         rawtext = "nerd casual jerk #game phone geek! 1337 glop"
-    return pd.Series(rawtext.split())
+    return pd.Series(rawtext.split(sep))
 
 def _gen_timeseries(dates=None):
     """Generate a Series with dates index.
