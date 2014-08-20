@@ -6,6 +6,7 @@
 ;; Company (auto completion).
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
+(add-to-list 'company-backends 'company-anaconda) ;; Python completion
 
 ;; Yasnippet.
 (yas-global-mode 1)

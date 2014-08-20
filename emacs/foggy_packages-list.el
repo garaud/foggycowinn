@@ -7,8 +7,10 @@
   '(
     ag
     auctex
+    anaconda-mode
     cmake-mode
     company
+    company-anaconda
     company-c-headers
     expand-region
     htmlize
