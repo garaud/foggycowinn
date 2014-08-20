@@ -3,9 +3,9 @@
 ;; 2011-2014
 ;; Author(s): Damien Garaud
 
-;; Auto Complete
-(require 'auto-complete-config)
-(ac-config-default)
+;; Company (auto completion).
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;; Yasnippet.
 (yas-global-mode 1)

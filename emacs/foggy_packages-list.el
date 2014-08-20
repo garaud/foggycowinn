@@ -7,8 +7,9 @@
   '(
     ag
     auctex
-    auto-complete fuzzy
     cmake-mode
+    company
+    company-c-headers
     expand-region
     htmlize
     ido-ubiquitous
