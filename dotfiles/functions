@@ -23,3 +23,11 @@ function cwenvback
     unset _OLD_CWENV_PYTHONPATH
     unset _OLD_CWENV_PS1
 }
+
+function f
+{
+    # Find a pattern for a specific extension file (uncase-sensitive pattern).
+    ext=$1
+    pattern=$2
+    find $PWD -type f -name "*.$ext" -print | ag -i $pattern
+}
