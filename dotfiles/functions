@@ -29,5 +29,5 @@ function f
     # Find a pattern for a specific extension file (uncase-sensitive pattern).
     ext=$1
     pattern=$2
-    find $PWD -type f -name "*.$ext" -print | ag -i $pattern
+    find $PWD -type f -iname "*$pattern*.$ext" -print
 }
