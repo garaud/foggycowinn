@@ -31,3 +31,15 @@ function f
     pattern=$2
     find $PWD -type f -iname "*$pattern*.$ext" -print
 }
+
+
+function F
+{
+    if [ -f $SACK_SHORTCUT ]; then
+        emacsclient -n +`sed -n "$1p" < $SACK_SHORTCUT`
+    else
+        echo "Sack shortcuts file '$SACK_SHORTCMD' not found."
+        echo "Please define the env. variable SACK_SHORTCUT or check if the file exist."
+    fi
+}
+
