@@ -22,6 +22,7 @@
     monky
     ;;mingus
     multiple-cursors
+    projectile
     org
     smartscan
     tangotango-theme
