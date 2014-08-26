@@ -63,6 +63,9 @@
 ;; Set Python mode for SConsctruct file
 (add-to-list 'auto-mode-alist '("\\SConstruct" . python-mode))
 
+(add-hook 'python-mode-hook 'anaconda-mode)
+(add-hook 'python-mode-hook 'eldoc-mode)
+
 ;; Cython mode
 ;; (add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.pxd\\'" . cython-mode))
