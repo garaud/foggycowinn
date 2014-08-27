@@ -39,6 +39,6 @@ function pyv
         _pypkg=$1
         echo $_pypkg `python -c "import $_pypkg;print($_pypkg.__version__)"`
     else
-        echo "Need Python package name.";
+        echo "Need one Python package name.";
     fi
 }
