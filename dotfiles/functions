@@ -31,3 +31,14 @@ function f
     pattern=$2
     find $PWD -type f -iname "*$pattern*.$ext" -print
 }
+
+function pyv
+{
+    # Try to find the current version of a specific package.
+    if [ "$#" -eq 1 ]; then
+        _pypkg=$1
+        echo $_pypkg `python -c "import $_pypkg;print($_pypkg.__version__)"`
+    else
+        echo "Need Python package name.";
+    fi
+}
