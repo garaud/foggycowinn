@@ -6,6 +6,7 @@
 (defvar foggy-packages-list
   '(
     ag
+    ahg
     auctex
     anaconda-mode
     cmake-mode
@@ -19,7 +20,6 @@
     jinja2-mode
     magit
     markdown-mode
-    monky
     ;;mingus
     multiple-cursors
     projectile

@@ -11,12 +11,14 @@
 (require 'magit)
 (global-set-key "\C-cg" 'magit-status)
 
+;; For Mercurial
+(require 'ahg)
 
 ;;;;;;;;;;;;;;;
 ;; Mercurial ;;
 ;;;;;;;;;;;;;;;
 
-(require 'monky)
+;;(require 'monky)
 
 ;; By default monky spawns a seperate hg process for every command.
 ;; This will be slow if the repo contains lot of changes.
@@ -24,7 +26,7 @@
 ;; cmdserver and communicate over pipe.
 ;; Available only on mercurial versions 1.9 or higher
 
-(setq monky-process-type 'cmdserver)
+;;(setq monky-process-type 'cmdserver)
 
 
 ;;; This version has better chances to run on windows
