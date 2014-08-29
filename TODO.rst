@@ -39,5 +39,6 @@ Emacs
   - bind the function (find a keybinding)
 * Add some contents about Emacs server to the ``emacs/README.org`` file.
 * Try to manage default size according to screen resolution
+* Manage my config with frame or no-frame in order to open emacs with no X correctly
 * Make doc-mode work to edit/modify Doxygen comments (in C++ file)
 * Configure Org-mode properly (agile, Getting Things Done, ...)
