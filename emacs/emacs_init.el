@@ -97,3 +97,4 @@
 (require 'foggy_web)
 (require 'foggy_music)
 (require 'foggy_keybindings)
+(require 'foggy_custom)
