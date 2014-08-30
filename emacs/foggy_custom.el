@@ -3,8 +3,6 @@
 ;; 2014
 ;; Author(s): Damien Garaud
 
-
-;; TODO Move this in a dedicated file (in a foggy-custom-theme.el for instance).
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.

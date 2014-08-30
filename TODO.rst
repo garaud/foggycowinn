@@ -25,7 +25,6 @@ Dotfiles
 Emacs
 -----
 
-* Move the ``custom`` part in ``foggy_look`` to a dedicated ELisp file.
 * Find why the buffer ``*scratch*`` is no in Lisp mode.
 * Check if there are some function in ``*.el`` files that I can move into
   ``foggy_functions.el``
