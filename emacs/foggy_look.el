@@ -9,7 +9,7 @@
 (if (display-graphic-p)
     (progn
       (load-theme 'tangotango t)
-      ((scroll-bar-mode -1))))
+      (scroll-bar-mode -1)))
 
 (set-default-font "DejaVu Sans Mono-12")
 
@@ -58,8 +58,8 @@
 ;; Highlight the current line.
 (if (display-graphic-p)
     (progn
-      ((global-hl-line-mode t)
-       (set-face-background 'hl-line "#282828"))))
+      (global-hl-line-mode t)
+      (set-face-background 'hl-line "#282828")))
 ;; For light theme.
 ;;(set-face-background 'hl-line "#F0F8FF")
 ;; Shows the column number.
