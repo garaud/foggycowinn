@@ -3,16 +3,19 @@
 ;; 2011-2014
 ;; Author(s): Damien Garaud
 
-;; Emacs Theme
-;; (load-theme 'tango-dark)
-(load-theme 'tangotango t)
+;; Special emacs launching with X:
+;;  - tangotango theme
+;;  - scroll bar mode to nil
+(if (display-graphic-p)
+    (progn
+      (load-theme 'tangotango t)
+      ((scroll-bar-mode -1))))
 
 (set-default-font "DejaVu Sans Mono-12")
 
 ;; Gets rid of the useless tool bar and menu bar.
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-(scroll-bar-mode -1)
 
 ;; No advertisement when Emacs starts.
 (setq inhibit-startup-message t)
@@ -53,9 +56,10 @@
 (setq font-lock-maximum-decoration t)
 (setq transient-mark-mode t)
 ;; Highlight the current line.
-(global-hl-line-mode t)
-;; For dark theme.
-(set-face-background 'hl-line "#282828")
+(if (display-graphic-p)
+    (progn
+      ((global-hl-line-mode t)
+       (set-face-background 'hl-line "#282828"))))
 ;; For light theme.
 ;;(set-face-background 'hl-line "#F0F8FF")
 ;; Shows the column number.
