@@ -13,6 +13,7 @@
     company
     company-anaconda
     company-c-headers
+    elfeed
     expand-region
     htmlize
     ido-ubiquitous
