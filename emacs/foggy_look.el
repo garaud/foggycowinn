@@ -8,10 +8,10 @@
 ;;  - scroll bar mode to nil
 (if (display-graphic-p)
     (progn
-      (load-theme 'tangotango t)
       (scroll-bar-mode -1)))
 
 (set-default-font "DejaVu Sans Mono-12")
+(load-theme 'tangotango t)
 
 ;; Gets rid of the useless tool bar and menu bar.
 (tool-bar-mode -1)
