@@ -43,6 +43,17 @@ function pyv
     fi
 }
 
+function c
+{
+    # Launch a compilation with 'make'. It's possible to pass the number of
+    # cores for parallel compilation.
+    if [ "$#" -eq 1 ]; then
+        chrt -i 0 make -j $1
+    else
+        chrt -i 0 make
+    fi
+}
+
 function _jh-prev-result
 {
     # Re-launch last command and save the result. It's possible to use it when
