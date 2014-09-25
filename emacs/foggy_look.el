@@ -92,9 +92,8 @@
     )
 
 ;; Highlight as 'warning' some keywords for a list of modes.
-(map 'list (lambda (mode)
-             (highlight-warning-keyword mode))
-     code-tag-mode-list)
+(cl-map 'list (lambda (mode) (highlight-warning-keyword mode))
+        code-tag-mode-list)
 
 ;; For a better naming of the buffers (that is, not filename.txt<2>!).
 (require 'uniquify)
