@@ -146,8 +146,14 @@ Goes backward if ARG is negative; error if CHAR not found."
   ;; Match with 'class|def word(' for instance (case insensitive for now).
   ;; Take a look at a TAGS file.
   (tags-apropos (concat "[^_]\\<" (current-word) "\\>\("))
-)
+  )
 
+;; Thanks to hesste from Github
+(defun toggle-show-trailing-whitespace ()
+  "Display or not the trailing whitespace"
+  (interactive)
+  (setq show-trailing-whitespace
+        (not show-trailing-whitespace)))
 
 (setq foggy_functions-loaded t)
 (provide 'foggy_functions)
