@@ -7,8 +7,8 @@ source ~/.zprezto/init.zsh
 #HISTSIZE=1000
 #SAVEHIST=1000
 
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
+bindkey '^[[1;5C' forward-word                        # [Ctrl-RightArrow] - move forward one word
+bindkey '^[[1;5D' backward-word                       # [Ctrl-LeftArrow] - move backward one word
 
 # Use modern completion system
 #autoload -Uz compinit
