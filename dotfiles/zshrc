@@ -2,19 +2,6 @@
 
 source ~/.zprezto/init.zsh
 
-# Path to your oh-my-zsh configuration.
-#ZSH=$HOME/.oh-my-zsh
-
-# Oh-my-zsh plugins.
-#plugins=(git mercurial autojump zshmarks)
-
-#source $ZSH/oh-my-zsh.sh
-#ZSH_THEME_TERM_TITLE_IDLE="%2d"
-
-# Set up the prompt
-#autoload -Uz promptinit
-#promptinit
-
 #setopt histignorealldups
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 #HISTSIZE=1000
