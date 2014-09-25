@@ -53,6 +53,9 @@
 ;; 'yes' & 'no' with one character 'y' & 'n'.
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; Do not ask when I open a symlink pointing to a version controlled file.
+(setq vc-follow-symlinks nil)
+
 ;; Note: excellent pour passer d'un buffer a l'autre et pour ouvrir des
 ;; fichiers: Interactively do things.
 (ido-mode t)
