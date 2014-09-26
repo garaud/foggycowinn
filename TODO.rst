@@ -25,7 +25,6 @@ Dotfiles
 Emacs
 -----
 
-* Find why the buffer ``*scratch*`` is no in Lisp mode.
 * Check if there are some function in ``*.el`` files that I can move into
   ``foggy_functions.el``
 * Try to refactor the 'highlight XXX and TODO words' in the file ``foggy_look.el``

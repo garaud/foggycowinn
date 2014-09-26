@@ -66,7 +66,6 @@
  ido-everywhere t)
 
 ;; Auto fill-adapt for text-mode.
-(setq major-mode 'text-mode)
 (setq text-mode-hook 'turn-on-auto-fill)
 
 ;; Flyspell mode.
