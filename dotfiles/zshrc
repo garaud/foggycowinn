@@ -1,14 +1,14 @@
 # -*- mode: sh; -*-
 
-source ~/.zprezto/init.zsh
-
-bindkey '^[[1;5C' forward-word  # [Ctrl-RightArrow] - move forward one word
-bindkey '^[[1;5D' backward-word # [Ctrl-LeftArrow] - move backward one word
-
 # Extra config (specific PATH or enviromnent variables).
 if [ -f ~/.extra ]; then
     source ~/.extra
 fi
+
+source ~/.zprezto/init.zsh
+
+bindkey '^[[1;5C' forward-word  # [Ctrl-RightArrow] - move forward one word
+bindkey '^[[1;5D' backward-word # [Ctrl-LeftArrow] - move backward one word
 
 # Some aliases.
 if [ -f ~/.aliases ]; then
