@@ -24,6 +24,9 @@
 
 (projectile-global-mode)
 
+;; sh-mode for zsh extension.:
+(add-to-list 'auto-mode-alist '("\\.zsh$" . sh-mode))
+
 ;;;;;;;;;;
 ;; YAML ;;
 ;;;;;;;;;;
