@@ -23,6 +23,8 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+  'fasd' \
+  'zshmarks' \
   'prompt'
 
 #
