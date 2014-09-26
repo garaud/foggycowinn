@@ -18,7 +18,8 @@
 (menu-bar-mode -1)
 
 ;; No advertisement when Emacs starts.
-(setq inhibit-startup-message t)
+(setq inhibit-startup-message t
+      initial-scratch-message nil)
 
 ;; No blinked cursor.
 (blink-cursor-mode -1)
