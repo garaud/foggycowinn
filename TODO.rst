@@ -14,6 +14,8 @@ General
 Dotfiles
 --------
 
+* Clone and deploy/install dependencies when I need to install my config on a
+  new environment (prezto, fasd, zshmarks, etc.)
 * Try to well display my ZSH prompt with URxvt (the clock is not displayed)
 * Add an =i3= configuration.
 * zsh prompt: display if the tracked (git or hg) files are currently modified in
