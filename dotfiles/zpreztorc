@@ -21,7 +21,6 @@ zstyle ':prezto:load' pmodule \
   'history' \
   'directory' \
   'spectrum' \
-  'utility' \
   'completion' \
   'fasd' \
   'zshmarks' \
