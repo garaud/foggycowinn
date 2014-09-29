@@ -32,3 +32,6 @@ if [[ ! -d ~/.vim/colors ]]; then
 fi
 echo $PWD/codeschool.vim "-> ~/.vim/colors/"
 ln -fs $PWD/codeschool.vim -t ~/.vim/colors/
+
+# External deps.
+source external/install.zsh
