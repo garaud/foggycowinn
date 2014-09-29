@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 filelist=`git ls-files`
-blacklist='README.org bootstrap.sh codeschool.vim'
+blacklist='README.org bootstrap.sh codeschool.vim fasd_install.sh'
 
 function symlink() {
     for fname in  $filelist; do
