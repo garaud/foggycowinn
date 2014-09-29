@@ -34,4 +34,7 @@ echo $PWD/codeschool.vim "-> ~/.vim/colors/"
 ln -fs $PWD/codeschool.vim -t ~/.vim/colors/
 
 # External deps.
+if [ ! -d ~/.zprezto/ ]; then
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+fi
 source external/install.zsh
