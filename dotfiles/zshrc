@@ -20,5 +20,10 @@ if [ -f ~/.functions ]; then
     source ~/.functions
 fi
 
+# Extra dependencies.
+if [ -d ~/.external-foggy ]; then
+    source ~/.external-foggy/init.zsh
+fi
+
 # For direnv (http://direnv.net/).
 [[ -x `which direnv` ]] && eval "$(direnv hook zsh)"
