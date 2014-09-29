@@ -1,10 +1,12 @@
 # -*- mode: sh -*-
 
-# cd
+# Directories moving
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias po='popd'
+alias g='jump'      # zshmarks
+alias bo='bookmark' # zshmarks
 
 # Editor
 alias vi=vim
