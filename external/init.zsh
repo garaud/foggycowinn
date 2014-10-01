@@ -1,4 +1,4 @@
 # -*- mode: sh; -*-
 
-source ~/.external-foggy/zshmarks/zshmarks.plugin.zsh || return 1
-fpath=("~/.external-foggy/zshmarks" $fpath)
+fpath=("$HOME/.external-foggy/zshmarks" $fpath)
+source $HOME/.external-foggy/zshmarks/zshmarks.plugin.zsh || return 1
