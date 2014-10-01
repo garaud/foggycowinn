@@ -14,6 +14,7 @@ source ~/.zprezto/init.zsh
 
 bindkey '^[[1;5C' forward-word  # [Ctrl-RightArrow] - move forward one word
 bindkey '^[[1;5D' backward-word # [Ctrl-LeftArrow] - move backward one word
+bindkey '^[[3;5~' kill-word     # [Crtl-Delete] - kill word
 
 # Some aliases.
 if [ -f ~/.aliases ]; then
