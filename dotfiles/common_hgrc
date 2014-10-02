@@ -75,6 +75,7 @@ odiff = diff --rev 'precursors(.)'  --hidden
 ublame = blame -n -d -l -u
 sha = log -r $1 --template "node: {node} -- {desc}\n"
 sst = !hg status $($HG root) $HG_ARGS
+lp = log -r 'last(public())'
 # History modification.
 grab = rebase -d . -r $1
 paste = rebase -d . -r $1 --keep
