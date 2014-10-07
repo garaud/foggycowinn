@@ -12,6 +12,7 @@ alias bo='bookmark' # zshmarks
 alias vi=vim
 alias emc='emacsclient -n'
 alias ec='emacsclient -n'
+alias te='emacsclient -nw'
 alias e='emacsclient -n'
 alias fe='fasd -f -e "emacsclient -n"' # # quick opening files with emacsclient
 alias mu4e='emacs -q -l .emacs.mail &' # emacs just for mail.
