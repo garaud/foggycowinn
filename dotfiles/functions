@@ -49,6 +49,8 @@ function c
     # cores for parallel compilation.
     if [ "$#" -eq 1 ]; then
         chrt -i 0 make -j $1
+    elif [ "$#" -eq 2 ]; then
+        chrt -i 0 make -j $1 $2 # to pass the target
     else
         chrt -i 0 make
     fi
