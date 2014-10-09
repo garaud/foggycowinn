@@ -25,6 +25,7 @@
     multiple-cursors
     projectile
     org
+    rust-mode
     smartscan
     tangotango-theme
     yaml-mode
