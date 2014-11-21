@@ -11,6 +11,9 @@
 ;; Yasnippet.
 (yas-global-mode 1)
 
+;; Smartparens
+(smartparens-global-mode t)
+
 ;; Multiple cursors
 (require 'multiple-cursors)
 ;; On an active region with multiple lines add a cursor to each line:

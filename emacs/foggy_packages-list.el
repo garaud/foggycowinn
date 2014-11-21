@@ -26,6 +26,7 @@
     projectile
     org
     rust-mode
+    smartparens
     smartscan
     tangotango-theme
     yaml-mode
