@@ -44,6 +44,11 @@ alias hu='hg up'
 alias hgv='hgview &'
 alias tig='tig --all'
 
+# Music and MPD
+alias rmpc='mpc -h raspberrypi.local'
+alias mry='ncmpcpp -h raspberrypi.local'
+alias m='ncmpcpp'
+
 ##########
 # Dev and debug tools.
 # Valgrind.
