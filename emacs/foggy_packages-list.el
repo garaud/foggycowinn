@@ -13,6 +13,7 @@
     company
     company-anaconda
     company-c-headers
+    django-mode
     elfeed
     expand-region
     htmlize
