@@ -5,6 +5,7 @@
 
 ;; Package management
 ;; Loading of packages at startup
+;; XXX File tO remove ?
 
 (defun prepend-path ( my-path )
   (setq load-path (cons (expand-file-name my-path) load-path)))
