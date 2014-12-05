@@ -10,7 +10,7 @@
     auctex
     anaconda-mode
     cmake-mode
-    company
+    company-mode
     company-anaconda
     company-c-headers
     django-mode
@@ -25,7 +25,7 @@
     ;;mingus
     multiple-cursors
     projectile
-    org
+    org-mode
     rust-mode
     smartparens
     smartscan
