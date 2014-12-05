@@ -155,5 +155,13 @@ Goes backward if ARG is negative; error if CHAR not found."
   (setq show-trailing-whitespace
         (not show-trailing-whitespace)))
 
+(defun comment-or-uncomment-current-line ()
+  "Comment or uncomment the current line where the cursor is."
+  (interactive)
+  (let ((beg (line-beginning-position))
+        (end (line-end-position)))
+    (comment-or-uncomment-region beg end)))
+
+
 (setq foggy_functions-loaded t)
 (provide 'foggy_functions)
