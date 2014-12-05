@@ -28,3 +28,4 @@
         grep = grep -Ii
         lasttag = describe --tags --abbrev=0
         d = diff
+        dc = diff --cached
