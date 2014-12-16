@@ -16,6 +16,8 @@
     django-mode
     elfeed
     expand-region
+    helm
+    helm-pydoc
     htmlize
     ido-ubiquitous
     lua-mode
