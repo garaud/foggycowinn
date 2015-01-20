@@ -9,6 +9,7 @@
     ahg
     auctex
     anaconda-mode
+    angular-snippets
     cmake-mode
     company-mode
     company-anaconda
@@ -32,6 +33,7 @@
     smartparens
     smartscan
     tangotango-theme
+    web-mode
     yaml-mode
     yasnippet
     )
