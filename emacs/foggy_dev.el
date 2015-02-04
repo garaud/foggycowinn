@@ -3,29 +3,6 @@
 ;; 2011-2014
 ;; Author(s): Damien Garaud
 
-;; Company (auto completion).
-(require 'company)
-(add-hook 'after-init-hook 'global-company-mode)
-(add-to-list 'company-backends 'company-anaconda) ;; Python completion
-
-;; Yasnippet.
-(yas-global-mode 1)
-
-;; Smartparens
-(smartparens-global-mode t)
-
-;; Multiple cursors
-(require 'multiple-cursors)
-;; On an active region with multiple lines add a cursor to each line:
-;; NOTE: 'C-S-c' means 'C-MAJ-c'
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-;; Add multiple cursors based on a keyword in the buffer (first set-mark your
-;; keyword, then 'C->').
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-
-(projectile-global-mode)
 
 ;; sh-mode for zsh extension.:
 (add-to-list 'auto-mode-alist '("\\.zsh$" . sh-mode))
@@ -78,8 +55,6 @@
 ;; Set Python mode for SConsctruct file
 (add-to-list 'auto-mode-alist '("\\SConstruct" . python-mode))
 
-(add-hook 'python-mode-hook 'anaconda-mode)
-(add-hook 'python-mode-hook 'eldoc-mode)
 
 ;; Cython mode
 ;; (add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))

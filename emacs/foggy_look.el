@@ -96,13 +96,6 @@
 (cl-map 'list (lambda (mode) (highlight-warning-keyword mode))
         code-tag-mode-list)
 
-;; For a better naming of the buffers (that is, not filename.txt<2>!).
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'reverse)
-(setq uniquify-separator "/")
-(setq uniquify-after-kill-buffer-p t)
-(setq uniquify-ignore-buffers-re "^\\*")
-
 ;; XXX Is there a better way?
 ;; Conf-mode for 'rc' files.
 (add-to-list 'auto-mode-alist '("hgrc\\'" . conf-mode))

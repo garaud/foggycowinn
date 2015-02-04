@@ -5,9 +5,9 @@
 ;; Path of the emacs configs directory.
 (setq emacs-foggy-dir "~/src/foggycowinn/emacs"
       packages-list-file (expand-file-name "foggy_packages-list.el" emacs-foggy-dir)
-      setup-packages-file (expand-file-name "foggy_packages-setup.el" emacs-foggy-dir)
+      setup-el-get (expand-file-name "setup-el-get.el" emacs-foggy-dir)
       init-emacs-file (expand-file-name "emacs_init.el" emacs-foggy-dir))
 
 (load packages-list-file)
-(load setup-packages-file)
+(load setup-el-get)
 (load init-emacs-file)

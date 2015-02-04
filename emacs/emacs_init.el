@@ -83,12 +83,6 @@
 (if (file-exists-p astyle-hooks-file)
     (load astyle-hooks-file))
 
-(require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
-
-(require 'smartscan)
-(global-smartscan-mode 1)
-
 ;; Load
 (require 'foggy_functions)
 (require 'foggy_look)

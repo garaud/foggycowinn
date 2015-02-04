@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: groupedreg
+# key: gre
+# group : general
+# --
+r"(?P<${1:name}>$0)$"
