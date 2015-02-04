@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 # (name, module obj)
-_PKG_LIST = (('scipy', scipy), ('numpy', np), ('pandas', pd))
+_PKG_LIST = (('scipy', scipy), ('numpy', np), ('pandas', pd),
+             ('matplotlib', plt.matplotlib))
 
 def print_datasci_version():
     """Just print versions of some loaded packages.
