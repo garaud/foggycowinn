@@ -9,12 +9,13 @@
     ahg
     auctex
     anaconda-mode
-    angular-snippets
+    ;;angular-snippets
+    clojure-mode
     cmake-mode
     company-mode
     company-anaconda
     company-c-headers
-    django-mode
+    ;;django-mode
     elfeed
     expand-region
     helm
@@ -27,6 +28,7 @@
     markdown-mode
     ;;mingus
     multiple-cursors
+    pony-mode
     projectile
     org-mode
     rust-mode
