@@ -1,9 +1,9 @@
 (require 'smartparens-config)
+(smartparens-global-mode)
 
-
-(sp-with-modes '(python-mode rst-mode text-mode)
-  ;; disable ', it's the quote character!
-  (sp-local-pair "'" nil :actions nil))
+;; The '' pair will autopair UNLESS the point is right after a word,
+;; in which case you want to insert a single apostrophe.
+(sp-pair "'" nil :unless '(sp-point-after-word-p))
 
 (defvar sp--bracket-modes '(js-mode
 			    sh-mode)
@@ -11,7 +11,6 @@
 (sp-with-modes sp--bracket-modes
   (sp-local-pair "{" nil :post-handlers '((my-create-newline-and-enter-sexp "RET")))
   (sp-local-pair "[" nil :post-handlers '((my-create-newline-and-enter-sexp "RET"))))
-(smartparens-global-mode)
 
 (defun my-create-newline-and-enter-sexp (&rest _ignored)
   "Open a new brace or bracket expression, with relevant newlines and indent. "
