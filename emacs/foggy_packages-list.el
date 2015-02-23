@@ -11,6 +11,7 @@
     anaconda-mode
     ;;angular-snippets
     clojure-mode
+    cider
     cmake-mode
     company-mode
     company-anaconda
