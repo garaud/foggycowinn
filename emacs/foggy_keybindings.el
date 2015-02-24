@@ -85,5 +85,12 @@
 
 ;; TODO: I would like allow this keybinding only if doxy-mode is used.
 
+;;;;;;;;;;
+;; Lisp ;;
+;;;;;;;;;;
+
+(eval-after-load 'lisp-mode
+  '(define-key lisp-mode-map [(tab)] 'slime-indent-and-complete-symbol))
+
 (setq foggy_keybindings-loaded t)
 (provide 'foggy_keybindings)
