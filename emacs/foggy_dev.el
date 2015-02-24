@@ -8,6 +8,13 @@
 (add-to-list 'auto-mode-alist '("\\.zsh$" . sh-mode))
 
 ;;;;;;;;;;
+;; Lisp ;;
+;;;;;;;;;;
+
+;; Emacs Lisp autocompletion with company
+(add-hook 'emacs-lisp-mode-hook 'company-mode)
+
+;;;;;;;;;;
 ;; YAML ;;
 ;;;;;;;;;;
 
