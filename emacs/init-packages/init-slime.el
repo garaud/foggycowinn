@@ -1,3 +1,6 @@
+(require 'slime-autoloads)
+(add-to-list 'slime-contribs 'slime-fancy)
+
 (setq inferior-lisp-program "/usr/bin/sbcl")
 (eval-after-load "slime"
   '(progn
@@ -5,5 +8,3 @@
      (define-key slime-mode-map (kbd "M-n") nil)
      (define-key slime-mode-map (kbd "C-c d") 'slime-documentation)
      (define-key slime-mode-map (kbd "C-j") 'slime-eval-print-last-expression)))
-
-
