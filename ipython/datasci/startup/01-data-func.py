@@ -1,8 +1,20 @@
 # -*- coding: utf-8 -*-
 
+
 # (name, module obj)
 _PKG_LIST = (('scipy', scipy), ('numpy', np), ('pandas', pd),
              ('matplotlib', plt.matplotlib))
+
+DATASCI_HELP_MSG = """\nVariables:
+- 'a': normal random array
+- 's': Series of str
+- 'ts': Series with dates
+- 'df': DataFrame 3 columns of random float and int
+- 'dfm': DataFrame 3 columns multiple data: float, int, str
+- 'dfmidx': DataFrame with 2 cols and a MultiIndex
+- 'panel': Panel with three random DataFrame (3 columns)
+"""
+
 
 def print_datasci_version():
     """Just print versions of some loaded packages.
@@ -10,6 +22,9 @@ def print_datasci_version():
     msg = "  - {0} version {1}"
     for name, module in _PKG_LIST:
         print(msg.format(name, module.__version__))
+
+def datasci_help(msg=DATASCI_HELP_MSG):
+    print(msg)
 
 def _gen_random_dataframe(size=150, freq='B'):
     """Function which generates arbitrary dates & DataFrame with random
@@ -90,13 +105,4 @@ dfm = _gen_dataframe_types()
 dfmidx = _gen_multiindex_dataframe()
 panel = _gen_panel()
 print_datasci_version()
-msg = """\nVariables:
-- 'a': normal random array
-- 's': Series of str
-- 'ts': Series with dates
-- 'df': DataFrame 3 columns of random float and int
-- 'dfm': DataFrame 3 columns multiple data: float, int, str
-- 'dfmidx': DataFrame with 2 cols and a MultiIndex
-- 'panel': Panel with three random DataFrame (3 columns)
-"""
-print(msg)
+datasci_help()
