@@ -16,9 +16,10 @@ ln -s /path/to/foggy/dotfiles/filenamerc ~/.filenamerc
 
 * zsh
 
-  This file depends on the project [[http://ohmyz.sh/][oh my zsh]]. Extra variables or functions can
-  be sourced via the file =~/.extra=. I've for instance different =extra=
-  files according to the computer (work, home, etc.). You can also find:
+  This file depends on the project [[https://github.com/sorin-ionescu/prezto][prezto]] (a configuration framework for Zsh).
+  Extra variables or functions can be sourced via the file =~/.extra=. I've for
+  instance different =extra= files according to the computer (work, home,
+  etc.). You can also find:
 
   - =functions=: Shell functions
   - =aliases=: a list of Shell aliases

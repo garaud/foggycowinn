@@ -16,8 +16,9 @@ theses following directories:
 
 * Emacs configuration
 
-  I use the Emacs packages features to install and upgrade the packages that I
-  use. They can come from ELPA, Melpa or Marmelade.
+  I use the Emacs tools [[https://github.com/dimitri/el-get][el-get]] to install and upgrade the packages. This is
+  useful to install from source code or from standard packages mirrors such as
+  ELPA, Melpa or Marmelade.
 
   The packages management (startup checking and installing) is inspired from
   https://github.com/kaushalmodi/.emacs.d/ Thanks to him.

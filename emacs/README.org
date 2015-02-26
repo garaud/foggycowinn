@@ -8,10 +8,9 @@ List of Emacs Lisp files for my own Emacs configuration.
 * How to use it?
 ** Copy the FoggyCowInn Emacs directory
 
-Do =git clone http://git.gitorious.org/foggycowinn/foggycowinn.git= or
- =git clone git://gitorious.org/foggycowinn/foggycowinn.git=.
+Do =git clone https://github.com/garaud/foggycowinn=.
 
-See also on Github at https://github.com/garaud/foggycowinn
+See also on Gitorious at https://gitorious.org/foggycowinn
 
 ** Create or modify your Emacs configuration file
 
