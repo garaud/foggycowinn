@@ -18,6 +18,7 @@
     company-c-headers
     ;;django-mode
     elfeed
+    emmet-mode
     expand-region
     helm
     helm-pydoc
