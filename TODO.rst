@@ -18,20 +18,12 @@ Dotfiles
   new environment (prezto, fasd, zshmarks, etc.)
 * Try to well display my ZSH prompt with URxvt (the clock is not displayed)
 * Add an =i3= configuration.
-* zsh prompt: display if the tracked (git or hg) files are currently modified in
-  a repo.
-* Use a Git sub-module of a fork from oh-my-zsh? Allow to clone it and configure
-  it thanks to the =bootstrap.sh= script?
-* Use Prezto instead of oh-my-zsh?
 
 Emacs
 -----
 
 * Check if there are some function in ``*.el`` files that I can move into
   ``foggy_functions.el``
-* Try to refactor the 'highlight XXX and TODO words' in the file ``foggy_look.el``
-* Understand why packages are not installed in the ``elpa`` dir in my ``emacs``
-  dir.
 * Improve the funtion ``ccppout`` at ``foggy_dev``:
   - use the word where the cursor is
   - genelarize the concept to print an arbiratry variable even in Python
