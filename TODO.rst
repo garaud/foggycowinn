@@ -29,7 +29,6 @@ Emacs
   - genelarize the concept to print an arbiratry variable even in Python
   - use ``save-excursion`` to store the cursor position
   - bind the function (find a keybinding)
-* Add some contents about Emacs server to the ``emacs/README.org`` file.
 * Try to manage default size according to screen resolution
   - try it with ``(x-display-pixel-height)`` and ``(x-display-pixel-width)``
 * Make doc-mode work to edit/modify Doxygen comments (in C++ file)

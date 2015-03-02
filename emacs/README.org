@@ -14,7 +14,21 @@ See also on Gitorious at https://gitorious.org/foggycowinn
 
 ** Create or modify your Emacs configuration file
 
-Take a look the the =.emacs.example= in the =emacs= directory.
+Take a look the the =.emacs.example= in the =emacs= directory. In this file, I
+use an Emacs server:
+
+#+BEGIN_SRC lisp
+(server-start)
+#+END_SRC
+
+Once launched, open a file with the =emacsclient= command. I have this alias in
+my Shell configuration:
+
+#+BEGIN_SRC sh
+alias e='emacsclient -n'
+#+END_SRC
+
+=-n= means /not wait/.
 
 The =emacs_init.el= is the main configuration file. It loads the different
 files =foggy_*.el=.
