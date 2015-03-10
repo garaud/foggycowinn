@@ -18,7 +18,7 @@ from IPython.utils.path import get_ipython_dir
 from IPython.core.profiledir import ProfileDir, ProfileDirError
 
 IPYTHONDIR = get_ipython_dir()
-PROFILE_LIST = ('cw', 'datasci', 'image', 'default')
+PROFILE_LIST = ('cw', 'datasci', 'image', 'default', 'db')
 IPYCONFIG_LIST = ('ipython_config.py', 'ipython_notebook_config.py',
                   'ipython_qtconsole_config.py')
 
