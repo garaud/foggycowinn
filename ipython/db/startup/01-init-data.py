@@ -40,9 +40,9 @@ jazz = _create_table(engine)
 _populate_table(engine, jazz)
 
 # Put a DataFrame table named 'df'
-df = pd.DataFrame({"date": pd.date_range("2015-03-22", periods=20, freq='B'),
-                   "X": np.random.random(20),
-                   "Y": np.random.random_integers(-2, 2, 20)})
+df = pd.DataFrame.from_items([("date", pd.date_range("2015-03-22", periods=20, freq='B')),
+                              ("X", np.random.random(20)),
+                              ("Y", np.random.random_integers(-2, 2, 20))])
 df.to_sql("df", engine, if_exists='replace')
 
 # db.py
