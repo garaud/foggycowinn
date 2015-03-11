@@ -34,6 +34,13 @@ def _populate_table(engine, table):
                         {"name": "Patricia Barber", "birth": 1955, "play": "Piano/Voice"}]
                 )
 
+def read_sqlite(filepath):
+    """Read the SQLite filename.
+    Return a db.py object.
+    """
+    return DB(filename=filepath, dbtype="sqlite")
+
+
 # In-memory SQLite db
 engine = _create_dbfile()
 jazz = _create_table(engine)
