@@ -17,6 +17,7 @@
 	wdiff = diff --color-words
 	st = status
 	ci = commit
+        civ = commit --no-verify
 	ca = commit --amend
         co = checkout
 	l = log
