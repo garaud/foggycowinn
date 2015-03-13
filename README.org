@@ -5,6 +5,7 @@
 theses following directories:
 
 - =dotfiles=: generic "rc" configuration files for bash, zsh, git, mercurial, etc.
+- =git-hooks=: a few Git hooks.
 - =emacs=: a few Emacs Lisp files to configure my Emacs 24 environment.
 - =ipython=: store a IPython configuration and different profiles.
 
@@ -13,8 +14,11 @@ theses following directories:
   Several configuration files for Zsh, Git, Mercurial, etc.
 
   See the [[https://github.com/garaud/foggycowinn/blob/master/dotfiles/README.org][dedicated README file]].
+* Git Hooks
+  Some Git hooks.
 
-* Emacs configuration
+  See the [[https://github.com/garaud/foggycowinn/blob/master/git-hooks/README.rst][dedicated README file]].
+* Emacs Configuration
 
   I use the Emacs tools [[https://github.com/dimitri/el-get][el-get]] to install and upgrade the packages. This is
   useful to install from source code or from standard packages mirrors such as
