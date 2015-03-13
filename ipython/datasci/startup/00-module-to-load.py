@@ -7,7 +7,7 @@ import string
 from distutils.version import StrictVersion
 
 from StringIO import StringIO
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 
 import numpy as np
 import matplotlib.pyplot as plt
