@@ -18,6 +18,10 @@ if StrictVersion(plt.matplotlib.__version__) < StrictVersion('1.4'):
 else:
     plt.style.use('ggplot')
 try:
+    from pandas.rpy.common import load_data as load_R_dataset
+except ImportError:
+    pass
+try:
     import scikits.statsmodels as statsmodels
 except ImportError:
     import statsmodels
