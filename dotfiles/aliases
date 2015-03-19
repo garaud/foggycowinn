@@ -58,10 +58,12 @@ alias valcache='valgrind --tool=callgrind'
 # IPython
 alias ipy='ipython'
 alias ipy3='ipython3'
+alias ipynb='ipython notebook'
 alias ipydata='ipython --profile=datasci' # With numpy, pandas, matplotlib
 alias ipyim='ipython --profile=image' # Image processing: numpy, scipy (ndimage), skimage
 alias ipycw='ipython --profile=cw' # For CubicWeb
 alias ipynb='ipython notebook --matplotlib=inline'
+alias ipydb='ipython --profile=db' # Database: SQLAlchemy, SQLite, db.py
 # Python current sys.path
 alias pypath="python -c 'import sys;import pprint;pprint.pprint(sys.path)'"
 # Python conda env.
