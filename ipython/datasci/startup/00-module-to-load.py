@@ -12,6 +12,7 @@ from datetime import date, datetime, timedelta
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+from pandas import Timestamp, Timedelta
 from pandas.tseries import offsets
 # Matploblib 1.4 can use ggplot theme. Use pandas default theme either.
 if StrictVersion(plt.matplotlib.__version__) < StrictVersion('1.4'):
