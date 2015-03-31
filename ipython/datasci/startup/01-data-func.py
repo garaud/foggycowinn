@@ -23,13 +23,6 @@ def print_datasci_version():
     for name, module in _PKG_LIST:
         print(msg.format(name, module.__version__))
 
-def Rdatasets_list():
-    import re
-    import requests
-    url = 'https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html'
-    content = requests.get(url).content
-    return re.findall(r'>([\w\.]+)</a></td>\n<td>([A-Za-z0-9 ]+)</td>', content)
-
 def datasci_help(msg=DATASCI_HELP_MSG):
     print(msg)
 
