@@ -31,6 +31,7 @@ def _gen_random_dataframe(size=150, freq='B'):
     variables.
     """
     dates = pd.date_range('2011-04-23', periods=size, freq=freq)
+    dates.name = "date"
     X = np.cumsum(np.random.randn(size))
     Y = 2. + np.cumsum(np.random.randn(size)) * 0.75
     Z = np.random.randint(-3, 4, size)
@@ -68,6 +69,7 @@ def _gen_timeseries(dates=None):
     """
     if dates is None:
         dates = pd.date_range('2013-07-17', periods=20, freq='D')
+    dates.name = "date"
     return pd.Series(np.sin(0.2 * np.arange(dates.size)), index=dates)
 
 def _gen_dataframe_types():
