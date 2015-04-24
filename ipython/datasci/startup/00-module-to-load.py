@@ -27,3 +27,5 @@ try:
 except ImportError:
     import statsmodels
 import scipy.stats
+
+import sklearn

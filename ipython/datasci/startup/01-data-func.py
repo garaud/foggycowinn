@@ -2,7 +2,7 @@
 
 # (name, module obj)
 _PKG_LIST = (('scipy', scipy), ('numpy', np), ('pandas', pd),
-             ('matplotlib', plt.matplotlib))
+             ('matplotlib', plt.matplotlib), ('sklearn', sklearn))
 
 DATASCI_HELP_MSG = """\nVariables:
 - 'a': normal random array
