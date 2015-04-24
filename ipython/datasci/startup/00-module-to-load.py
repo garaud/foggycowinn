@@ -29,3 +29,4 @@ except ImportError:
 import scipy.stats
 
 import sklearn
+import sklearn.datasets
