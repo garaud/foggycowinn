@@ -20,6 +20,7 @@
     elfeed
     emmet-mode
     expand-region
+    handlebars-mode
     helm
     helm-pydoc
     htmlize
