@@ -37,7 +37,7 @@
     rust-mode
     smartparens
     smartscan
-    tangotango-theme
+    tangotango
     web-mode
     yaml-mode
     yasnippet
