@@ -31,10 +31,8 @@
   (el-get-elpa-build-local-recipes))
 
 (setq el-get-sources
-      '((:name anaconda-mode :type elpa)
-        (:name ibuffer :type builtin)
-        (:name slime :type elpa)
-        (:name tangotango
+      '((:name ibuffer :type builtin)
+	(:name tangotango
 	       :type github
                :website "https://github.com/juba/color-theme-tangotango"
                :description "Tango theme for emacs"
