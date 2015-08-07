@@ -6,7 +6,7 @@ import os.path as osp
 import string
 from distutils.version import StrictVersion
 
-from StringIO import StringIO
+from io import StringIO
 from datetime import date, datetime, timedelta
 
 from dateutil.parser import parse as parsedate
