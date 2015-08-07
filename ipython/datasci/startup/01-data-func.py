@@ -87,7 +87,7 @@ def _gen_multiindex_dataframe():
     """
     idx_level = (['A', 'A', 'A', 'C', 'C', 'C'],
                  [1, 2, 3, 1, 2, 3])
-    index = pd.MultiIndex.from_tuples(zip(*idx_level))
+    index = pd.MultiIndex.from_tuples(list(zip(*idx_level)))
     return pd.DataFrame(np.random.randn(6, 2), index=index, columns=['X','Y'])
 
 
