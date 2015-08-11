@@ -17,3 +17,6 @@ c.TerminalInteractiveShell.deep_reload = True
 # Control-Z/Enter in Windows). By typing 'exit' or 'quit', you can force a
 # direct exit without any confirmation.
 c.TerminalInteractiveShell.confirm_exit = False
+
+# Configure matplotlib for interactive use with the default matplotlib backend.
+c.InteractiveShellApp.matplotlib = 'auto'
