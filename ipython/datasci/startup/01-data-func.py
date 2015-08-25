@@ -9,6 +9,8 @@ DATASCI_HELP_MSG = """\nVariables:
 - 's': Series of str
 - 'ts': Series with dates
 - 'df': DataFrame 3 columns of random float and int
+- 'dfl': DataFrame to test the 'join' feature with 'dfr'
+- 'dfr': see 'dfl'
 - 'dfna': DataFrame 3 columns and some missing values
 - 'dfm': DataFrame 3 columns multiple data: float, int, str
 - 'dfmidx': DataFrame with 2 cols and a MultiIndex
@@ -106,6 +108,10 @@ df = _gen_random_dataframe()
 dfna = _gen_random_dataframe(size=50, freq='D')
 dfna['X'].iloc[[0,3,5,12,22,36]] = np.nan
 dfna['Y'].iloc[[3,7,15,25,26,42]] = np.nan
+dfl = pd.DataFrame({"name": ["davis", "coltrane", "hankock", "hendrix", "barber"],
+                    "x": [52., 32., 45., 56., 18.]})
+dfr = pd.DataFrame({"y": [23., 47., 18., 36.]},
+                   index=["coltrane", "hendrix", "brubeck", "davis"])
 dfm = _gen_dataframe_types()
 dfmidx = _gen_multiindex_dataframe()
 panel = _gen_panel()
