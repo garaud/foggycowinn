@@ -24,6 +24,28 @@ function cwenvback
     unset _OLD_CWENV_PS1
 }
 
+function condaup
+{
+    export _miniconda=$HOME/miniconda3
+    export _PYTHONBACK=$PYTHONPATH
+    export _OLD_PS1=$PS1
+    export _OLD_PATH=$PATH
+    export PATH=$_miniconda/bin:$PATH
+    export PS1="[conda]$PS1"
+    unset PYTHONPATH
+}
+
+function condaback
+{
+    export PYTHONPATH=$_PYTHONBACK
+    export PATH=$_OLD_PATH
+    export PS1=$_OLD_PS1
+    unset _PYTHONBACK
+    unset _OLD_PS1
+    unset _OLD_PATH
+}
+
+
 function f
 {
     # Find a pattern for a specific extension file (uncase-sensitive pattern).
