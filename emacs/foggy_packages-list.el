@@ -16,6 +16,7 @@
     company-mode
     company-anaconda
     company-c-headers
+    company-restclient
     ;;django-mode
     elfeed
     emmet-mode
@@ -34,6 +35,7 @@
     pony-mode
     projectile
     org-mode
+    restclient
     rust-mode
     smartparens
     smartscan
