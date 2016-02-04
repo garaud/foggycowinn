@@ -101,6 +101,54 @@ def _gen_panel():
                      'cat_T': _gen_random_dataframe(df_index_size, freq='B'),
                      'cat_U': _gen_random_dataframe(df_index_size, freq='D')})
 
+
+def _lineno(fpath):
+    """Count the number of lines in a file
+
+    Inspired from http://stackoverflow.com/questions/845058/how-to-get-line-count-cheaply-in-python
+    """
+    import mmap
+    with open(fpath, "r+") as fobj:
+        buf = mmap.mmap(fobj.fileno(), 0)
+        lines = 0
+        while buf.readline():
+            lines += 1
+        return lines-1
+
+
+def read_head(fpath, head=5):
+    """Read the head of a CSV file
+
+    fpath: str
+    head: int (default 5)
+
+    Return a DataFrame
+    """
+    with open(fpath, 'r') as fobj:
+        reader = pd.read_csv(fobj, chunksize=head)
+    return reader.get_chunk()
+
+
+def random_read(fpath, chunksize, **kwargs):
+    """Randomly read a CSV file with a specific chunksize
+
+    fpath: str
+    chunksize: int
+    kwargs: passing args to `pd.read_csv`
+
+    Return a DataFrame with ~`chunksize` lines
+    """
+    df = pd.DataFrame()
+    split = 20
+    chunk = lineno(fpath) // split
+    take = chunksize // split
+    with open(fpath, "r", encoding='utf-8') as fobj:
+        reader = pd.read_csv(fpath, encoding='utf-8', chunksize=chunk, **kwargs)
+        for group in iter(reader):
+            df = df.append(group.sample(take))
+    return df.sort_index()
+
+
 a = _gen_random_array()
 s = _gen_str_series()
 ts = _gen_timeseries()
