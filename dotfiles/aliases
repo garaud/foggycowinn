@@ -88,6 +88,7 @@ alias cmhmodule='cmake --help-module'
 # Misc.
 alias ta='todo -A'
 alias dusort='du --max-depth=1 -x --block-size=1048576 | sort -nr'
+alias meteo='curl -4 http://wttr.in/Bordeaux'
 
 # For make, C style compliant. It's useful to use colorgcc. UTF-8 encoding has
 # not been supported by the Perl script colorgcc yet (where code is between
