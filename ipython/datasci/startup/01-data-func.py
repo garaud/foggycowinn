@@ -149,6 +149,12 @@ def random_read(fpath, chunksize, **kwargs):
     return df.sort_index()
 
 
+def prtfloat(number):
+    """Just pretty print float with a thousand separator
+    """
+    print(format_number(number, 'en_US'))
+
+
 a = _gen_random_array()
 s = _gen_str_series()
 ts = _gen_timeseries()

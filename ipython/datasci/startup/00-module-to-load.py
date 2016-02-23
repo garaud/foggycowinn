@@ -12,6 +12,8 @@ from datetime import date, datetime, timedelta
 from dateutil.parser import parse as parsedate
 from dateutil.relativedelta import relativedelta
 
+from babel.numbers import format_number
+
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
