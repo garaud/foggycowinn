@@ -19,6 +19,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pandas import Timestamp, Timedelta
 from pandas.tseries import offsets
+pd.options.display.width = 180
+pd.options.display.max_colwidth = 100
 # Matploblib 1.4 can use ggplot theme. Use pandas default theme either.
 if StrictVersion(plt.matplotlib.__version__) < StrictVersion('1.4'):
     pd.options.display.mpl_style = 'default'
