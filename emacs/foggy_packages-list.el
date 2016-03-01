@@ -37,6 +37,7 @@
     org-mode
     restclient
     rust-mode
+    slime
     smartparens
     smartscan
     tangotango

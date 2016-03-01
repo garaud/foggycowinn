@@ -14,6 +14,10 @@
 ;; Emacs Lisp autocompletion with company
 (add-hook 'emacs-lisp-mode-hook 'company-mode)
 
+(add-hook 'lisp-mode-hook '(lambda ()
+                             (slime-mode 1)
+                             (slime-autodoc-mode 1)))
+
 ;;;;;;;;;;
 ;; YAML ;;
 ;;;;;;;;;;

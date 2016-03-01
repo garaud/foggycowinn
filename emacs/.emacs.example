@@ -8,6 +8,7 @@
       setup-el-get (expand-file-name "setup-el-get.el" emacs-foggy-dir)
       init-emacs-file (expand-file-name "emacs_init.el" emacs-foggy-dir))
 
+
 (load packages-list-file)
 (load setup-el-get)
 (load init-emacs-file)
