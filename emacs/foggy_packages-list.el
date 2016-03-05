@@ -21,6 +21,8 @@
     elfeed
     emmet-mode
     expand-region
+    flymake-easy
+    flymake-python-pyflakes
     handlebars-mode
     helm
     helm-pydoc
@@ -34,6 +36,7 @@
     multiple-cursors
     pony-mode
     projectile
+    pyflakes
     org-mode
     restclient
     rust-mode

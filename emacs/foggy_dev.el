@@ -73,6 +73,9 @@
 ;; Set Python mode for SConsctruct file
 (add-to-list 'auto-mode-alist '("\\SConstruct" . python-mode))
 
+(require 'flymake-python-pyflakes)
+(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+
 
 ;; Cython mode
 ;; (add-to-list 'auto-mode-alist '("\\.pyx\\'" . cython-mode))
