@@ -32,3 +32,8 @@ fi
 
 # For direnv (http://direnv.net/).
 [[ -x `which direnv` ]] && eval "$(direnv hook zsh)"
+
+# Pew complete & prompt (Python virtual env)
+if [ -x `which pew` ]; then
+    source $(pew shell_config)
+fi
