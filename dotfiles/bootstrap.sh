@@ -38,3 +38,6 @@ if [ ! -d ~/.zprezto/ ]; then
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 fi
 
+# Prompt
+echo $PWD/prompt_foggy_setup "-> ~/.zprezto/modules/prompt/functions/"
+ln -fs $PWD/prompt_foggy_setup -t $HOME/.zprezto/modules/prompt/functions/
