@@ -7,6 +7,8 @@
 ;; GENERAL ;;
 ;;;;;;;;;;;;;
 
+(require 'calendar)
+
 ;; Ediff configuration.
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 

@@ -3,6 +3,9 @@
 ;; 2014
 ;; Author(s): Damien Garaud
 
+(require 'calendar)
+
+
 ;; Redefines zap-to-char, and therefore M-z: the argument of the function is
 ;; not killed anymore.
 (defun zap-to-char (arg char)
@@ -161,6 +164,46 @@ Goes backward if ARG is negative; error if CHAR not found."
   (let ((beg (line-beginning-position))
         (end (line-end-position)))
     (comment-or-uncomment-region beg end)))
+
+
+(defun foggy:weekno (word)
+  "extract the week number from a word such as S42"
+  (if (eq 0 (string-match "\\bS\[0-9\]\\{2\\}\\b" word))
+      (string-to-int (substring word 1))))
+
+(defun foggy:current-year ()
+  "return the current year"
+  ;; (string-to-int (format-time-string "%Y")))
+  (caddr (calendar-current-date)))
+
+
+(defun foggy:date-from-weekno (weekno)
+  "Get the date from a weekno. Return (month day year)."
+  (let ((year (foggy:current-year)))
+    (calendar-gregorian-from-absolute
+     (calendar-iso-to-absolute (list foggy:weekno 1 year)))))
+
+(defun foggy:swap-date (month day year)
+  ""
+  (list day month year))
+
+(defun foggy:str-date (date)
+  "string date format from a date (month day year)"
+  (format-time-string "%a %m %Y" (apply #'encode-time
+                                        (append '(0 0 0) (apply #'foggy:swap-date date)))))
+
+
+(defun foggy:insert-week-date ()
+  "Write a c++ output of the current word."
+  (interactive)
+  (setq cword (current-word))
+  (if (foggy:weekno cword)
+      (progn
+        (end-of-line 1)
+        (newline)
+        (beginning-of-line 1)
+        (insert (foggy:str-date (foggy:date-from-weekno (foggy:weekno cword)))))))
+
 
 
 (setq foggy_functions-loaded t)
