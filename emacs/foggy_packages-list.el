@@ -40,6 +40,7 @@
     org-mode
     restclient
     rust-mode
+    scala-mode2
     slime
     smartparens
     smartscan
