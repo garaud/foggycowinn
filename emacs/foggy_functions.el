@@ -4,6 +4,7 @@
 ;; Author(s): Damien Garaud
 
 (require 'calendar)
+(require 'cal-iso)
 
 
 ;; Redefines zap-to-char, and therefore M-z: the argument of the function is
@@ -181,7 +182,7 @@ Goes backward if ARG is negative; error if CHAR not found."
   "Get the date from a weekno. Return (month day year)."
   (let ((year (foggy:current-year)))
     (calendar-gregorian-from-absolute
-     (calendar-iso-to-absolute (list foggy:weekno 1 year)))))
+     (calendar-iso-to-absolute (list weekno 1 year)))))
 
 (defun foggy:swap-date (month day year)
   ""
