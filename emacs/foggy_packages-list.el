@@ -44,6 +44,7 @@
     slime
     smartparens
     smartscan
+    smooth-scrolling
     tangotango
     web-mode
     yaml-mode
