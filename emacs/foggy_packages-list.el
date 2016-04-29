@@ -20,6 +20,7 @@
     ;;django-mode
     elfeed
     emmet-mode
+    ensime
     expand-region
     flymake-easy
     flymake-python-pyflakes
