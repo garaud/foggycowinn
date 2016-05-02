@@ -25,6 +25,7 @@
     flymake-easy
     flymake-python-pyflakes
     handlebars-mode
+    haskell-mode
     helm
     helm-pydoc
     htmlize
