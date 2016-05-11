@@ -53,7 +53,6 @@
 ;;;;;;;;;;;;;;;;
 
 (setq js-indent-level 2)
-(add-hook 'js-mode-hook 'linum-mode)
 
 ;;;;;;;;;;;;
 ;; PYTHON ;;
@@ -62,9 +61,6 @@
 ;; **NOTE**
 ;; Prefer python.el (instead of python-mode). python-mode manages docstring and
 ;; triple quotes very badly.
-
-;; Linum mode with Python.
-(add-hook 'python-mode-hook 'linum-mode)
 
 ;; Automatic indent after 'RET'
 (add-hook 'python-mode-hook '(lambda ()
@@ -89,9 +85,6 @@
 
 ;; I want to have a C++ mode even for *.h files.
 (setq auto-mode-alist (cons '("\\.h$" . c++-mode) auto-mode-alist))
-
-;; Linum mode for C++
-(add-hook 'c++-mode-hook 'linum-mode)
 
 ;; Semantic mode for C++.
 (add-hook 'c++-mode-hook 'semantic-mode)
@@ -160,3 +153,18 @@
 
 (setq foggy_dev-loaded t)
 (provide 'foggy_dev)
+
+
+;; add line number in specific mode
+(cl-map 'list (lambda (mode-hook)
+                (add-hook mode-hook 'linum-mode))
+        '(js-mode-hook
+          rust-mode-hook
+          sh-mode-hook
+          python-mode-hook
+          lisp-mode-hook
+          scala-mode-hook
+          haskell-mode-hook
+          c++-mode-hook
+          clojure-mode-hook
+          emacs-lisp-mode-hook))
