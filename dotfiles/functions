@@ -65,6 +65,15 @@ function pyv
     fi
 }
 
+function ext
+{
+    if [ "$#" -ne 1 ]; then
+        echo "need a extension"
+    fi
+    ext=$1
+    find $PWD -name "*.$ext" -print
+}
+
 function c
 {
     # Launch a compilation with 'make'. It's possible to pass the number of
