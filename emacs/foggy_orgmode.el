@@ -35,6 +35,8 @@
  'org-babel-load-languages
  '((python . t)
    (ipython . t)))
+;;; display/update images in the buffer after I evaluate
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
 
 ;;;;;;;;;;;;;;;;;
 ;; Keybindings ;;
