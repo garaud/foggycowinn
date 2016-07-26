@@ -1,3 +1,4 @@
+(require 'yasnippet)
 (yas-global-mode 1)
 
 ;; Disable yasnippet in Lisp and REPL Slime major modes.

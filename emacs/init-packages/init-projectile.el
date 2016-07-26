@@ -1,1 +1,2 @@
-(projectile-global-mode)
+(require 'projectile)
+(projectile-mode)
