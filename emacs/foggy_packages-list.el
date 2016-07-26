@@ -35,6 +35,7 @@
     markdown-mode
     ;;mingus
     multiple-cursors
+    ob-ipython
     pony-mode
     projectile
     pyflakes

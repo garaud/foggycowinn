@@ -29,6 +29,13 @@
 ;; Use to highlight the code blocks for HTML exporting.
 (require 'htmlize)
 
+;; org-babel
+(setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)
+   (ipython . t)))
+
 ;;;;;;;;;;;;;;;;;
 ;; Keybindings ;;
 ;;;;;;;;;;;;;;;;;
