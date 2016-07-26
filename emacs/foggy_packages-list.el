@@ -22,8 +22,7 @@
     emmet-mode
     ensime
     expand-region
-    flymake-easy
-    flymake-python-pyflakes
+    flycheck
     handlebars-mode
     haskell-mode
     helm
