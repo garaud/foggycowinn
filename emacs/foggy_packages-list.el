@@ -46,6 +46,7 @@
     smartparens
     smartscan
     smooth-scrolling
+    sql-indent
     tangotango
     web-mode
     yaml-mode

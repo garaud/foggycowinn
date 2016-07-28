@@ -47,6 +47,13 @@
 (require 'rust-mode)
 (add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode))
 
+;;;;;;;;;;;
+;;  SQL  ;;
+;;;;;;;;;;;
+
+(eval-after-load "sql"
+  (load-library "sql-indent"))
+
 
 ;;;;;;;;;;;;;;;;
 ;; Javascript ;;
