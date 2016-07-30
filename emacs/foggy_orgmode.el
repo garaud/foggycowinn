@@ -3,6 +3,8 @@
 ;; 2011-2015
 ;; Author(s): Damien Garaud
 
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+
 ;; Location of the agenda, for org-mode.
 (setq org-directory "~/org/todo")
 (setq org-agenda-files (quote ("~/org/todo/work.org"
@@ -31,11 +33,7 @@
 
 ;; org-babel
 (setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((python . t)
-   (ipython . t)))
-;;; display/update images in the buffer after I evaluate
+;; display/update images in the buffer after I evaluate
 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
 
 ;;;;;;;;;;;;;;;;;

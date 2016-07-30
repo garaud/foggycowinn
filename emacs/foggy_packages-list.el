@@ -35,11 +35,11 @@
     markdown-mode
     ;;mingus
     multiple-cursors
-    ob-ipython
     pony-mode
     projectile
     pyflakes
     org-mode
+    ob-ipython
     restclient
     rust-mode
     slime

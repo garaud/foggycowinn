@@ -18,6 +18,8 @@
    (goto-char (point-max))
    (eval-print-last-sexp)))
 
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+
 ;; directory of code to init el-get packages
 (setq el-get-user-package-directory (concat emacs-foggy-dir "/init-packages"))
 
