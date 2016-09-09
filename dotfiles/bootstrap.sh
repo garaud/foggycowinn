@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 filelist=`git ls-files`
-blacklist='README.org bootstrap.sh codeschool.vim fasd_install.sh'
+blacklist='README.org bootstrap.sh codeschool.vim fasd_install.sh profiles.clj'
 
 function symlink() {
     for fname in  $filelist; do
@@ -32,6 +32,14 @@ if [[ ! -d ~/.vim/colors ]]; then
 fi
 echo $PWD/codeschool.vim "-> ~/.vim/colors/"
 ln -fs $PWD/codeschool.vim -t ~/.vim/colors/
+
+# Lein profiles
+if [ ! -d ~/.lein ]; then
+    mkdir ~/.lein
+fi
+if [ ! -f ~/.lein/profiles.clj ]; then
+    cp profiles.clj ~/.lein/profiles.clj
+fi
 
 # External deps.
 if [ ! -d ~/.zprezto/ ]; then
