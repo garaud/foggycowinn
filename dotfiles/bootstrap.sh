@@ -37,8 +37,10 @@ ln -fs $PWD/codeschool.vim -t ~/.vim/colors/
 if [ ! -d ~/.lein ]; then
     mkdir ~/.lein
 fi
+
 if [ ! -f ~/.lein/profiles.clj ]; then
-    cp profiles.clj ~/.lein/profiles.clj
+    echo  $PWD/profiles.clj  " -> " "$HOME/.lein/profiles.clj"
+    ln -fs $PWD/profiles.clj "$HOME/.lein/profiles.clj"
 fi
 
 # External deps.
