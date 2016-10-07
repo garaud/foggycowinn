@@ -13,6 +13,10 @@
 
 ;; Emacs Lisp autocompletion with company
 (add-hook 'emacs-lisp-mode-hook 'company-mode)
+;; eldoc for emacs-lisp & ielm
+(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
 
 (add-hook 'lisp-mode-hook '(lambda ()
                              (slime-mode 1)
