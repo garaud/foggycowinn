@@ -10,6 +10,7 @@
     auctex
     anaconda-mode
     ;;angular-snippets
+    beacon
     clojure-mode
     cider
     cmake-mode

@@ -72,6 +72,10 @@
 ;; Shows the complains!
 (setq visible-bell t)
 
+;; highlight the cursor when scrolling up/down
+(beacon-mode 1)
+(setq beacon-color "#729fcf")
+
 ;; Use to highligt some keywords in these modes.
 (setq code-tag-mode-list '(
                           python-mode
