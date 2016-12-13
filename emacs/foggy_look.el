@@ -10,7 +10,7 @@
     (progn
       (scroll-bar-mode -1)))
 
-(set-default-font "DejaVu Sans Mono-12")
+(set-default-font "DejaVu Sans Mono-14")
 (load-theme 'tangotango t)
 
 ;; Gets rid of the useless tool bar and menu bar.
