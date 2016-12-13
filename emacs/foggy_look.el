@@ -51,7 +51,7 @@
 ;; Highlights as much as possible.
 (setq font-lock-maximum-decoration t)
 (setq transient-mark-mode t)
--;; Highlight the current line.
+;; Highlight the current line.
 (if (display-graphic-p)
     (progn
       (global-hl-line-mode t)

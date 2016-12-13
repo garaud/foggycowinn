@@ -32,6 +32,7 @@
     ido-ubiquitous
     lua-mode
     jinja2-mode
+    leuven-theme
     magit
     markdown-mode
     ;;mingus
@@ -41,6 +42,7 @@
     pyflakes
     org-mode
     ob-ipython
+    org-present
     restclient
     rust-mode
     slime
