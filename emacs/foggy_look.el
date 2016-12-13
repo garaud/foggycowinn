@@ -11,7 +11,7 @@
       (scroll-bar-mode -1)))
 
 (set-default-font "DejaVu Sans Mono-14")
-(load-theme 'tangotango t)
+(load-theme 'leuven t)
 
 ;; Gets rid of the useless tool bar and menu bar.
 (tool-bar-mode -1)
@@ -26,11 +26,6 @@
 
 ;; Show trailing white space.
 (setq-default show-trailing-whitespace t)
-
-;; Show empty lines.
-(setq-default indicate-empty-lines t)
-(when (not indicate-empty-lines)
-  (toggle-indicate-empty-lines))
 
 ;; Show time.
 (display-time)
@@ -56,13 +51,11 @@
 ;; Highlights as much as possible.
 (setq font-lock-maximum-decoration t)
 (setq transient-mark-mode t)
-;; Highlight the current line.
+-;; Highlight the current line.
 (if (display-graphic-p)
     (progn
       (global-hl-line-mode t)
-      (set-face-background 'hl-line "#282828")))
-;; For light theme.
-;;(set-face-background 'hl-line "#F0F8FF")
+      (set-face-background 'hl-line "#F0F8FF")))
 ;; Shows the column number.
 (setq column-number-mode t)
 ;; Shows the brackets correspondence.
@@ -71,10 +64,6 @@
 (global-font-lock-mode 1)
 ;; Shows the complains!
 (setq visible-bell t)
-
-;; highlight the cursor when scrolling up/down
-(beacon-mode 1)
-(setq beacon-color "#729fcf")
 
 ;; Use to highligt some keywords in these modes.
 (setq code-tag-mode-list '(

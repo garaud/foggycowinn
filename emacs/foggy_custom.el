@@ -33,18 +33,6 @@
      ((t :inherit font-lock-constant-face)))
    )))
 
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-(custom-theme-set-faces
- 'tangotango
- ;; Keep the color but change the default size (was 1.5 and 1.2 resp.).
- `(org-level-1 ((t (:bold t :foreground "dodger blue" :height 1.0))))
- `(org-level-2 ((t (:bold t :foreground "#edd400" :height 1.0))))
- ))
-
 (set-company-faces)
 
 (setq foggy-custom-loaded t)
