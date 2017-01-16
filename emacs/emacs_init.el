@@ -90,7 +90,7 @@
 (require 'foggy_look)
 (require 'foggy_dev)
 (require 'foggy_revision_control)
-(require 'foggy_latex)
+;;(require 'foggy_latex)
 (require 'foggy_orgmode)
 (require 'foggy_web)
 (require 'foggy_music)

@@ -168,9 +168,9 @@ Goes backward if ARG is negative; error if CHAR not found."
 
 
 (defun foggy:weekno (word)
-  "extract the week number from a word such as S42"
+  "extract the week number from a word such as S42 (+1)"
   (if (eq 0 (string-match "\\bS\[0-9\]\\{2\\}\\b" word))
-      (string-to-int (substring word 1))))
+      (+ (string-to-int (substring word 1)) 1)))
 
 (defun foggy:current-year ()
   "return the current year"
@@ -190,12 +190,12 @@ Goes backward if ARG is negative; error if CHAR not found."
 
 (defun foggy:str-date (date)
   "string date format from a date (month day year)"
-  (format-time-string "%a %m %Y" (apply #'encode-time
-                                        (append '(0 0 0) (apply #'foggy:swap-date date)))))
+  (format-time-string "%a %d %m %Y" (apply #'encode-time
+                                           (append '(0 0 0) (apply #'foggy:swap-date date)))))
 
 
 (defun foggy:insert-week-date ()
-  "Write a c++ output of the current word."
+  "Write the current date with the week no. of the year."
   (interactive)
   (setq cword (current-word))
   (if (foggy:weekno cword)
@@ -204,7 +204,6 @@ Goes backward if ARG is negative; error if CHAR not found."
         (newline)
         (beginning-of-line 1)
         (insert (foggy:str-date (foggy:date-from-weekno (foggy:weekno cword)))))))
-
 
 ;; Can hide `mode-line`
 ;; from https://emacs-doctor.com/emacs-hide-mode-line.html

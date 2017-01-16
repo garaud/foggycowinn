@@ -7,7 +7,7 @@
   '(
     ag
     ahg
-    auctex
+    ;auctex
     anaconda-mode
     ;;angular-snippets
     beacon
@@ -51,6 +51,7 @@
     smooth-scrolling
     sql-indent
     tangotango
+    visual-regexp-steroids
     web-mode
     yaml-mode
     yasnippet
