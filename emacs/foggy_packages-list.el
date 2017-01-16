@@ -7,7 +7,7 @@
   '(
     ag
     ahg
-    auctex
+    ;auctex
     anaconda-mode
     ;;angular-snippets
     beacon
