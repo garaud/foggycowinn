@@ -41,6 +41,7 @@
                :prepare (add-to-list 'custom-theme-load-path default-directory)
 	       :pkgname "juba/color-theme-tangotango")
 	(:name ubiquify :type builtin)
+	(:name org-mode :type builtin)
 	))
 
 (el-get 'sync
