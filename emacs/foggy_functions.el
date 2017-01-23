@@ -193,17 +193,14 @@ Goes backward if ARG is negative; error if CHAR not found."
   (format-time-string "%a %d %m %Y" (apply #'encode-time
                                            (append '(0 0 0) (apply #'foggy:swap-date date)))))
 
-
 (defun foggy:insert-week-date ()
-  "Write the current date with the week no. of the year."
+  "Write the current date with the week no. of the year e.g. [Mon 23 01 2017]."
   (interactive)
   (setq cword (current-word))
   (if (foggy:weekno cword)
       (progn
         (end-of-line 1)
-        (newline)
-        (beginning-of-line 1)
-        (insert (foggy:str-date (foggy:date-from-weekno (foggy:weekno cword)))))))
+        (insert " [" (foggy:str-date (foggy:date-from-weekno (foggy:weekno cword))) "]"))))
 
 ;; Can hide `mode-line`
 ;; from https://emacs-doctor.com/emacs-hide-mode-line.html
