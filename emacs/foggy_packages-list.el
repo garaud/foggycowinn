@@ -36,6 +36,7 @@
     magit
     markdown-mode
     ;;mingus
+    mu4e
     multiple-cursors
     pony-mode
     projectile

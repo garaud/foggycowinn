@@ -1,9 +1,10 @@
+
 #+TITLE: README for Emacs Configuration
 #+AUTHOR: Damien Garaud
 
 This Emacs configuration uses [[https://github.com/dimitri/el-get][el-get]] to install/remove and update Emacs
-packages. Thus, you can need some packages (e.g. Debian) such as =textinfo=,
-=install-info=, =autoconf=.
+packages. Thus, you can need some packages (e.g. Debian) such as =pkg-config=,
+=textinfo=, =install-info=, =autoconf=.
 
 * About
 

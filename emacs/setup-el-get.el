@@ -42,6 +42,7 @@
 	       :pkgname "juba/color-theme-tangotango")
 	(:name ubiquify :type builtin)
 	(:name org-mode :type builtin)
+	(:name mu4e :type builtin)
 	))
 
 (el-get 'sync
