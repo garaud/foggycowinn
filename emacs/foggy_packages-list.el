@@ -35,6 +35,7 @@
     leuven-theme
     magit
     markdown-mode
+    markdown-toc
     ;;mingus
     mu4e
     multiple-cursors
