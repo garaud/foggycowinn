@@ -20,6 +20,7 @@
     company-restclient
     ;;django-mode
     elfeed
+    elmacro
     emmet-mode
     ensime
     expand-region
