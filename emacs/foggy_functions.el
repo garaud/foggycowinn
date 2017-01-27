@@ -202,6 +202,12 @@ Goes backward if ARG is negative; error if CHAR not found."
         (end-of-line 1)
         (insert " [" (foggy:str-date (foggy:date-from-weekno (foggy:weekno cword))) "]"))))
 
+(defun foggy:insert-org-week ()
+  "Just insert 5 items (3rd org level) from monday to friday"
+  (interactive)
+  (insert "*** Lun\n*** Mar\n*** Mer\n*** Jeu\n*** Ven\n"))
+
+
 ;; Can hide `mode-line`
 ;; from https://emacs-doctor.com/emacs-hide-mode-line.html
 (defvar-local hidden-mode-line-mode nil)
