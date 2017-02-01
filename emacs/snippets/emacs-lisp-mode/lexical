@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: lexical scope
+# key: ls
+# --
+;;; -*- lexical-binding: t -*-
