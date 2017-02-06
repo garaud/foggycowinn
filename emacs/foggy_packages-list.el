@@ -46,6 +46,7 @@
     org-mode
     ob-ipython
     org-present
+    redshank
     restclient
     rust-mode
     slime
