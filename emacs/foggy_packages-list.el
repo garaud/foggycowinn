@@ -23,6 +23,7 @@
     elmacro
     emmet-mode
     ensime
+    eros
     expand-region
     flycheck
     handlebars-mode
@@ -35,10 +36,12 @@
     jinja2-mode
     leuven-theme
     magit
+;;    major-mode-icons
     markdown-mode
     markdown-toc
     ;;mingus
     mu4e
+    mu4e-alert
     multiple-cursors
     pony-mode
     projectile
