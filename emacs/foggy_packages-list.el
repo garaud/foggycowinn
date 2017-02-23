@@ -53,6 +53,7 @@
     restclient
     rust-mode
     slime
+    smart-mode-line
     smartparens
     smartscan
     smooth-scrolling
