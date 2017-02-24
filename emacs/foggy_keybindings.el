@@ -75,6 +75,9 @@
 
 ;; TODO: I would like allow this keybindings only if rst-mode is used.
 
+;; Magit
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;;;;;;;;;;;;;
 ;; Doxygen ;;
 ;;;;;;;;;;;;;
