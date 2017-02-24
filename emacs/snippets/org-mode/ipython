@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ob-ipython
+# key: <ip
+# group : org-mode
+# --
+#+BEGIN_SRC ipython :session ${1:session} :exports both
+$2
+#+END_SRC
