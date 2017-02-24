@@ -33,6 +33,7 @@
   (toggle-indicate-empty-lines))
 
 ;; Show time.
+(setq display-time-24hr-format t)
 (display-time)
 
 ;; To select a default font, and windows width and height.
