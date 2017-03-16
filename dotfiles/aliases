@@ -81,7 +81,7 @@ alias cmake-debug='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE:S
 alias cmake-verbose='cmake -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=2 -DCMAKE_VERBOSE_MAKEFILE:BOOL=TRUE'
 alias ccmake-debug='ccmake -DCMAKE_BUILD_TYPE:STRING=Debug'
 alias cmake-clang-debug='CC=clang CXX=clang++ cmake -DCMAKE_CXX_FLAGS:STRING="-g"'
-alias cmake-clang-relase='CC=clang CXX=clang++ cmake -DCMAKE_CXX_FLAGS:STRING="" -DCMAKE_BUILD_TYPE:STRING=Release'
+alias cmake-clang-release='CC=clang CXX=clang++ cmake -DCMAKE_CXX_FLAGS:STRING="" -DCMAKE_BUILD_TYPE:STRING=Release'
 alias cmake-plapril='cmake -DAPRIL_PROJECT_DIR=/home/dag/src/april -DEIGEN3_INCLUDE_DIR=/home/dag/usr/include/eigen3/ -DCPLEX_INSTALL_DIR=/home/dag/var/ibm/CPLEX_Studio_Preview124'
 alias cmhlistvar='cmake --help-variable-list'
 alias cmhlistcmd='cmake --help-command-list'
