@@ -54,6 +54,10 @@ alias rmpc='mpc -h raspberrypi.local'
 alias mry='ncmpcpp -h raspberrypi.local'
 alias m='ncmpcpp'
 
+# Tmux
+alias tn='tmux new -s '
+alias ta='tmux attach -t '
+
 ##########
 # Dev and debug tools.
 # Valgrind.
@@ -92,7 +96,7 @@ alias cmhproperty='cmake --help-property'
 alias cmhmodule='cmake --help-module'
 
 # Misc.
-alias ta='todo -A'
+# alias ta='todo -A'
 alias dusort='du --max-depth=1 -x --block-size=1048576 | sort -nr'
 alias meteo='curl -4 http://wttr.in/Bordeaux'
 alias http='http -v --style monokai'
