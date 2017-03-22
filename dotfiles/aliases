@@ -11,7 +11,6 @@ alias bo='bookmark' # zshmarks
 # Editor
 alias vi=vim
 alias ef="emacs -fs" # fullscreen
-alias emc='emacsclient -n'
 alias ec='emacsclient -n'
 alias te='emacsclient -nw'
 alias e='emacsclient -n'
