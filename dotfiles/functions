@@ -63,6 +63,12 @@ function c
     fi
 }
 
+function t
+{
+    # launch emacs without config on a term
+    emacs -Q -nw --eval "(load-theme 'leuven)" $*
+}
+
 function _jh-prev-result
 {
     # Re-launch last command and save the result. It's possible to use it when
