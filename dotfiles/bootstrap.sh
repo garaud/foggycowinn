@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 filelist=`git ls-files`
-blacklist='README.org bootstrap.sh codeschool.vim fasd_install.sh profiles.clj'
+blacklist='README.org bootstrap.sh codeschool.vim fasd_install.sh zshmarks_install.sh profiles.clj'
 
 function symlink() {
     for fname in  $filelist; do
@@ -51,3 +51,6 @@ fi
 # Prompt
 echo $PWD/prompt_foggy_setup "-> ~/.zprezto/modules/prompt/functions/"
 ln -fs $PWD/prompt_foggy_setup -t $HOME/.zprezto/modules/prompt/functions/
+
+# zshmark
+bash zshmarks_install.sh
