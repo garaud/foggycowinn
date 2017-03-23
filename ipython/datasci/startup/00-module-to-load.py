@@ -3,6 +3,7 @@
 from __future__ import print_function
 
 import os.path as osp
+import sys
 import string
 from distutils.version import StrictVersion
 
@@ -26,9 +27,7 @@ if StrictVersion(plt.matplotlib.__version__) < StrictVersion('1.4'):
     pd.options.display.mpl_style = 'default'
 else:
     plt.style.use('ggplot')
-try:
-    import scikits.statsmodels as statsmodels
-except ImportError:
+if sys.version_info[0] != 3:
     import statsmodels
 import scipy.stats
 
