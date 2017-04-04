@@ -25,10 +25,16 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
-# Some functions.
+# Some shell functions.
 if [ -f ~/.functions ]; then
     source ~/.functions
 fi
+
+# Some functions dedicated to zsh.
+if [ -f ~/.functions.zsh ]; then
+    source ~/.functions.zsh
+fi
+
 
 # For direnv (http://direnv.net/).
 [[ -x `which direnv` ]] && eval "$(direnv hook zsh)"
