@@ -17,6 +17,7 @@
 	wdiff = diff --color-words
 	st = status
 	ci = commit
+        cf = commit --fixup
         civ = commit --no-verify
 	ca = commit --amend
         co = checkout
@@ -26,8 +27,14 @@
         ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
         lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
         le = log --oneline --decorate
-        lg = log --pretty=oneline --decorate --graph --abbrev-commit
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit
+        # lg = log --pretty=oneline --decorate --graph --abbrev-commit
         logtree = log --graph --oneline --decorate --all
+        r = rebase
+        ri = rebase --interactive
+        rs = rebase --interactive --autosquash
+        rc = rebase --continue
+        ra = rebase --abort
         grep = grep -Ii
         lasttag = describe --tags --abbrev=0
         d = diff
