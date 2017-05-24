@@ -62,6 +62,9 @@
 ;; Search the current word in a TAGS file.
 (global-set-key (kbd "C-c w") 'search-word-tags)
 
+;; imenu-anywhere
+(global-set-key (kbd "C-;") #'imenu-anywhere)
+
 ;;;;;;;;;;
 ;; ReST ;;
 ;;;;;;;;;;

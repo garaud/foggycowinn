@@ -32,6 +32,7 @@
     helm-pydoc
     htmlize
     ido-ubiquitous
+    imenu-anywhere
     lua-mode
     jinja2-mode
     leuven-theme
