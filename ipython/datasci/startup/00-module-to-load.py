@@ -33,3 +33,6 @@ import scipy.stats
 
 import sklearn
 import sklearn.datasets
+
+import seaborn as sns
+sns.set_context('talk')
