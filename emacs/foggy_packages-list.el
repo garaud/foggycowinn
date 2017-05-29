@@ -8,6 +8,7 @@
     ag
     ahg
     ;auctex
+    ace-window
     anaconda-mode
     ;;angular-snippets
     beacon
