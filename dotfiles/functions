@@ -25,9 +25,14 @@ function condaback
 function f
 {
     # Find a pattern for a specific extension file (uncase-sensitive pattern).
-    ext=$1
-    pattern=$2
-    find $PWD -type f -iname "*$pattern*.$ext" -print
+    # usage: f pattern ext or f pattern
+    if [ "$#" -eq 1 ]; then
+        find $PWD -type f -iname "*$1*" -print
+    elif [ "$#" -eq 2 ]; then
+        find $PWD -type f -iname "*$1*.$2" -print
+    else
+        echo "You need 1 or 2 param pattern [ext]";
+    fi
 }
 
 function pyv
