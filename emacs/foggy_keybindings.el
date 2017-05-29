@@ -20,8 +20,8 @@
 (global-set-key "\C-x\<" "\C-u\M-x\comment-region")
 (global-set-key "\C-x\c" 'comment-or-uncomment-current-line)
 
-(global-set-key [(meta g)] 'goto-line)
-(global-set-key [(meta v)] 'fill-region)
+;; (global-set-key [(meta g)] 'goto-line)
+;; (global-set-key [(meta v)] 'fill-region)
 
 ;; Deletes a line.
 (global-unset-key [(meta r)])
