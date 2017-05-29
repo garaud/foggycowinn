@@ -28,8 +28,8 @@
     flycheck
     handlebars-mode
     haskell-mode
-    helm
-    helm-pydoc
+    ;; helm
+    ;; helm-pydoc
     htmlize
     ido-ubiquitous
     imenu-anywhere
@@ -59,6 +59,7 @@
     smartscan
     smooth-scrolling
     sql-indent
+    swiper ;; provide ivy
     tangotango
     visual-regexp-steroids
     web-mode
