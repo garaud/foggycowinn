@@ -3,6 +3,17 @@
 
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
+
+;; the default without counsel-M-x to "^"
+(setq ivy-initial-inputs-alist
+      '((org-refile . "^")
+        (org-agenda-refile . "^")
+        (org-capture-refile . "^")
+        (counsel-describe-function . "^")
+        (counsel-describe-variable . "^")
+        (man . "^")
+        (woman . "^")))
+
 (global-set-key "\C-s" 'swiper)
 ;; (global-set-key "\C-x\b" 'ivy-switch-buffer)
 
