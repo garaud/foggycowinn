@@ -49,8 +49,8 @@
 (setq x-select-enable-clipboard t)
 
 ;; Windmove to easily move among windows.
-(require 'windmove)
-(windmove-default-keybindings 'meta)
+;; (require 'windmove)
+;; (windmove-default-keybindings 'meta)
 
 ;; 'yes' & 'no' with one character 'y' & 'n'.
 (defalias 'yes-or-no-p 'y-or-n-p)
