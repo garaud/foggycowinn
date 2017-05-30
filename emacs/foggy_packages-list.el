@@ -51,6 +51,7 @@
     org-mode
     ob-ipython
     org-present
+    rainbow-mode
     redshank
     restclient
     rust-mode

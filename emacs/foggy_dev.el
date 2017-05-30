@@ -123,6 +123,15 @@
 
 
 ;;;;;;;;;
+;; CSS ;;
+;;;;;;;;;
+
+;; extension for cartocss files
+(add-to-list 'auto-mode-alist '("\\.mss\\'" . css-mode))
+(add-hook 'css-mode-hook 'rainbow-mode)
+
+
+;;;;;;;;;
 ;; Lua ;;
 ;;;;;;;;;
 
