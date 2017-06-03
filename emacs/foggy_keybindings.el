@@ -40,7 +40,7 @@
 ;; In order to ease switching between buffers, accepts C-x C-b in addition to
 ;; the regular C-x b.
 (global-unset-key "\C-x\C-b")
-(global-set-key "\C-x\C-b" 'switch-to-buffer)
+(global-set-key "\C-x\C-b" 'ivy-switch-buffer)
 
 (global-set-key [(meta j)] 'hippie-expand)
 
