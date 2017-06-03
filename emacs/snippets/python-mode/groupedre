@@ -3,4 +3,4 @@
 # key: gre
 # group : general
 # --
-r"(?P<${1:name}>$0)$"
+r"(?P<${1:name}>${2:regex}$0)$"
