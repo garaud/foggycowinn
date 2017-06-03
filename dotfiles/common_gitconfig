@@ -13,6 +13,8 @@
 	ui = always
 [pager]
 	status = true
+[push]
+        default = current
 [alias]
 	wdiff = diff --color-words
 	st = status
