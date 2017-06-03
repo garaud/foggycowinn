@@ -31,5 +31,8 @@ Emacs
   - bind the function (find a keybinding)
 * Try to manage default size according to screen resolution
   - try it with ``(x-display-pixel-height)`` and ``(x-display-pixel-width)``
+* Try to highlight symbols during smartscan
+  https://github.com/mickeynp/smart-scan
+  - M-n, M-p next/previous symbols
 * Make doc-mode work to edit/modify Doxygen comments (in C++ file)
 * Configure Org-mode properly (agile, Getting Things Done, ...)
