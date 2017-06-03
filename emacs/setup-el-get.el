@@ -23,6 +23,13 @@
 ;; directory of code to init el-get packages
 (setq el-get-user-package-directory (concat emacs-foggy-dir "/init-packages"))
 
+(require 'package)
+;; Add melpa package source when using package list
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+
 ;; init package management with elpa (i.e. call init-package.el)
 (el-get 'sync 'package)
 
