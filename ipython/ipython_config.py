@@ -3,7 +3,7 @@
 c = get_config()
 
 # Set the color scheme (NoColor, Linux, or LightBG).
-c.TerminalInteractiveShell.colors = 'LightBG'
+#c.TerminalInteractiveShell.colors = 'LightBG'
 
 # Enable deep (recursive) reloading by default. IPython can use the deep_reload
 # module which reloads changes in modules recursively (it replaces the reload()
