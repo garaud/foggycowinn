@@ -40,6 +40,7 @@ alias cmg='ag -G "\.cmake$|CMakeLists\.txt"'
 
 # DCVS.
 alias gitka='gitk --all'
+alias tiga='tig --all'
 alias mq='hg -R `hg root`/.hg/patches'
 alias hgl='hg log -G'
 alias hgu='hg pull'
