@@ -1,4 +1,5 @@
 (require 'swiper)
+(require 'counsel)
 (ivy-mode 1)
 
 (setq ivy-use-virtual-buffers t)
