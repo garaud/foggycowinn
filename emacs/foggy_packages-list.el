@@ -20,6 +20,7 @@
     company-c-headers
     company-restclient
     ;;django-mode
+    dired-details
     elfeed
     elmacro
     emmet-mode
@@ -37,6 +38,7 @@
     lua-mode
     jinja2-mode
     leuven-theme
+    lodgeit
     magit
 ;;    major-mode-icons
     markdown-mode
@@ -49,6 +51,8 @@
     projectile
     pyflakes
     org-mode
+    ;org-caldav
+    ;ob-http ; some strange install error
     ob-ipython
     org-present
     rainbow-mode
