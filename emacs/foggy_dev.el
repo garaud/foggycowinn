@@ -22,6 +22,16 @@
                              (slime-mode 1)
                              (slime-autodoc-mode 1)))
 
+;; Clojure style guide
+(setq clojure-indent-style :always-align)
+(put-clojure-indent 'symbol 2)
+(define-clojure-indent
+  (-> 1)
+  (letfn     '(1 ((:defn)) nil))
+  (defrecord '(2 :form :form (1))))
+(setq clojure-align-forms-automatically t)
+
+
 ;;;;;;;;;;
 ;; YAML ;;
 ;;;;;;;;;;
