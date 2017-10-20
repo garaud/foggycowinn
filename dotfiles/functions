@@ -71,5 +71,12 @@ function c
 function t
 {
     # launch emacs without config on a term
-    emacs -Q -nw --eval "(load-theme 'leuven)" $*
+    emacs -Q -nw --eval "(progn (load-theme 'leuven) (tool-bar-mode -1) (menu-bar-mode -1))" $*
+}
+
+
+function ne
+{
+    # launch emacs a naked Emacs (in a Windows)
+    emacs -Q --eval "(progn (load-theme 'misterioso) (tool-bar-mode -1) (menu-bar-mode -1) (set-default-font \"DejaVu Sans Mono-12\"))" $*
 }
