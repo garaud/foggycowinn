@@ -27,6 +27,7 @@
     ensime
     eros
     expand-region
+    fancy-narrow
     flycheck
     handlebars-mode
     haskell-mode
