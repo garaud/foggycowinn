@@ -31,6 +31,9 @@
     flycheck
     handlebars-mode
     haskell-mode
+    highlight-numbers
+    highlight-quoted
+    highlight-defined
     ;; helm
     ;; helm-pydoc
     htmlize
@@ -56,6 +59,7 @@
     ;ob-http ; some strange install error
     ob-ipython
     org-present
+    rainbow-delimiters
     rainbow-mode
     redshank
     restclient
