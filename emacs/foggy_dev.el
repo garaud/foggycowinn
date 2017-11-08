@@ -21,6 +21,15 @@
 (add-hook 'lisp-mode-hook '(lambda ()
                              (slime-mode 1)
                              (slime-autodoc-mode 1)))
+(add-hook 'lisp-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'lisp-mode-hook #'highlight-numbers-mode)
+(add-hook 'lisp-mode-hook #'highlight-quoted-mode)
+;; (add-hook 'lisp-mode-hook #'highlight-defined-mode)
+(add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'emacs-lisp-mode-hook #'highlight-numbers-mode)
+(add-hook 'emacs-lisp-mode-hook #'highlight-quoted-mode)
+;; (add-hook 'emacs-lisp-mode-hook #'highlight-defined-mode)
+
 
 ;; Clojure style guide
 (setq clojure-indent-style :always-align)
@@ -85,7 +94,9 @@
 
 ;; Automatic indent after 'RET'
 (add-hook 'python-mode-hook '(lambda ()
-  (local-set-key (kbd "RET") 'newline-and-indent)))
+                               (local-set-key (kbd "RET") 'newline-and-indent)))
+
+(add-hook 'python-mode-hook #'highlight-numbers-mode)
 
 ;; Set Python mode for SConsctruct file
 (add-to-list 'auto-mode-alist '("\\SConstruct" . python-mode))
