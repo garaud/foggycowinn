@@ -65,6 +65,11 @@
 ;; imenu-anywhere
 (global-set-key (kbd "C-;") #'imenu-anywhere)
 
+;; shell-popup.
+;; Also see http://pragmaticemacs.com/emacs/pop-up-a-quick-shell-with-shell-pop/
+;; C-p should be used to go to the previous line
+(global-set-key (kbd "C-p") 'shell-pop)
+
 ;;;;;;;;;;
 ;; ReST ;;
 ;;;;;;;;;;

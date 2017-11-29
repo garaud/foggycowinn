@@ -64,6 +64,7 @@
     redshank
     restclient
     rust-mode
+    shell-pop
     slime
     smart-mode-line
     smartparens
