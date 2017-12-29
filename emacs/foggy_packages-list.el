@@ -19,6 +19,7 @@
     company-anaconda
     company-c-headers
     company-restclient
+    dashboard
     ;;django-mode
     dired-details
     elfeed
