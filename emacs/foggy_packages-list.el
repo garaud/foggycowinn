@@ -32,6 +32,7 @@
     flycheck
     handlebars-mode
     haskell-mode
+    helpful
     highlight-numbers
     highlight-quoted
     highlight-defined
