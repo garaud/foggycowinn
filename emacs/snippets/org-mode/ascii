@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name : #+begin_ascii...#+end_ascii
+# key: <a
+# --
+#+BEGIN_ASCII
+  $1
+#+END_ASCII
