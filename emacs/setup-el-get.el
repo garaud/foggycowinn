@@ -40,7 +40,13 @@
   (el-get-elpa-build-local-recipes))
 
 (setq el-get-sources
-      '((:name ibuffer :type builtin)
+      '((:name org-projectile
+	       :type github
+	       :depends (projectile)
+               :website "https://github.com/IvanMalison/org-projectile"
+               :description " Manage org-mode TODOs for your projectile projects"
+	       :pkgname "IvanMalison/org-projectile")
+	(:name ibuffer :type builtin)
 	(:name tangotango
 	       :type github
                :website "https://github.com/juba/color-theme-tangotango"
@@ -48,10 +54,17 @@
                :prepare (add-to-list 'custom-theme-load-path default-directory)
 	       :pkgname "juba/color-theme-tangotango")
 	(:name ubiquify :type builtin)
-	(:name org-mode :type builtin)
+	;; (:name org-mode :type builtin)
 	(:name mu4e :type builtin)
+	(:name python-pytest
+	       :type github
+               :website "https://github.com/wbolster/emacs-python-pytest"
+               :description "Run pytest inside Emacs"
+	       :depends (projectile dash magit-popup)
+	       :pkgname "wbolster/emacs-python-pytest")
 	))
 
+(el-get 'sync '(org-mode))
 (el-get 'sync
 	(append (cl-mapcar #'(lambda (recipe) (cl-getf recipe :name))
 			   el-get-sources)

@@ -19,6 +19,7 @@
     company-anaconda
     company-c-headers
     company-restclient
+    cython-mode
     dashboard
     ;;django-mode
     dired-details

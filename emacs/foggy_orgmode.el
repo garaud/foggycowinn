@@ -6,21 +6,21 @@
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 ;; Location of the agenda, for org-mode.
-(setq org-directory "~/org/todo")
-(setq org-agenda-files (quote ("~/org/todo/work.org"
-                               "~/org/todo/home.org")))
-(setq org-capture-templates
-      '(("t" "Todo" entry
-         (file+headline "~/org/todo/tiny-tasks.org" "Tasks")
-         "* TODO %?\n  %i\n  %a")
-        ("j" "Journal Entry" plain
-         (file+datetree "~/org/journal.org")
-         "%U\n\n%?" :empty-lines-before 1)))
+;; (setq org-directory "~/org/todo")
+;; (setq org-agenda-files (quote ("~/org/todo/work.org"
+;;                                "~/org/todo/home.org")))
+;; (setq org-capture-templates
+;;       '(("t" "Todo" entry
+;;          (file+headline "~/org/todo/tiny-tasks.org" "Tasks")
+;;          "* TODO %?\n  %i\n  %a")
+;;         ("j" "Journal Entry" plain
+;;          (file+datetree "~/org/journal.org")
+;;          "%U\n\n%?" :empty-lines-before 1)))
 
 ;; Diary.
-;;(setq org-agenda-include-diary t)
+(setq org-agenda-include-diary t)
 ;; Highlight the current line in agenda views.
-;;(add-hook 'org-agenda-mode-hook 'highlight-current-line-minor-mode)
+;; (add-hook 'org-agenda-mode-hook 'highlight-current-line-minor-mode)
 
 ;; Display date when a task is done.
 (setq org-log-done t)

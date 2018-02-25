@@ -40,8 +40,8 @@
 (set-frame-width (selected-frame) 88)
 (set-frame-height (selected-frame) 42)
 
-;; 80th column is not be crossed.
-(setq-default fill-column 80)
+;; 85th column is not be crossed.
+(setq-default fill-column 85)
 
 ;; Sets default encoding to UTF-8.
 (prefer-coding-system 'utf-8)
