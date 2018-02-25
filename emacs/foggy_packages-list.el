@@ -57,7 +57,7 @@
     pony-mode
     projectile
     pyflakes
-    org-mode
+    ;org-mode
     ;org-caldav
     ;ob-http ; some strange install error
     ob-ipython
@@ -76,6 +76,7 @@
     sql-indent
     swiper ;; provide ivy
     tangotango
+    virtualenvwrapper
     visual-regexp-steroids
     web-mode
     yaml-mode
