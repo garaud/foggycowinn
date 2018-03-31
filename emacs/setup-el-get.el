@@ -56,6 +56,8 @@
 	(:name ubiquify :type builtin)
 	;; (:name org-mode :type builtin)
 	(:name mu4e :type builtin)
+	(:name libmpdel :type elpa :repo ("melpa" . "https://melpa.org/packages/"))
+	(:name mpdel :type elpa :repo ("melpa" . "https://melpa.org/packages/"))
 	(:name python-pytest
 	       :type github
                :website "https://github.com/wbolster/emacs-python-pytest"

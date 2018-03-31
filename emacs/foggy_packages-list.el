@@ -60,7 +60,7 @@
     ;org-mode
     ;org-caldav
     ;ob-http ; some strange install error
-    ob-ipython
+    ;ob-ipython
     org-present
     rainbow-delimiters
     rainbow-mode
