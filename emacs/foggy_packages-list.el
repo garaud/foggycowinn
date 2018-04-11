@@ -10,6 +10,7 @@
     ;auctex
     ace-window
     anaconda-mode
+    atomic-chrome
     ;;angular-snippets
     beacon
     clojure-mode
