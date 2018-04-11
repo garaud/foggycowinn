@@ -13,6 +13,7 @@
 ;; ;; Personal Emacs configuration file ;;
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(setq custom-file "~/.emacs.terminal.d/custom.el")
 
 ;; ;;;;;;;;;;;;;
 ;; ;; General ;;
