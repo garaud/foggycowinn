@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 filelist=`git ls-files`
-blacklist='README.org bootstrap.sh codeschool.vim fasd_install.sh zshmarks_install.sh profiles.clj'
+blacklist='README.org bootstrap.sh codeschool.vim fasd_install.sh zshmarks_install.sh profiles.clj temacs.el temacs.sh'
 
 function symlink() {
     for fname in  $filelist; do
@@ -42,6 +42,14 @@ if [ ! -f ~/.lein/profiles.clj ]; then
     echo  $PWD/profiles.clj  " -> " "$HOME/.lein/profiles.clj"
     ln -fs $PWD/profiles.clj "$HOME/.lein/profiles.clj"
 fi
+
+# Tiny Emacs config from Terminal
+if [ ! -d ~/.emacs.terminal.d ]; then
+    mkdir ~/.emacs.terminal.d
+    touch ~/.emacs.terminal.d/custom.el
+fi
+ln -s $PWD/temacs.el $HOME/.emacs.terminal.d/init.el
+ln -s $PWD/temacs.sh $HOME/bin/temacs
 
 # External deps.
 if [ ! -d ~/.zprezto/ ]; then
