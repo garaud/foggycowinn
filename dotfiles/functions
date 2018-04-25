@@ -80,3 +80,20 @@ function ne
     # launch emacs a naked Emacs (in a Windows)
     emacs -Q --eval "(progn (load-theme 'misterioso) (tool-bar-mode -1) (menu-bar-mode -1) (set-default-font \"DejaVu Sans Mono-12\"))" $*
 }
+
+
+# random lines from a file (suppose there is a header and always pick the first) 10%
+# of the content of the file by default
+function rl
+{
+    if [ "$#" -eq 1 ]; then
+        _line_num=`sed -n '$=' $1`
+        _line_num=`echo $(($_line_num / 10))`
+        cat <(head -n 1 $1) <(shuf -n $_line_num $1)
+    elif [ "$#" -eq 2 ]; then
+        # suppose you pass the number of lines to sample
+        cat <(head -n 1 $1) <(shuf -n $2 $1)
+    else
+        echo "At least one mandatory param (filename).";
+    fi
+}
