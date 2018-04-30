@@ -237,6 +237,16 @@ Goes backward if ARG is negative; error if CHAR not found."
 ;; (add-hook 'after-change-major-mode-hook 'hidden-mode-line-mode)
 
 
+;; mpdel: notification when the current song changes in the minibuffer.
+(defun my/notify-song ()
+  (let ((song (libmpdel-current-song)))
+    (if song
+        (message "Current song is %s - %s" (libmpdel-artist-name (libmpdel-current-song)) (libmpdel-entity-name (libmpdel-current-song)))
+      (message "No more song is being played"))))
+
+(add-hook 'libmpdel-current-song-changed-hook #'my/notify-song)
+
+
 
 (setq foggy_functions-loaded t)
 (provide 'foggy_functions)
