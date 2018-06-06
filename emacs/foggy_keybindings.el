@@ -70,6 +70,12 @@
 ;; C-p should be used to go to the previous line
 (global-set-key (kbd "C-p") 'shell-pop)
 
+;; Open recent files
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(global-unset-key (kbd "C-x C-r"))
+(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+
 ;;;;;;;;;;
 ;; ReST ;;
 ;;;;;;;;;;
