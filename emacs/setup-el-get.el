@@ -55,9 +55,15 @@
 	       :pkgname "juba/color-theme-tangotango")
 	(:name ubiquify :type builtin)
 	;; (:name org-mode :type builtin)
-	(:name mu4e :type builtin)
-	(:name libmpdel :type elpa :repo ("melpa" . "https://melpa.org/packages/"))
-	(:name mpdel :type elpa :repo ("melpa" . "https://melpa.org/packages/"))
+	;; (:name mu4e :type builtin)
+	(:name libmpdel
+	       :type github
+	       :website "https://github.com/mpdel/libmpdel"
+	       :pkgname "mpdel/libmpdel")
+	(:name mpdel
+	       :type github
+	       :webiste "https://github.com/mpdel/mpdel"
+	       :pkgname "mpdel/mpdel")
 	(:name python-pytest
 	       :type github
                :website "https://github.com/wbolster/emacs-python-pytest"
