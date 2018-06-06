@@ -38,6 +38,7 @@
     highlight-numbers
     highlight-quoted
     highlight-defined
+    highlight-indentation
     ;; helm
     ;; helm-pydoc
     htmlize
