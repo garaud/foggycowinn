@@ -187,7 +187,6 @@
 ;; Open many windows when you launch 'gdb'.
 (setq gdb-many-windows t)
 
-
 (setq foggy_dev-loaded t)
 (provide 'foggy_dev)
 
@@ -197,6 +196,22 @@
                 (add-hook mode-hook 'linum-mode))
         '(js-mode-hook
           rust-mode-hook
+          sh-mode-hook
+          python-mode-hook
+          lisp-mode-hook
+          scala-mode-hook
+          haskell-mode-hook
+          c++-mode-hook
+          clojure-mode-hook
+          emacs-lisp-mode-hook))
+
+;; highlight-indentation mode for some major modes
+;; add line number in specific mode
+(cl-map 'list (lambda (mode-hook)
+                (add-hook mode-hook 'highlight-indentation-mode))
+        '(js-mode-hook
+          rust-mode-hook
+          yaml-mode-hook
           sh-mode-hook
           python-mode-hook
           lisp-mode-hook
