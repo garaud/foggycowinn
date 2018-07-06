@@ -13,6 +13,7 @@
     atomic-chrome
     ;;angular-snippets
     beacon
+    calfw
     clojure-mode
     cider
     cmake-mode
@@ -60,7 +61,6 @@
     projectile
     pyflakes
     ;org-mode
-    ;org-caldav
     ;ob-http ; some strange install error
     ;ob-ipython
     org-present
