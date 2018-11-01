@@ -132,6 +132,11 @@
   (insert content)
 )
 
+;; ggtags mode (Global project + ctags)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (ggtags-mode 1))))
 
 ;;;;;;;;;;;;;
 ;;  CMake  ;;
@@ -202,6 +207,7 @@
           scala-mode-hook
           haskell-mode-hook
           c++-mode-hook
+          sql-mode-hook
           clojure-mode-hook
           emacs-lisp-mode-hook))
 

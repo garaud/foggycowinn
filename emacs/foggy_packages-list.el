@@ -33,6 +33,7 @@
     expand-region
     fancy-narrow
     flycheck
+    ggtags
     handlebars-mode
     haskell-mode
     helpful
