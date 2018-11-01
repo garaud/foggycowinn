@@ -70,6 +70,11 @@
                :description "Run pytest inside Emacs"
 	       :depends (projectile dash magit-popup)
 	       :pkgname "wbolster/emacs-python-pytest")
+        (:name blacken
+               :type github
+               :website "https://github.com/proofit404/blacken"
+               :description "Python Black for Emacs"
+               :pkgname "proofit404/blacken")
 	))
 
 (el-get 'sync '(org-mode))
