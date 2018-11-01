@@ -56,6 +56,17 @@ if [ ! -d ~/.zprezto/ ]; then
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 fi
 
+# FireCode fonts with symbols
+if [ ! -d ~/.fonts ]; then
+    mkdir ~/.fonts
+fi
+if [ ! -f ~/.fonts/FiraCode-Regular-Symbol.otf ]; then
+    wget https://github.com/tonsky/FiraCode/files/412440/FiraCode-Regular-Symbol.zip
+    pushd ~/.fonts/
+    unzip FiraCode-Regular-Symbol.zip
+    popd
+fi
+
 # Prompt
 echo $PWD/prompt_foggy_setup "-> ~/.zprezto/modules/prompt/functions/"
 ln -fs $PWD/prompt_foggy_setup -t $HOME/.zprezto/modules/prompt/functions/
