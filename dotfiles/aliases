@@ -41,6 +41,7 @@ alias cmg='ag -G "\.cmake$|CMakeLists\.txt"'
 
 # DCVS.
 alias gitka='gitk --all'
+alias gg='gitg -b'
 alias tiga='tig --all'
 alias mq='hg -R `hg root`/.hg/patches'
 alias hgl='hg log -G'
@@ -106,16 +107,16 @@ alias http='http -v --style monokai'
 # For make, C style compliant. It's useful to use colorgcc. UTF-8 encoding has
 # not been supported by the Perl script colorgcc yet (where code is between
 # ticks).
-alias make='LC_CTYPE=C make'
+# alias make='LC_CTYPE=C make'
 
 # Cubicweb
 alias cw-ctl='cubicweb-ctl'
 alias rmdb='rm -rf `hg root`/test/data/database/'
 
 # Apt-stuff
-alias asearch='apt-cache search'
-alias ashow='apt-cache show'
-alias agu='sudo apt-get update'
-alias agi='sudo apt-get install'
-alias agg='sudo apt-get upgrade'
-alias agr='sudo apt-get remove'
+alias asearch='apt search'
+alias ashow='apt show'
+alias agu='sudo apt update'
+alias agi='sudo apt install'
+alias agg='sudo apt upgrade'
+alias agr='sudo apt remove'
