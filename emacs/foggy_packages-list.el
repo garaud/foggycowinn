@@ -46,6 +46,7 @@
     htmlize
     ido-ubiquitous
     imenu-anywhere
+    lispy
     lua-mode
     jinja2-mode
     leuven-theme
@@ -70,6 +71,7 @@
     redshank
     restclient
     rust-mode
+    sesman
     shell-pop
     slime
     smart-mode-line
