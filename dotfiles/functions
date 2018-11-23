@@ -8,6 +8,10 @@ function condaup
     export _OLD_PATH=$PATH
     export PATH=$_miniconda/bin:$PATH
     export PS1="[conda]$PS1"
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda custom_conda context time dir)
+    POWERLEVEL9K_CUSTOM_CONDA="echo '[conda]'"
+    POWERLEVEL9K_CUSTOM_CONDA_FOREGROUND='073'
+    POWERLEVEL9K_CUSTOM_CONDA_BACKGROUND='238'
     unset PYTHONPATH
 }
 
@@ -16,6 +20,7 @@ function condaback
     export PYTHONPATH=$_PYTHONBACK
     export PATH=$_OLD_PATH
     export PS1=$_OLD_PS1
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv context time dir)
     unset _PYTHONBACK
     unset _OLD_PS1
     unset _OLD_PATH
