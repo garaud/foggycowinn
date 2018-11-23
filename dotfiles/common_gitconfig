@@ -23,6 +23,7 @@
         civ = commit --no-verify
 	ca = commit --amend
         co = checkout
+        sl = stash list
 	l = log
         # ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
         la = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --all
