@@ -52,7 +52,7 @@
     leuven-theme
     lodgeit
     magit
-;;    major-mode-icons
+    magit-todos
     markdown-mode
     markdown-toc
     ;;mingus
