@@ -28,6 +28,7 @@
     dired-details
     elfeed
     elmacro
+    elm-mode
     emmet-mode
     ensime
     eros
@@ -47,6 +48,8 @@
     htmlize
     ido-ubiquitous
     imenu-anywhere
+    ; importmagic  ;; for python
+    kotlin-mode
     lispy
     lua-mode
     jinja2-mode
