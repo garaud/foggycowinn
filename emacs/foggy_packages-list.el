@@ -17,6 +17,7 @@
     clojure-mode
     cider
     cmake-mode
+    color-identifiers-mode
     company-mode
     company-anaconda
     company-c-headers
