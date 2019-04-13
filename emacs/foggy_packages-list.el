@@ -65,6 +65,7 @@
     multiple-cursors
     pony-mode
     projectile
+    pyenv-mode
     pyflakes
     ;org-mode
     ;ob-http ; some strange install error
@@ -81,6 +82,7 @@
     smart-mode-line
     smartparens
     smartscan
+    smex
     smooth-scrolling
     sql-indent
     swiper ;; provide ivy
