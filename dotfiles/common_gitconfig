@@ -39,6 +39,8 @@
         rs = rebase --interactive --autosquash
         rc = rebase --continue
         ra = rebase --abort
+        p = push
+        pf = push --force
         grep = grep -Ii
         lasttag = describe --tags --abbrev=0
         d = diff
