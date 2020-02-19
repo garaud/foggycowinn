@@ -5,15 +5,44 @@
 
 import itertools
 
+import numpy as np
+import pandas as pd
+
+
 from rpy2.robjects.packages import importr
 from rpy2.robjects import r
 import rpy2.robjects as robj
+
 
 def _rclass(obj):
     """
     Return R class name for input object
     """
     return r['class'](obj)[0]
+
+
+def _convert_robj(obj, use_pandas=True):
+    """
+    Convert rpy2 object to a pandas-friendly form
+
+    Parameters
+    ----------
+    obj : rpy2 object
+
+    Returns
+    -------
+    Non-rpy data structure, mix of NumPy and pandas objects
+    """
+    if not isinstance(obj, robj.RObjectMixin):
+        return obj
+
+    converters = _pandas_converters if use_pandas else _converters
+
+    for rpy_type, converter in converters:
+        if isinstance(obj, rpy_type):
+            return converter(obj)
+    raise TypeError('Do not know what to do with %s object' % type(obj))
+
 
 def _is_null(obj):
     return _rclass(obj) == 'NULL'
@@ -23,7 +52,7 @@ def _convert_list(obj):
     Convert named Vector to dict, factors to list
     """
     try:
-        values = [convert_robj(x) for x in obj]
+        values = [_convert_robj(x) for x in obj]
         keys = r['names'](obj)
         return dict(zip(keys, values))
     except TypeError:
@@ -164,31 +193,6 @@ _converters = [
     (robj.Vector, _convert_list),
 ]
 
-
-def _convert_robj(obj, use_pandas=True):
-    """
-    Convert rpy2 object to a pandas-friendly form
-
-    Parameters
-    ----------
-    obj : rpy2 object
-
-    Returns
-    -------
-    Non-rpy data structure, mix of NumPy and pandas objects
-    """
-    if not isinstance(obj, robj.RObjectMixin):
-        return obj
-
-    converters = _pandas_converters if use_pandas else _converters
-
-    for rpy_type, converter in converters:
-        if isinstance(obj, rpy_type):
-            return converter(obj)
-
-    raise TypeError('Do not know what to do with %s object' % type(obj))
-
-
 def load_R_dataset(name, package=None, convert=True):
     if package:
         importr(package)
@@ -204,4 +208,5 @@ def Rdatasets_list():
     import requests
     url = 'https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html'
     content = requests.get(url).content
+    content = content.decode("utf-8")
     return re.findall(r'>([\w\.]+)</a></td>\n<td>([A-Za-z0-9 ]+)</td>', content)
