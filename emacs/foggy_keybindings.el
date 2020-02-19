@@ -24,8 +24,8 @@
 ;; (global-set-key [(meta v)] 'fill-region)
 
 ;; Deletes a line.
-(global-unset-key [(meta r)])
-(global-set-key [(meta r)] "\C-a\C-@\C-e\C-f\C-w")
+(global-unset-key [(meta k)])
+(global-set-key [(meta k)] "\C-a\C-@\C-e\C-f\C-w")
 
 ;; Copies a line.
 (global-unset-key [(meta s)])

@@ -192,9 +192,6 @@
 ;; Open many windows when you launch 'gdb'.
 (setq gdb-many-windows t)
 
-(setq foggy_dev-loaded t)
-(provide 'foggy_dev)
-
 
 ;; add line number in specific mode
 (cl-map 'list (lambda (mode-hook)
@@ -226,3 +223,7 @@
           c++-mode-hook
           clojure-mode-hook
           emacs-lisp-mode-hook))
+
+
+(setq foggy_dev-loaded t)
+(provide 'foggy_dev)

@@ -10,9 +10,10 @@
     (progn
       (scroll-bar-mode -1)))
 
-;;(set-frame-font "DejaVu Sans Mono-14")
+;; (set-frame-font "DejaVu Sans Mono-14")
 (set-frame-font "Fira Code-14")
 (load-theme 'tangotango t)
+;; (load-theme 'leuven t)
 (add-hook 'after-make-frame-functions (lambda (frame) (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol")))
 
 ;; tips for FiraCode ligature
@@ -34,7 +35,7 @@
             ("\\(\\\\\\\\\\)"              #Xe106)
             ("\\(\\\\\\\\\\\\\\)"          #Xe107)
             ("\\({-\\)"                    #Xe108)
-            ("\\(\\[\\]\\)"                #Xe109)
+            ;;("\\(\\[\\]\\)"                #Xe109)
             ("\\(::\\)"                    #Xe10a)
             ("\\(:::\\)"                   #Xe10b)
             ("[^=]\\(:=\\)"                #Xe10c)
@@ -43,7 +44,7 @@
             ("\\(!==\\)"                   #Xe10f)
             ("\\(-}\\)"                    #Xe110)
             ;; ("\\(--\\)"                    #Xe111)
-            ("\\(---\\)"                   #Xe112)
+            ;; ("\\(---\\)"                   #Xe112)
             ("\\(-->\\)"                   #Xe113)
             ("[^-]\\(->\\)"                #Xe114)
             ("\\(->>\\)"                   #Xe115)
@@ -191,7 +192,9 @@
 (if (display-graphic-p)
     (progn
       (global-hl-line-mode t)
-      (set-face-background 'hl-line "#282828")))
+      ;; (set-face-background 'hl-line "#F0F8FF") ;; light theme
+      (set-face-background 'hl-line "#282828")
+      ))
 ;; For light theme.
 ;;(set-face-background 'hl-line "#F0F8FF")
 ;; Shows the column number.
