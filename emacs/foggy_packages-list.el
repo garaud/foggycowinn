@@ -11,7 +11,6 @@
     ace-window
     all-the-icons
     all-the-icons-dired
-    all-the-icons-ivy
     anaconda-mode
     atomic-chrome
     ;;angular-snippets
@@ -54,6 +53,7 @@
     ido-ubiquitous
     imenu-anywhere
     ivy-rich
+    all-the-icons-ivy
     ; importmagic  ;; for python
     kotlin-mode
     lispy

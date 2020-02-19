@@ -1,3 +1,3 @@
 (require 'all-the-icons-ivy)
 
-(all-the-icons-ivy-setup)
+(add-hook 'after-init-hook 'all-the-icons-ivy-setup)
