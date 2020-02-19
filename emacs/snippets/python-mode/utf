@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
-# name: utf-8 encoding
+# name: my utf-8 encoding
 # key: utf
+# group: general
 # --
 # coding: utf-8
