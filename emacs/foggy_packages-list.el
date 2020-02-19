@@ -63,6 +63,7 @@
     lodgeit
     forge
     magit
+    move-lines
     transient
     magit-todos
     git-link
