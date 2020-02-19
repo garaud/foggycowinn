@@ -1,18 +1,26 @@
 # -*- mode: sh -*-
 
+
 function condaup
 {
-    export _miniconda=$HOME/miniconda3
+    export _miniconda=$HOME/anaconda3
     export _PYTHONBACK=$PYTHONPATH
     export _OLD_PS1=$PS1
     export _OLD_PATH=$PATH
-    export PATH=$_miniconda/bin:$PATH
-    export PS1="[conda]$PS1"
+    # export PATH=$_miniconda/bin:$PATH
+    # export PS1="[conda]$PS1"
     POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda custom_conda context time dir)
     POWERLEVEL9K_CUSTOM_CONDA="echo '[conda]'"
     POWERLEVEL9K_CUSTOM_CONDA_FOREGROUND='073'
     POWERLEVEL9K_CUSTOM_CONDA_BACKGROUND='238'
     unset PYTHONPATH
+    __conda_setup="$('$_miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+    eval "$__conda_setup"
+    if [ -f "/home/dag/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/dag/anaconda3/etc/profile.d/conda.sh"
+    fi
+    export PATH=$_miniconda/bin:$PATH
+    unset __conda_setup
 }
 
 function condaback
@@ -24,8 +32,34 @@ function condaback
     unset _PYTHONBACK
     unset _OLD_PS1
     unset _OLD_PATH
+    unset conda
 }
 
+function pyenvup
+{
+    export _PYTHONBACK=$PYTHONPATH
+    export _OLD_PATH=$PATH
+    export _OLD_PS1=$PS1
+    export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_pyenv virtualenv context time dir)
+    POWERLEVEL9K_CUSTOM_PYENV="echo '[pyenv]'"
+    POWERLEVEL9K_CUSTOM_PYENV_FOREGROUND='073'
+    POWERLEVEL9K_CUSTOM_PYENV_BACKGROUND='238'
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+}
+
+function pyenvback
+{
+    export PYTHONPATH=$_PYTHONBACK
+    export PATH=$_OLD_PATH
+    export PS1=$_OLD_PS1
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv context time dir)
+    unset _PYTHONBACK
+    unset _OLD_PATH
+    unset _OLD_PS1
+    unset PYENV_VIRTUALENV_DISABLE_PROMPT
+}
 
 function f
 {
@@ -101,4 +135,12 @@ function rl
     else
         echo "At least one mandatory param (filename).";
     fi
+}
+
+# (current) week summary from timewarrior
+function tweek
+{
+    monday=`date -dlast-monday +%Y-%m-%d`
+    saturday=`date -dsaturday +%Y-%m-%d`
+    timew summary :ids $monday - $saturday
 }
