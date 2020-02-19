@@ -34,13 +34,14 @@
         # lg = log --pretty=oneline --decorate --graph --abbrev-commit
         logtree = log --graph --oneline --decorate --all
         fp = fetch --prune
+        m = merge
         r = rebase
         ri = rebase --interactive
         rs = rebase --interactive --autosquash
         rc = rebase --continue
         ra = rebase --abort
         p = push
-        pf = push --force
+        pf = push --force-with-lease
         grep = grep -Ii
         lasttag = describe --tags --abbrev=0
         d = diff
