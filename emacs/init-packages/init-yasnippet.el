@@ -1,4 +1,8 @@
 (require 'yasnippet)
+
+;; personal snippets
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+
 (yas-global-mode 1)
 
 ;; Disable yasnippet in Lisp and REPL Slime major modes.

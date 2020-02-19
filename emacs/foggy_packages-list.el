@@ -9,13 +9,18 @@
     ahg
     ;auctex
     ace-window
+    all-the-icons
+    all-the-icons-dired
+    all-the-icons-ivy
     anaconda-mode
     atomic-chrome
     ;;angular-snippets
     beacon
     calfw
-    clojure-mode
+    emojify
+    sesman
     cider
+    clojure-mode
     cmake-mode
     color-identifiers-mode
     company-mode
@@ -48,6 +53,7 @@
     htmlize
     ido-ubiquitous
     imenu-anywhere
+    ivy-rich
     ; importmagic  ;; for python
     kotlin-mode
     lispy
@@ -55,8 +61,11 @@
     jinja2-mode
     leuven-theme
     lodgeit
+    forge
     magit
+    transient
     magit-todos
+    git-link
     markdown-mode
     markdown-toc
     ;;mingus
@@ -76,7 +85,6 @@
     redshank
     restclient
     rust-mode
-    sesman
     shell-pop
     slime
     smart-mode-line
@@ -92,5 +100,6 @@
     web-mode
     yaml-mode
     yasnippet
+    yasnippet-snippets
     )
   "List of packages.")
