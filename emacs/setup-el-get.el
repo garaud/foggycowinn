@@ -68,6 +68,11 @@
                :description "Run pytest inside Emacs"
 	       :depends (projectile dash magit-popup)
 	       :pkgname "wbolster/emacs-python-pytest")
+       	(:name move-lines
+	       :type github
+               :website "https://github.com/targzeta/move-lines"
+               :description "Moves current line or lines surrounding region up or down"
+	       :pkgname "targzeta/move-lines")
         (:name blacken
                :type github
                :website "https://github.com/proofit404/blacken"
