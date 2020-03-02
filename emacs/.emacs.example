@@ -9,12 +9,11 @@
       init-emacs-file (expand-file-name "emacs_init.el" emacs-foggy-dir)
       custom-file (expand-file-name "custom.el" emacs-foggy-dir))
 
-
+(load-file custom-file)
 (load packages-list-file)
 (load setup-el-get)
 (load init-emacs-file)
 
-(load-file custom-file)
 
 ;; do 'extra' stuff, local machine specific, if necessary
 (let ((extra (expand-file-name "~/.extra.el")))

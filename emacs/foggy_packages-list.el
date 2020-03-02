@@ -75,6 +75,7 @@
     multiple-cursors
     pony-mode
     projectile
+    py-isort
     pyenv-mode
     pyflakes
     ;org-mode
