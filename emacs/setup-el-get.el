@@ -26,18 +26,18 @@
 (require 'package)
 ;; Add melpa package source when using package list
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
-
-;; init package management with elpa (i.e. call init-package.el)
-(el-get 'sync 'package)
 
 (require 'el-get-elpa)
 ;; Build the El-Get copy of the package.el packages if we have not
 ;; built it before.  Will have to look into updating later ...
 (unless (file-directory-p el-get-recipe-path-elpa)
   (el-get-elpa-build-local-recipes))
+
+;; init package management with elpa (i.e. call init-package.el)
+(el-get 'sync 'package)
 
 (setq el-get-sources
       '((:name org-projectile
@@ -54,8 +54,6 @@
                :prepare (add-to-list 'custom-theme-load-path default-directory)
 	       :pkgname "juba/color-theme-tangotango")
 	(:name ubiquify :type builtin)
-	;; (:name org-mode :type builtin)
-	;; (:name mu4e :type builtin)
 	(:name libmpdel
 	       :type github
 	       :website "https://github.com/mpdel/libmpdel"
