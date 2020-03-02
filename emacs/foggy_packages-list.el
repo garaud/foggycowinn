@@ -30,6 +30,7 @@
     dashboard
     ;;django-mode
     dired-details
+    doom-modeline
     elfeed
     elmacro
     elm-mode
