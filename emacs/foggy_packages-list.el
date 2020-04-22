@@ -95,7 +95,9 @@
     smartscan
     smex
     smooth-scrolling
+    solarized-emacs
     sql-indent
+    string-inflection
     swiper ;; provide ivy
     tangotango
     virtualenvwrapper
