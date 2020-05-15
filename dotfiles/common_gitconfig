@@ -30,9 +30,15 @@
         ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
         ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
         le = log --oneline --decorate
-        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit
-        # lg = log --pretty=oneline --decorate --graph --abbrev-commit
+        lg = log --graph --abbrev-commit --decorate --format=format:'%C(yellow)%h%C(reset) %s %C(bold blue)%an%Creset %Cgreen(%cr) %C(auto)%d%C(reset)'
+        # same as lg but with --first-parent
+        lgp = log --graph --abbrev-commit --decorate --format=format:'%C(yellow)%h%C(reset) %s %C(bold blue)%an%Creset %Cgreen(%cr) %C(auto)%d%C(reset)' --first-parent
         logtree = log --graph --oneline --decorate --all
+
+	showp = show --first-parent
+
+	# List every branch, local and remote, in order of most recent to oldest commit, showing the branch's last commit and some last commit meta-data
+	br = for-each-ref --sort=-committerdate refs/heads/ refs/remotes/origin/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' -
         fp = fetch --prune
         m = merge
         r = rebase
@@ -46,3 +52,10 @@
         lasttag = describe --tags --abbrev=0
         d = diff
         dc = diff --cached
+        # The oldest ancestor between an integration branch (by default, master) and a topic branch (by default HEAD)
+	# e.g. git oldest-ancestor master ai/topic
+	# See http://stackoverflow.com/a/4991675/430128
+	oldest-ancestor = !bash -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
+        # Log of already merged topic -- pass the topic merge commit as a parameter, and the fork branch as a second param (master by default)
+	# If the base of the branch was `maint` instead of `master`, you need to specify `maint` as the second param
+	mergedtopiclg = !sh -c \"git lg $(git oldest-ancestor $1^2 ${2:-master})..$1^2\" -
