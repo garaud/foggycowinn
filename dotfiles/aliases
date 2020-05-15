@@ -42,7 +42,8 @@ alias cmg='ag -G "\.cmake$|CMakeLists\.txt"'
 
 # DCVS.
 alias gitka='gitk --all'
-alias gg='gitg -b -r'
+# start with commit activity, show all branches, remotes and tags
+alias gg='gitg -abrt'
 alias tiga='tig --all'
 alias mq='hg -R `hg root`/.hg/patches'
 alias hgl='hg log -G'
