@@ -1,8 +1,8 @@
 (require 'doom-modeline)
 
-(setq doom-modeline-height 25)
-(setq doom-modeline-bar-width 8)
-(setq doom-modeline-window-width-limit 120)
+(setq doom-modeline-height 0.2)
+;; (setq doom-modeline-bar-width 1)
+;; (setq doom-modeline-window-width-limit 120)
 ;; (window-width)
 
 ;; Whether display the icon for `major-mode'. Respects `doom-modeline-icon'.
@@ -16,12 +16,12 @@
 (setq doom-modeline-buffer-encoding nil)
 
 ;; Whether display the indentation information.
-(setq doom-modeline-indent-info nil)
+;; (setq doom-modeline-indent-info nil)
 
 ;; If non-nil, only display one number for checker information if applicable.
-(setq doom-modeline-checker-simple-format nil)
+;; (setq doom-modeline-checker-simple-format nil)
 
-(setq doom-modeline-vcs-max-length 20)
+;; (setq doom-modeline-vcs-max-length 20)
 
 ;; Whether display the perspective name. Non-nil to display in the mode-line.
 (setq doom-modeline-persp-name t)
@@ -34,6 +34,6 @@
 
 ;; Whether display the modification icon for the buffer.
 ;; Respects `doom-modeline-icon' and `doom-modeline-buffer-state-icon'.
-(setq doom-modeline-buffer-modification-icon t)
+;; (setq doom-modeline-buffer-modification-icon t)
 
 (doom-modeline-mode 1)

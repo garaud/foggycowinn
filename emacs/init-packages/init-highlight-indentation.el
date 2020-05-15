@@ -1,7 +1,11 @@
 (require 'highlight-indentation)
 
+;; dark background
 (set-face-background 'highlight-indentation-face "#424848")
 (set-face-background 'highlight-indentation-current-column-face "#424848")
+;; light background
+;; (set-face-background 'highlight-indentation-face "#f2f3f3")
+;; (set-face-background 'highlight-indentation-current-column-face "#f2f3f3")
 
 ;; source https://stackoverflow.com/questions/1587972/how-to-display-indentation-guides-in-emacs/4459159#4459159
 (defun aj-toggle-fold ()
