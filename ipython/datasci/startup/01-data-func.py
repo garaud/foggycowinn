@@ -14,7 +14,6 @@ DATASCI_HELP_MSG = """\nVariables:
 - 'dfna': DataFrame 3 columns and some missing values
 - 'dfm': DataFrame 3 columns multiple data: float, int, str
 - 'dfmidx': DataFrame with 2 cols and a MultiIndex
-- 'panel': Panel with three random DataFrame (3 columns)
 """
 
 
@@ -93,15 +92,6 @@ def _gen_multiindex_dataframe():
     return pd.DataFrame(np.random.randn(6, 2), index=index, columns=['X','Y'])
 
 
-def _gen_panel():
-    """Generate a simple Panel with three keys.
-    """
-    df_index_size = 25
-    return pd.Panel({'cat_S': _gen_random_dataframe(df_index_size, freq='D'),
-                     'cat_T': _gen_random_dataframe(df_index_size, freq='B'),
-                     'cat_U': _gen_random_dataframe(df_index_size, freq='D')})
-
-
 def _lineno(fpath):
     """Count the number of lines in a file
 
@@ -168,6 +158,5 @@ dfr = pd.DataFrame({"y": [23., 47., 18., 36.]},
                    index=["coltrane", "hendrix", "brubeck", "davis"])
 dfm = _gen_dataframe_types()
 dfmidx = _gen_multiindex_dataframe()
-panel = _gen_panel()
 print_datasci_version()
 datasci_help()
