@@ -8,7 +8,13 @@
 ;;;;;;;;;
 
 ;; Magit.
-(require 'magit)
+;(require 'magit)
+;(require 'transient)
+;(require 'forge)
+
+;(with-eval-after-load 'magit
+;  (require 'forge))
+
 (global-set-key "\C-cg" 'magit-status)
 
 ;; For Mercurial
