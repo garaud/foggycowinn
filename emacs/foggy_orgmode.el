@@ -36,6 +36,12 @@
 ;; display/update images in the buffer after I evaluate
 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
 
+;; save the clock history across Emacs sessions.
+;; see ~/.emacs.d/org-clock-save.el
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+
+
 ;;;;;;;;;;;;;;;;;
 ;; Keybindings ;;
 ;;;;;;;;;;;;;;;;;
