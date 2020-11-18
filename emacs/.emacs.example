@@ -1,5 +1,10 @@
 ;; -*- mode: lisp -*-
-(server-start)
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+;; (package-initialize)
 
 ;; Global variables.
 ;; Path of the emacs configs directory.
@@ -19,3 +24,6 @@
 (let ((extra (expand-file-name "~/.extra.el")))
   (if (file-exists-p extra)
       (load extra)))
+
+;; emacs server
+(server-start)
