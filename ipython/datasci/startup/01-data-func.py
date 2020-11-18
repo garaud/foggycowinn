@@ -154,8 +154,8 @@ dfna['X'].iloc[[0,3,5,12,22,36]] = np.nan
 dfna['Y'].iloc[[3,7,15,25,26,42]] = np.nan
 dfl = pd.DataFrame({"name": ["davis", "coltrane", "hankock", "hendrix", "barber"],
                     "x": [52., 32., 45., 56., 18.]})
-dfr = pd.DataFrame({"y": [23., 47., 18., 36.]},
-                   index=["coltrane", "hendrix", "brubeck", "davis"])
+dfr = pd.DataFrame({"y": [23., 47., 18., 36., 42.]},
+                   index=["coltrane", "hendrix", "brubeck", "davis", "jones"])
 dfm = _gen_dataframe_types()
 dfmidx = _gen_multiindex_dataframe()
 print_datasci_version()
