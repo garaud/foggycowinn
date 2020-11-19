@@ -16,7 +16,7 @@
         (man . "^")
         (woman . "^")))
 
-(global-set-key "\C-s" 'swiper)
+(global-set-key "\C-s" 'swiper-isearch)
 (global-set-key "\C-x\b" 'ivy-switch-buffer)
 
 (global-set-key (kbd "M-x") 'counsel-M-x)
