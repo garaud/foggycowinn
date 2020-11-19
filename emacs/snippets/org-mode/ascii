@@ -2,6 +2,6 @@
 # name : #+begin_ascii...#+end_ascii
 # key: <a
 # --
-#+BEGIN_ASCII
+#+BEGIN_EXPORT ascii
   $1
-#+END_ASCII
+#+END_EXPORT
