@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name : #+begin_ascii...#+end_ascii
+# name : export ascii
 # key: <a
 # --
 #+BEGIN_EXPORT ascii
