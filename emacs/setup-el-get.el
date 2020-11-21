@@ -42,7 +42,7 @@
 (setq el-get-sources
       '((:name org-projectile
 	       :type github
-	       :depends (projectile)
+	       :depends (s projectile)
                :website "https://github.com/IvanMalison/org-projectile"
                :description " Manage org-mode TODOs for your projectile projects"
 	       :pkgname "IvanMalison/org-projectile")
@@ -78,6 +78,16 @@
                :website "https://github.com/proofit404/blacken"
                :description "Python Black for Emacs"
                :pkgname "proofit404/blacken")
+        (:name modern-fringes
+               :type github
+               :website "https://github.com/SpecialBomb/emacs-modern-fringes"
+               :description "Replaces the ugly looking default emacs fringe bitmaps and replaces them with better, modern looking ones."
+               :pkgname "SpecialBomb/emacs-modern-fringes")
+        (:name ligature
+               :type github
+               :website "https://github.com/mickeynp/ligature.el"
+               :description "Typographic Ligatures in Emacs"
+               :pkgname "mickeynp/ligature.el")
 	))
 
 (el-get 'sync '(org-mode))
