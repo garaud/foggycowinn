@@ -11,25 +11,29 @@
     ace-window
     all-the-icons
     all-the-icons-dired
-    anaconda-mode
+    ;; anaconda-mode
     atomic-chrome
     ;;angular-snippets
     beacon
+    dockerfile-mode
     calfw
     emojify
+    engine-mode
     sesman
     cider
     clojure-mode
     cmake-mode
     color-identifiers-mode
-    company-mode
-    company-anaconda
+    company
+    ;; company-anaconda
     company-c-headers
     company-restclient
+    cuda-mode
     cython-mode
     dashboard
     ;;django-mode
     dired-details
+    direnv
     doom-modeline
     elfeed
     elmacro
@@ -53,19 +57,22 @@
     htmlize
     ido-ubiquitous
     imenu-anywhere
+    swiper ;; provide ivy
     ivy-rich
     all-the-icons-ivy
     ; importmagic  ;; for python
     kotlin-mode
     lispy
+    lsp-mode
+    lsp-ui
     lua-mode
     jinja2-mode
     leuven-theme
     lodgeit
     forge
+    transient
     magit
     move-lines
-    transient
     magit-todos
     git-link
     markdown-mode
@@ -98,7 +105,6 @@
     solarized-emacs
     sql-indent
     string-inflection
-    swiper ;; provide ivy
     tangotango
     virtualenvwrapper
     visual-regexp-steroids
