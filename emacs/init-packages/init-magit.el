@@ -1,0 +1,2 @@
+(require 'transient)
+(require 'magit)
