@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: absolute path from here
+# key: here
+# --
+_here="$( cd "$(dirname "$${{0}}")" ; pwd -P )"
