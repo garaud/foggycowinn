@@ -37,7 +37,9 @@
   (el-get-elpa-build-local-recipes))
 
 ;; init package management with elpa (i.e. call init-package.el)
-(el-get 'sync 'package)
+;; (package-refresh-contents)
+(package-initialize t) ;; Load emacs packages and activate them
+
 
 (setq el-get-sources
       '((:name org-projectile
@@ -62,12 +64,13 @@
 	       :type github
 	       :webiste "https://github.com/mpdel/mpdel"
 	       :pkgname "mpdel/mpdel")
-	(:name python-pytest
-	       :type github
-               :website "https://github.com/wbolster/emacs-python-pytest"
-               :description "Run pytest inside Emacs"
-	       :depends (projectile dash magit-popup)
-	       :pkgname "wbolster/emacs-python-pytest")
+	;(:name python-pytest
+	;       :type melpa
+        ;       :website "https://github.com/wbolster/emacs-python-pytest"
+        ;       :description "Run pytest inside Emacs"
+	       ;; :depends (projectile dash dash-functional transient)
+	       ;; :pkgname "wbolster/emacs-python-pytest")
+	 ;      )
        	(:name move-lines
 	       :type github
                :website "https://github.com/targzeta/move-lines"
@@ -90,10 +93,11 @@
                :pkgname "mickeynp/ligature.el")
 	))
 
+
 (el-get 'sync '(org-mode))
 (el-get 'sync
-	(append (cl-mapcar #'(lambda (recipe) (cl-getf recipe :name))
-			   el-get-sources)
-		foggy-packages-list))
+ 	(append (cl-mapcar #'(lambda (recipe) (cl-getf recipe :name))
+ 			   el-get-sources)
+		foggy-packages-list ))
 
 (provide 'setup-el-get)
