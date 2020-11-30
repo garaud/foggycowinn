@@ -27,6 +27,12 @@ alias kfr='setxkbmap fr'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+# PDF
+alias pdf='evince'
+
+# Less
+alias le='less'
+
 # List dir & grep.
 alias ls='ls --color=auto'
 alias ll='ls -lF'
@@ -79,6 +85,7 @@ alias valcache='valgrind --tool=callgrind'
 alias ipy2='ipython2'
 alias ipy='ipython3'
 alias py3='python3'
+alias py='python'
 alias jp='jupyter notebook'
 alias ipydata='ipython --profile=datasci' # With numpy, pandas, matplotlib
 alias ipy3data='ipython3 --profile=datasci' # With numpy, pandas, matplotlib
