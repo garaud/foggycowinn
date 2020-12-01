@@ -3,6 +3,10 @@
 ;; 2011-2015
 ;; Author(s): Damien Garaud
 
+
+(require 'org-tempo)
+;; org-tempo, see https://orgmode.org/manual/Structure-Templates.html#DOCF148
+
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 ;; Location of the agenda, for org-mode.
