@@ -19,6 +19,7 @@
     calfw
     emojify
     engine-mode
+    edit-indirect
     sesman
     cider
     clojure-mode
