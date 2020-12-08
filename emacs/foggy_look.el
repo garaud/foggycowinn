@@ -11,7 +11,7 @@
       (scroll-bar-mode -1)))
 
 ;; (set-frame-font "DejaVu Sans Mono-14")
-(set-frame-font "Fira Code-14")
+(set-frame-font "Fira Code-13")
 (load-theme 'tangotango t)
 ;; (load-theme 'leuven t)
 
