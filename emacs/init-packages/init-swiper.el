@@ -1,7 +1,9 @@
 
 (require 'swiper)
 (require 'counsel)
+(require 'ivy-rich)
 (ivy-mode 1)
+
 
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
@@ -15,6 +17,7 @@
         (counsel-describe-variable . "^")
         (man . "^")
         (woman . "^")))
+(setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
 
 (global-set-key "\C-s" 'swiper-isearch)
 (global-set-key "\C-x\b" 'ivy-switch-buffer)
@@ -29,3 +32,5 @@
 ;; (global-set-key (kbd "C-c j") 'counsel-git-grep)
 (global-set-key (kbd "C-c f") 'counsel-git) ;; find file in the git repo
 (global-set-key (kbd "C-c k") 'counsel-ag)
+
+(ivy-rich-mode 1)
