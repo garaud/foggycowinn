@@ -145,3 +145,13 @@ function tweek
     saturday=`date -dsaturday +%Y-%m-%d`
     timew summary :ids $monday - $saturday
 }
+
+# function which wraps the pew new command in order to post-install some packages
+function pn
+{
+    if [ "$#" -eq 1 ]; then
+        pew new $1 -i python-language-server -i "jedi<0.18" -i ipython -i isort -i flake8 -i pylint -i black
+    else
+        echo "Required argument (name of the venv)"
+    fi
+}
