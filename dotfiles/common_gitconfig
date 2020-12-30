@@ -5,6 +5,8 @@
 #   path = main_gitconfig
 # feature. Git >= 1.7.10
 
+[init]
+	defaultBranch = main
 [color]
 	diff = auto
 	status = auto
