@@ -209,4 +209,4 @@ Goes backward if ARG is negative; error if CHAR not found."
 
 
 (require 'projectile)
-(require 'virtualenvwrapper)
+;; (require 'virtualenvwrapper)
