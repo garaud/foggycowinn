@@ -76,6 +76,12 @@
                :website "https://github.com/targzeta/move-lines"
                :description "Moves current line or lines surrounding region up or down"
 	       :pkgname "targzeta/move-lines")
+	(:name hnreader
+	       :type github
+	       :depends (promise request)
+	       :website "https://github.com/thanhvg/emacs-hnreader/"
+	       :description "Hackernews reader in org-mode"
+	       :pkgname "thanhvg/emacs-hnreader")
         (:name blacken
                :type github
                :website "https://github.com/proofit404/blacken"

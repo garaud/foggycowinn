@@ -1,3 +1,3 @@
-(require 'org)
-(require 'ob)
-(require 'ob-ipython)
+;(require 'org)
+;(require 'ob)
+;(require 'ob-ipython)
