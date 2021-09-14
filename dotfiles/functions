@@ -142,8 +142,8 @@ function rl
 function tweek
 {
     monday=`date -dlast-monday +%Y-%m-%d`
-    saturday=`date -dsaturday +%Y-%m-%d`
-    timew summary :ids $monday - $saturday
+    sunday=`date -d ${monday}+7days +%Y-%m-%d`
+    timew summary :ids $monday - $sunday
 }
 
 # function which wraps the pew new command in order to post-install some packages
