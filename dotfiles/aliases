@@ -8,6 +8,8 @@ alias po='popd'
 alias g='jump'      # zshmarks
 alias bo='bookmark' # zshmarks
 
+alias bat='batcat'
+
 # Editor
 alias vi=vim
 alias ef="emacs -fs" # fullscreen
