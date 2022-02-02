@@ -71,5 +71,5 @@ fi
 echo $PWD/prompt_foggy_setup "-> ~/.zprezto/modules/prompt/functions/"
 ln -fs $PWD/prompt_foggy_setup -t $HOME/.zprezto/modules/prompt/functions/
 
-# zshmark
-bash zshmarks_install.sh
+# fzf-marks (instead of zshmark)
+bash fzf-marks_install.sh

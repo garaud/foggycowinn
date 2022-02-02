@@ -25,7 +25,8 @@ zstyle ':prezto:load' pmodule \
   'autosuggestions' \
   'fasd' \
   'prompt' \
-  'zshmarks'
+  'fzf-marks' \
+  'gradle-completion' \
 
 #
 # Editor
@@ -72,7 +73,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 # zstyle ':prezto:module:prompt' theme 'foggy'
-zstyle ':prezto:module:prompt' theme 'powerlevel9k'
+zstyle ':prezto:module:prompt' theme 'powerlevel10k'
 
 #
 # SSH
