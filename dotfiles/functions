@@ -45,6 +45,9 @@ function pyenvup
     POWERLEVEL9K_CUSTOM_PYENV="echo '[pyenv]'"
     POWERLEVEL9K_CUSTOM_PYENV_FOREGROUND='073'
     POWERLEVEL9K_CUSTOM_PYENV_BACKGROUND='238'
+    export PATH="$HOME/.pyenv/bin:$PATH"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 }
@@ -153,5 +156,16 @@ function pn
         pew new $1 -i python-language-server -i "jedi<0.18" -i ipython -i isort -i flake8 -i pylint -i black
     else
         echo "Required argument (name of the venv)"
+    fi
+}
+
+# go to the git root directory
+function gr
+{
+    if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]]; then
+        local root_path=$(git rev-parse --show-toplevel)
+        pushd $root_path
+    else
+        echo "it's not no a git repo"
     fi
 }
