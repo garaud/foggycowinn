@@ -167,11 +167,6 @@ Goes backward if ARG is negative; error if CHAR not found."
     (comment-or-uncomment-region beg end)))
 
 
-(defun foggy:weekno (word)
-  "extract the week number from a word such as S42 (+1)"
-  (if (eq 0 (string-match "\\bS\[0-9\]\\{2\\}\\b" word))
-      (+ (string-to-int (substring word 1)) 1)))
-
 (defun foggy:current-year ()
   "return the current year"
   ;; (string-to-int (format-time-string "%Y")))
@@ -190,17 +185,16 @@ Goes backward if ARG is negative; error if CHAR not found."
 
 (defun foggy:str-date (date)
   "string date format from a date (month day year)"
-  (format-time-string "%a %d %m %Y" (apply #'encode-time
+  (format-time-string "%Y-%m-%d %a" (apply #'encode-time
                                            (append '(0 0 0) (apply #'foggy:swap-date date)))))
 
-(defun foggy:insert-week-date ()
+(defun foggy:insert-current-date ()
   "Write the current date with the week no. of the year e.g. [Mon 23 01 2017]."
   (interactive)
-  (setq cword (current-word))
-  (if (foggy:weekno cword)
-      (progn
-        (end-of-line 1)
-        (insert " [" (foggy:str-date (foggy:date-from-weekno (foggy:weekno cword))) "]"))))
+  (progn
+    (end-of-line 1)
+    (insert (foggy:str-date (calendar-current-date)) " ")))
+
 
 (defun foggy:insert-org-week ()
   "Just insert 5 items (3rd org level) from monday to friday"
