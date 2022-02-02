@@ -1,3 +1,9 @@
+
+import builtins
+from IPython.lib import deepreload
+
+# https://ipython.readthedocs.io/en/stable/api/generated/IPython.lib.deepreload.html
+
 # Configuration file for ipython.
 
 c = get_config()
@@ -11,7 +17,8 @@ c = get_config()
 # forces a full reload of modules whose code may have changed, which the default
 # reload() function does not.  When deep_reload is off, IPython will use the
 # normal reload(), but deep_reload will still be available as dreload().
-c.TerminalInteractiveShell.deep_reload = True
+builtins.reload = deepreload.reload
+# c.TerminalInteractiveShell.deep_reload = True
 
 # Set to confirm when you try to exit IPython with an EOF (Control-D in Unix,
 # Control-Z/Enter in Windows). By typing 'exit' or 'quit', you can force a
@@ -19,4 +26,4 @@ c.TerminalInteractiveShell.deep_reload = True
 c.TerminalInteractiveShell.confirm_exit = False
 
 # Configure matplotlib for interactive use with the default matplotlib backend.
-c.InteractiveShellApp.matplotlib = 'auto'
+# c.InteractiveShellApp.matplotlib = 'auto'
