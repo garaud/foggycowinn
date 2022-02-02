@@ -1,5 +1,6 @@
 (require 'dashboard)
 (require 'dashboard-widgets)
+(require 'page-break-lines)
 
 (setq dashboard-items '((recents  . 8)
  			(projects . 8)

@@ -1,7 +1,7 @@
 
 (require 'swiper)
 (require 'counsel)
-(require 'ivy-rich)
+;(require 'ivy-rich)
 (ivy-mode 1)
 
 
@@ -33,4 +33,4 @@
 (global-set-key (kbd "C-c f") 'counsel-git) ;; find file in the git repo
 (global-set-key (kbd "C-c k") 'counsel-ag)
 
-(ivy-rich-mode 1)
+;(ivy-rich-mode 1)

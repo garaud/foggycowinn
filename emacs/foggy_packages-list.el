@@ -17,37 +17,40 @@
     beacon
     dockerfile-mode
     calfw
+    company
     emojify
-    engine-mode
+    ;engine-mode
     edit-indirect
+    exec-path-from-shell
     sesman
     cider
     clojure-mode
-    cmake-mode
+    ;cmake-mode ;; url in the recipe is wrong...
     color-identifiers-mode
-    company
+    company-mode
     ;; company-anaconda
     company-c-headers
     company-restclient
-    cuda-mode
+    ;cuda-mode
     cython-mode
     dashboard
     ;;django-mode
     dired-details
     direnv
     doom-modeline
+    editorconfig
     elfeed
     elmacro
     elm-mode
     emmet-mode
-    ensime
-    eros
+    ;eros
     expand-region
     fancy-narrow
     flycheck
     ggtags
+    groovy-mode
     handlebars-mode
-    haskell-mode
+    ;haskell-mode
     helpful
     highlight-numbers
     highlight-quoted
@@ -55,6 +58,7 @@
     highlight-indentation
     ;; helm
     ;; helm-pydoc
+    hl-todo
     htmlize
     ido-ubiquitous
     imenu-anywhere
@@ -66,6 +70,8 @@
     lispy
     lsp-mode
     lsp-ui
+    lsp-java
+    lsp-metals
     lua-mode
     jinja2-mode
     leuven-theme
@@ -74,6 +80,8 @@
     transient
     magit
     move-lines
+    mpdel
+    ;navigel
     magit-todos
     git-link
     markdown-mode
@@ -86,18 +94,19 @@
     projectile
     py-isort
     pyenv-mode
-    pyflakes
+    ;pyflakes
     ;org-mode
     ;ob-http ; some strange install error
     ;ob-ipython
     org-present
     rainbow-delimiters
     rainbow-mode
-    redshank
+    ;redshank
     restclient
     rust-mode
     shell-pop
     slime
+    scala-mode
     smart-mode-line
     smartparens
     smartscan
