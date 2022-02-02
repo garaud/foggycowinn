@@ -217,6 +217,8 @@
           c++-mode-hook
           sql-mode-hook
           clojure-mode-hook
+          scala-mode-hook
+          java-mode-hook
           emacs-lisp-mode-hook))
 
 ;; highlight-indentation mode for some major modes
