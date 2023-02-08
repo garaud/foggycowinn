@@ -16,8 +16,8 @@ alias ef="emacs -fs" # fullscreen
 alias es='emacs-snapshot&!'
 alias ec='emacsclient -n'
 alias te='emacsclient.emacs-snapshot -nw'
-alias e='emacsclient.emacs-snapshot -n'
-#alias e='emacsclient -n'
+#alias e='emacsclient.emacs-snapshot -n'
+alias e='emacsclient -n'
 alias eq='emacs -Q'
 alias fe='fasd -f -e "emacsclient -n"' # # quick opening files with emacsclient
 alias mu4e='emacs -q -l .emacs.mail &' # emacs just for mail.
@@ -51,7 +51,8 @@ alias cpg='ag -G "\.h$|\.hpp$|\.txx$|\.c$|\.cc$|\.cpp$|\.c\+\+$"'
 alias cmg='ag -G "\.cmake$|CMakeLists\.txt"'
 
 # DCVS.
-alias gitka='gitk --all'
+# alias gitka='gitk --all'
+alias gitka='gitk --branches --tags --remotes'
 # start with commit activity, show all branches, remotes and tags
 alias gg='gitg -abrt'
 alias tiga='tig --all'
