@@ -1,5 +1,11 @@
 (require 'lsp-mode)
 (require 'lsp-modeline)
+;; FIX: it's strange that I have to add this line because of
+;; lsp-headerline-breadcrumb-mode not found in the (add-hook 'lsp-configure-hook ...)
+;; maybe due to an 'autoload' which does not work...
+(require 'lsp-headerline)
+
+(define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
 
 (setq lsp-enable-links nil)
 
@@ -14,7 +20,7 @@
 
 (with-eval-after-load 'lsp-mode
   (require 'lsp-pylsp)
-  (require 'lsp-java)
+  ;(require 'lsp-java)
   (add-to-list 'lsp-enabled-clients 'pylsp)
   (add-to-list 'lsp-enabled-clients 'metals)
   (add-to-list 'lsp-enabled-clients 'java)
@@ -22,3 +28,5 @@
   (add-hook 'scala-mode-hook #'lsp)
   (add-hook 'java-mode-hook #'lsp)
   (add-hook 'lsp-mode-hook #'lsp-lens-mode))
+
+(setq dap-auto-configure-features nil)

@@ -153,9 +153,9 @@
 ;;;;;;;;;;;;;
 
 ;; CMake mode.
-(require 'cmake-mode)
-(add-to-list 'auto-mode-alist '("CMakeLists.txt" . cmake-mode))
-(add-to-list 'auto-mode-alist '("\\.cmake\\'" . cmake-mode))
+;(require 'cmake-mode)
+;(add-to-list 'auto-mode-alist '("CMakeLists.txt" . cmake-mode))
+;(add-to-list 'auto-mode-alist '("\\.cmake\\'" . cmake-mode))
 
 
 ;;;;;;;;;
@@ -206,11 +206,12 @@
 
 ;; add line number in specific mode
 (cl-map 'list (lambda (mode-hook)
-                (add-hook mode-hook 'linum-mode))
+                (add-hook mode-hook 'display-line-numbers-mode))
         '(js-mode-hook
           rust-mode-hook
           sh-mode-hook
           python-mode-hook
+          julia-mode-hook
           lisp-mode-hook
           scala-mode-hook
           haskell-mode-hook

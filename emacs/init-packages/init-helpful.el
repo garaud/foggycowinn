@@ -10,3 +10,7 @@
 
 ;; I also recommend you configure helpful-at-point to a convenient keybinding:
 (global-set-key (kbd "C-c C-.") #'helpful-at-point)
+
+(when EMACS29+
+  ;; REVIEW See Wilfred/elisp-refs#35. Remove once fixed upstream.
+  (defvar read-symbol-positions-list nil))

@@ -1,2 +1,2 @@
 (require 'lsp-java)
-;; (add-hook 'java-mode-hook #'lsp)
+(add-hook 'java-mode-hook #'lsp)

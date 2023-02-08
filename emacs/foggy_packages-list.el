@@ -12,12 +12,14 @@
     all-the-icons
     all-the-icons-dired
     ;; anaconda-mode
+    yaml
     atomic-chrome
     ;;angular-snippets
     beacon
     dockerfile-mode
     calfw
     company
+    dap-mode
     emojify
     ;engine-mode
     edit-indirect
@@ -51,7 +53,7 @@
     groovy-mode
     handlebars-mode
     ;haskell-mode
-    helpful
+    ;helpful
     highlight-numbers
     highlight-quoted
     highlight-defined
@@ -67,11 +69,13 @@
     all-the-icons-ivy
     ; importmagic  ;; for python
     kotlin-mode
+    julia-mode
     lispy
-    lsp-mode
     lsp-ui
     lsp-java
     lsp-metals
+    lsp-docker
+    lsp-mode
     lua-mode
     jinja2-mode
     leuven-theme
@@ -86,9 +90,10 @@
     git-link
     markdown-mode
     markdown-toc
+    mermaid-mode
     ;;mingus
-    mu4e
-    mu4e-alert
+    ;mu4e
+    ;mu4e-alert
     multiple-cursors
     pony-mode
     projectile
@@ -99,6 +104,7 @@
     ;ob-http ; some strange install error
     ;ob-ipython
     org-present
+    org-bookmark-heading
     rainbow-delimiters
     rainbow-mode
     ;redshank
@@ -119,6 +125,7 @@
     virtualenvwrapper
     visual-regexp-steroids
     web-mode
+    which-key
     yaml-mode
     yasnippet
     yasnippet-snippets

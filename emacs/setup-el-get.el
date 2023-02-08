@@ -25,10 +25,9 @@
 
 (require 'package)
 ;; Add melpa package source when using package list
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
+ ; (add-to-list 'package-archives
+ ;            '("melpa" . "http://melpa.org/packages/") t)
+
 
 (require 'el-get-elpa)
 ;; Build the El-Get copy of the package.el packages if we have not
@@ -36,9 +35,9 @@
 (unless (file-directory-p el-get-recipe-path-elpa)
   (el-get-elpa-build-local-recipes))
 
-;; init package management with elpa (i.e. call init-package.el)
-;; (package-refresh-contents)
-(package-initialize t) ;; Load emacs packages and activate them
+;; ;; init package management with elpa (i.e. call init-package.el)
+;; ;; (package-refresh-contents)
+;; (package-initialize t) ;; Load emacs packages and activate them
 
 
 (setq el-get-sources
@@ -56,14 +55,14 @@
                :prepare (add-to-list 'custom-theme-load-path default-directory)
 	       :pkgname "juba/color-theme-tangotango")
 	(:name ubiquify :type builtin)
-	(:name libmpdel
-	       :type github
-	       :website "https://github.com/mpdel/libmpdel"
-	       :pkgname "mpdel/libmpdel")
-	(:name mpdel
-	       :type github
-	       :webiste "https://github.com/mpdel/mpdel"
-	       :pkgname "mpdel/mpdel")
+	;; (:name libmpdel
+	;;        :type github
+	;;        :website "https://github.com/mpdel/libmpdel"
+	;;        :pkgname "mpdel/libmpdel")
+	;; (:name mpdel
+	;;        :type github
+	;;        :webiste "https://github.com/mpdel/mpdel"
+	;;        :pkgname "mpdel/mpdel")
 	;(:name python-pytest
 	;       :type melpa
         ;       :website "https://github.com/wbolster/emacs-python-pytest"
@@ -76,12 +75,12 @@
                :website "https://github.com/targzeta/move-lines"
                :description "Moves current line or lines surrounding region up or down"
 	       :pkgname "targzeta/move-lines")
-	(:name hnreader
-	       :type github
-	       :depends (promise request)
-	       :website "https://github.com/thanhvg/emacs-hnreader/"
-	       :description "Hackernews reader in org-mode"
-	       :pkgname "thanhvg/emacs-hnreader")
+	;; (:name hnreader
+	;;        :type github
+	;;        :depends (promise request)
+	;;        :website "https://github.com/thanhvg/emacs-hnreader/"
+	;;        :description "Hackernews reader in org-mode"
+	;;        :pkgname "thanhvg/emacs-hnreader")
         (:name blacken
                :type github
                :website "https://github.com/proofit404/blacken"
@@ -102,8 +101,8 @@
 
 (el-get 'sync '(org-mode))
 (el-get 'sync
- 	(append (cl-mapcar #'(lambda (recipe) (cl-getf recipe :name))
- 			   el-get-sources)
-		foggy-packages-list ))
+  	(append (cl-mapcar #'(lambda (recipe) (cl-getf recipe :name))
+  			   el-get-sources)
+ 		foggy-packages-list ))
 
 (provide 'setup-el-get)
