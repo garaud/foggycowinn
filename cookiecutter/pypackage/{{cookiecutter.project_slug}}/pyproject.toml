@@ -1,0 +1,132 @@
+{%- set license_classifiers = {
+    'MIT': 'License :: OSI Approved :: MIT License',
+    'BSD-3-Clause': 'License :: OSI Approved :: BSD License',
+    'ISC': 'License :: OSI Approved :: ISC License (ISCL)',
+    'Apache-2.0': 'License :: OSI Approved :: Apache Software License',
+    'GPL-3.0-only': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
+} -%}
+[tool]
+[tool.poetry]
+name = "{{ cookiecutter.project_slug }}"
+version = "{{ cookiecutter.version }}"
+homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
+description = "{{ cookiecutter.project_short_description }}."
+authors = ["{{ cookiecutter.full_name.replace('\"', '\\\"') }} <{{ cookiecutter.email }}>"]
+readme = "README.md"
+{%- if cookiecutter.open_source_license in license_classifiers %}
+license =  "{{ cookiecutter.open_source_license }}"
+{%- endif %}
+classifiers=[
+    'Development Status :: 2 - Pre-Alpha',
+    'Intended Audience :: Developers',
+{%- if cookiecutter.open_source_license in license_classifiers %}
+    '{{ license_classifiers[cookiecutter.open_source_license] }}',
+{%- endif %}
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+]
+packages = [
+    { include = "{{ cookiecutter.pkg_name }}" },
+    { include = "tests", format = "sdist" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+{%- if cookiecutter.command_line_interface|lower == 'click' %}
+click = "8.1.3"
+{%- endif %}
+
+black  = { version = "^23.3.0", optional = true}
+isort  = { version = "^5.12.0", optional = true}
+flake8  = { version = "^6.0.0", optional = true}
+flake8-docstrings = { version = "^1.7.0", optional = true }
+ipython = { version = "8.14", optional = true}
+bpython = { version = "0.24", optional = true}
+{%- if cookiecutter.use_mypy == 'y' %}
+mypy = {version = "^1.3", optional = true}
+{%- endif %}
+pytest  = { version = "^7.3.2", optional = true}
+pytest-cov  = { version = "^4.1.0", optional = true}
+pytest-sugar = { version = "^0.9.7", optional = true }
+tox  = { version = "^4.6.3", optional = true}
+virtualenv  = { version = "^20.23", optional = true}
+pip  = { version = "^23.1.2", optional = true}
+mkdocs  = { version = "^1.4.3", optional = true}
+mkdocs-include-markdown-plugin  = { version = "^4.0.4", optional = true}
+mkdocs-material  = { version = "^9.1.16", optional = true}
+mkdocstrings  = { version = "^0.22.0", extras = ["python"], optional = true}
+mkdocs-material-extensions  = { version = "^1.1.1", optional = true}
+mkdocs-autorefs = {version = "^0.4.1", optional = true}
+twine  = { version = "^4.0.2", optional = true}
+pre-commit = {version = "^3.3.3", optional = true}
+toml = {version = "^0.10.2", optional = true}
+
+
+[tool.poetry.extras]
+test = [
+    "pytest",
+    "black",
+    "isort",
+    {%- if cookiecutter.use_mypy == 'y' %}
+    "mypy",
+    {%- endif %}
+    "flake8",
+    "flake8-docstrings",
+    "pytest-cov",
+    "pytest-sugar"
+    ]
+
+dev = ["tox", "pre-commit", "virtualenv", "pip", "twine", "toml", "ipython", "bpython"]
+
+doc = [
+    "mkdocs",
+    "mkdocs-include-markdown-plugin",
+    "mkdocs-material",
+    "mkdocstrings",
+    "mkdocs-material-extensions",
+    "mkdocs-autorefs"
+    ]
+
+{% if cookiecutter.command_line_interface|lower == 'click' -%}
+[tool.poetry.scripts]
+{{ cookiecutter.project_slug }} = '{{ cookiecutter.pkg_name }}.cli:main'
+
+{% endif -%}
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+target-version = ['py39', 'py310', 'py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 120
+skip_gitignore = true
+# you can skip files as below
+#skip_glob = docs/conf.py
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
